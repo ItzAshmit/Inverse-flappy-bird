@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://br7dxfo4bl2nb"]
+
+[ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/player.tscn" id="1_l756w"]
+[ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
+
+[node name="MainGame" type="Node2D" unique_id=1605266567]
+script = ExtResource("1_pu3va")
+
+[node name="player" parent="." unique_id=1757279582 instance=ExtResource("1_l756w")]
+position = Vector2(300, 354)
+
+[node name="Timer" type="Node2D" parent="." unique_id=99128431]
+
+[node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
+autostart = true
+
+[node name="Pipes" type="Node2D" parent="." unique_id=1050928447]
+
+[connection signal="timeout" from="Timer/PipeSpawner" to="." method="pipe_spawner"]
