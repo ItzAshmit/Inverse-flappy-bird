@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var speed= 500
+var speed= 250
 var gravity = 10
 func _ready() -> void:
 	velocity =  Vector2.UP*speed

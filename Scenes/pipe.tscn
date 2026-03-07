@@ -8,29 +8,72 @@ atlas = ExtResource("2_hnit7")
 region = Rect2(0, 0, 32, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnit7"]
-size = Vector2(25.925564, 75.00003)
+size = Vector2(45.369736, 528.75024)
 
 [node name="Pipe" type="Node2D" unique_id=1624188297]
 script = ExtResource("1_hnit7")
 
 [node name="Upper" type="Area2D" parent="." unique_id=2107738169]
-position = Vector2(0, -30)
+position = Vector2(0, -40)
 scale = Vector2(-0.30857575, 0.26666656)
 
 [node name="Sprite2D" type="Sprite2D" parent="Upper" unique_id=192697183]
 texture_filter = 1
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_p1buf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Upper" unique_id=17084373]
+texture_filter = 1
+position = Vector2(0, -127.50006)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_p1buf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Upper" unique_id=615944233]
+texture_filter = 1
+position = Vector2(0, -255.00009)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_p1buf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Upper" unique_id=1618858830]
+texture_filter = 1
+position = Vector2(0, -382.50015)
+scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_p1buf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Upper" unique_id=476777213]
+position = Vector2(0, -191.25009)
 shape = SubResource("RectangleShape2D_hnit7")
 
 [node name="Lower" type="Area2D" parent="." unique_id=1038536352]
+position = Vector2(0, 40)
 scale = Vector2(-0.30857575, 0.26666656)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lower" unique_id=1616294913]
 texture_filter = 1
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_p1buf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Lower" unique_id=1837348342]
+texture_filter = 1
+position = Vector2(0, 127.50005)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_p1buf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Lower" unique_id=377810078]
+texture_filter = 1
+position = Vector2(0, 255.0001)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_p1buf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Lower" unique_id=1025991360]
+texture_filter = 1
+position = Vector2(0, 382.50018)
+scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_p1buf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lower" unique_id=1849436251]
-position = Vector2(0, -1.7881401e-06)
+position = Vector2(0, 189.37509)
 shape = SubResource("RectangleShape2D_hnit7")
+
+[connection signal="body_entered" from="Upper" to="." method="_on_upper_body_entered"]
+[connection signal="body_entered" from="Lower" to="." method="_on_upper_body_entered"]
