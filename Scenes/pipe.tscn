@@ -14,7 +14,7 @@ size = Vector2(45.369736, 528.75024)
 script = ExtResource("1_hnit7")
 
 [node name="Upper" type="Area2D" parent="." unique_id=2107738169]
-position = Vector2(0, -150)
+position = Vector2(0, -75)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Upper" unique_id=192697183]
