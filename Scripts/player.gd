@@ -1,55 +1,29 @@
 extends CharacterBody2D
-var speed:int = 250
+var speed:int = 150
 var gravity:int = 10
-var has_pipes_to_dogde:bool = false
+var jumped = false
 func _ready() -> void:
 	velocity =  Vector2.UP*speed
 
-
-
 func jump():
 	velocity.y = -speed
-
-
+	jumped = true
 
 func _physics_process(_delta: float) -> void:
+	jumped = false
 	velocity.y += gravity
-	
-	if $RayCast2D.is_colliding():
-		has_pipes_to_dogde = true
-		if $RayCast2D.get_collider().collision_layer == 4:
-			jump()
-			has_pipes_to_dogde = false
-	
-	if $RayCast2D2.is_colliding(): 
-		has_pipes_to_dogde = true
-
-	if $RayCast2D3.is_colliding() and not $RayCast2D2.is_colliding():
+	if $front.is_colliding() and ($front.get_collider().collision_layer == 3):
+		print(1)
 		jump()
-
-	if $RayCast2D3.is_colliding() and $RayCast2D2.is_colliding():
-		has_pipes_to_dogde = true
-
-	if not $RayCast2D.is_colliding() and not $RayCast2D2.is_colliding() and not $RayCast2D3.is_colliding():
-		has_pipes_to_dogde = false
-
-	if $RayCast2D4.is_colliding():
+	if $"front-above".is_colliding() and (not jumped) and ($"front-above".get_collider().collision_layer == 3):
+		print(2)
 		jump()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	if(global_position.y >= randi_range(350,450)) and not has_pipes_to_dogde:
+	if $"front-below".is_colliding() and (not jumped) and ($"front-below".get_collider().collision_layer == 3):
+		print(3)
+		jump()	
+	if $below.is_colliding():
+		jump()
+	if(global_position.y >= randi_range(350,450)) and not jumped:
 		jump()
 
 	move_and_slide()

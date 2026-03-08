@@ -69,22 +69,22 @@ zoom = Vector2(5, 5)
 limit_top = 450
 limit_bottom = 250
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=304648439]
+[node name="front" type="RayCast2D" parent="." unique_id=304648439]
 target_position = Vector2(150, 0)
 collision_mask = 6
 collide_with_areas = true
 
-[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=251978010]
+[node name="front-above" type="RayCast2D" parent="." unique_id=251978010]
 target_position = Vector2(50, -50)
 collision_mask = 6
 collide_with_areas = true
 
-[node name="RayCast2D3" type="RayCast2D" parent="." unique_id=140456417]
+[node name="front-below" type="RayCast2D" parent="." unique_id=140456417]
 target_position = Vector2(50, 50)
 collision_mask = 6
 collide_with_areas = true
 
-[node name="RayCast2D4" type="RayCast2D" parent="." unique_id=580898188]
+[node name="below" type="RayCast2D" parent="." unique_id=580898188]
 target_position = Vector2(0, 30)
 collision_mask = 6
 collide_with_areas = true
