@@ -15,6 +15,7 @@ script = ExtResource("1_hnit7")
 
 [node name="Upper" type="Area2D" parent="." unique_id=2107738169]
 position = Vector2(0, -75)
+scale = Vector2(0.5, 0.5)
 collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Upper" unique_id=192697183]
@@ -45,7 +46,8 @@ position = Vector2(0, -191.25009)
 shape = SubResource("RectangleShape2D_hnit7")
 
 [node name="Lower" type="Area2D" parent="." unique_id=1038536352]
-position = Vector2(0, 150)
+position = Vector2(0, 75)
+scale = Vector2(0.5, 0.5)
 collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Lower" unique_id=1616294913]

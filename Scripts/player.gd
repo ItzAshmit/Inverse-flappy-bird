@@ -21,15 +21,24 @@ func _physics_process(_delta: float) -> void:
 			jump()
 			has_pipes_to_dogde = false
 	
-	if $RayCast2D2.is_colliding():
-		has_pipes_to_dogde = true
+	# if $RayCast2D2.is_colliding(): 
+	# 	if $RayCast2D.get_collider():
+	# 		if $RayCast2D.get_collider().collision_layer == 2:
+	# 			has_pipes_to_dogde = true
 
 	if $RayCast2D3.is_colliding() and not $RayCast2D2.is_colliding():
 		jump()
 
+	if $RayCast2D3.is_colliding() and $RayCast2D2.is_colliding():
+		has_pipes_to_dogde = true
 
-	if($Timer.time_left==0) and not has_pipes_to_dogde:
+	if not $RayCast2D.is_colliding() and not $RayCast2D2.is_colliding() and not $RayCast2D3.is_colliding():
+		has_pipes_to_dogde = false
+
+	if $RayCast2D4.is_colliding():
 		jump()
-		$Timer.start()
+
+	if(global_position.y >= randi_range(350,450)) and not has_pipes_to_dogde:
+		jump()
 
 	move_and_slide()
