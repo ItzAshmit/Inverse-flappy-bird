@@ -8,3 +8,6 @@ func _physics_process(_delta: float) -> void:
 		velocity.y = -speed
 	velocity.y += gravity
 	move_and_slide()
+	if($Timer.time_left==0): 
+		velocity.y = -speed
+		$Timer.start()
