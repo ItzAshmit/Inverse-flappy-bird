@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/player.tscn" id="1_l756w"]
 [ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
 [ext_resource type="Texture2D" uid="uid://bude5cpw7e2wd" path="res://Assets/Flappy Bird Assets/Background/Background1.png" id="2_0e3vx"]
+[ext_resource type="Script" uid="uid://bihwmakb88jb2" path="res://Scripts/label.gd" id="4_6j5ir"]
 
 [node name="MainGame" type="Node2D" unique_id=1605266567]
 script = ExtResource("1_pu3va")
@@ -24,8 +25,13 @@ position = Vector2(300, 354)
 
 [node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
 wait_time = 3.5
-autostart = true
+one_shot = true
 
 [node name="pipes" type="Node" parent="." unique_id=966294912]
 
-[connection signal="timeout" from="Timer/PipeSpawner" to="." method="pipe_spawner"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=757289853]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1370715056]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("4_6j5ir")
