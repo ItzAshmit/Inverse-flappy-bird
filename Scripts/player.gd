@@ -13,7 +13,7 @@ func jump():
 func _physics_process(_delta: float) -> void:
 	jumped = false
 	velocity.y += gravity
-	if (not $front.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
+	if (not $front.is_colliding()) and (not $above.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
 		goingdown = false
 	if $front.is_colliding() and ($front.get_collider().collision_layer == 4):
 		goingdown = false
@@ -22,6 +22,8 @@ func _physics_process(_delta: float) -> void:
 		goingdown = true
 	if $below.is_colliding():
 		jump()
+	if $above.is_colliding():
+		goingdown=true
 	if $front.is_colliding() and ($front.get_collider().collision_layer == 2):
 		goingdown=true
 	if $"front-below".is_colliding() and (not $front.is_colliding()):

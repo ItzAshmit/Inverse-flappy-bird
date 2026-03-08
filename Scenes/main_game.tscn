@@ -24,7 +24,6 @@ position = Vector2(300, 354)
 [node name="Timer" type="Node2D" parent="." unique_id=99128431]
 
 [node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
-wait_time = 3.5
 one_shot = true
 
 [node name="pipes" type="Node" parent="." unique_id=966294912]
