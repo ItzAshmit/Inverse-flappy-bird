@@ -36,6 +36,19 @@ func _physics_process(_delta: float) -> void:
 	if $RayCast2D4.is_colliding():
 		jump()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 	if(global_position.y >= randi_range(350,450)) and not has_pipes_to_dogde:
 		jump()
 
