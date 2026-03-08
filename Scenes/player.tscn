@@ -48,6 +48,7 @@ _data = {
 }
 
 [node name="player" type="CharacterBody2D" unique_id=1757279582]
+collision_mask = 7
 script = ExtResource("1_v0iea")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=548325269]
@@ -69,8 +70,11 @@ limit_top = 450
 limit_bottom = 250
 
 [node name="Timer" type="Timer" parent="." unique_id=1993430083]
-wait_time = 0.8
+wait_time = 0.81
 one_shot = true
 autostart = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=304648439]
+target_position = Vector2(104, 0)
+collision_mask = 6
+collide_with_areas = true

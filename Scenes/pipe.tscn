@@ -16,6 +16,7 @@ script = ExtResource("1_hnit7")
 [node name="Upper" type="Area2D" parent="." unique_id=2107738169]
 position = Vector2(0, -40)
 scale = Vector2(-0.30857575, 0.26666656)
+collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Upper" unique_id=192697183]
 texture_filter = 1
@@ -47,6 +48,7 @@ shape = SubResource("RectangleShape2D_hnit7")
 [node name="Lower" type="Area2D" parent="." unique_id=1038536352]
 position = Vector2(0, 40)
 scale = Vector2(-0.30857575, 0.26666656)
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="Lower" unique_id=1616294913]
 texture_filter = 1
