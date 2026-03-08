@@ -70,11 +70,11 @@ limit_top = 450
 limit_bottom = 250
 
 [node name="Timer" type="Timer" parent="." unique_id=1993430083]
-wait_time = 0.81
+wait_time = 0.82
 one_shot = true
 autostart = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=304648439]
-target_position = Vector2(104, 0)
+target_position = Vector2(139, 0)
 collision_mask = 6
 collide_with_areas = true

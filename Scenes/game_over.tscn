@@ -1,3 +1,54 @@
 [gd_scene format=3 uid="uid://6nb0hsbl8xp6"]
 
-[node name="Game_over" type="Node2D" unique_id=1752647516]
+[ext_resource type="Script" uid="uid://da3pis5jsyuu3" path="res://Scenes/game_over.gd" id="1_ojehl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8fo1c"]
+font_size = 128
+outline_size = 10
+
+[node name="Game_over" type="Control" unique_id=1217476244]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ojehl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=595518043]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=840121333]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_8fo1c")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1660255817]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -92.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "REMATCH"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
