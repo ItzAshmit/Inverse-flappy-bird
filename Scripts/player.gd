@@ -16,6 +16,7 @@ func _physics_process(_delta: float) -> void:
 	if (not $front.is_colliding()) and (not $above.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
 		goingdown = false
 	if $front.is_colliding() and ($front.get_collider().collision_layer == 4):
+		print($front.get_collider().collision_layer)
 		goingdown = false
 		jump()
 	if $"front-above".is_colliding() and (not $front.is_colliding()):
