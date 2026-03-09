@@ -45,6 +45,7 @@ position = Vector2(380, 464)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Down" unique_id=2050395866]
+position = Vector2(5, -28)
 shape = SubResource("RectangleShape2D_6j5ir")
 
 [node name="Up" type="StaticBody2D" parent="Border" unique_id=476749661]

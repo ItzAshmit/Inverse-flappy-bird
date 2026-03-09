@@ -70,7 +70,7 @@ limit_top = 450
 limit_bottom = 250
 
 [node name="front" type="RayCast2D" parent="." unique_id=304648439]
-target_position = Vector2(150, 0)
+target_position = Vector2(75, 0)
 collision_mask = 14
 collide_with_areas = true
 
@@ -80,19 +80,19 @@ collision_mask = 14
 collide_with_areas = true
 
 [node name="front-below" type="RayCast2D" parent="." unique_id=140456417]
-target_position = Vector2(40, 30)
+target_position = Vector2(30, 20)
 collision_mask = 14
 collide_with_areas = true
 
 [node name="below" type="RayCast2D" parent="." unique_id=580898188]
 position = Vector2(-4, 0)
-target_position = Vector2(0, 30)
+target_position = Vector2(0, 20)
 collision_mask = 6
 collide_with_areas = true
 
 [node name="below2" type="RayCast2D" parent="." unique_id=1138045831]
 position = Vector2(4, 0)
-target_position = Vector2(0, 30)
+target_position = Vector2(0, 20)
 collision_mask = 14
 collide_with_areas = true
 
