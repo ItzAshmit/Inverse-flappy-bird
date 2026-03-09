@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bude5cpw7e2wd" path="res://Assets/Flappy Bird Assets/Background/Background1.png" id="2_0e3vx"]
 [ext_resource type="Script" uid="uid://bihwmakb88jb2" path="res://Scripts/label.gd" id="4_6j5ir"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
+size = Vector2(242, 11)
+
 [node name="MainGame" type="Node2D" unique_id=1605266567]
 script = ExtResource("1_pu3va")
 
@@ -34,3 +37,19 @@ one_shot = true
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("4_6j5ir")
+
+[node name="Border" type="Node2D" parent="." unique_id=666152375]
+
+[node name="Down" type="StaticBody2D" parent="Border" unique_id=1227874653]
+position = Vector2(380, 464)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Down" unique_id=2050395866]
+shape = SubResource("RectangleShape2D_6j5ir")
+
+[node name="Up" type="StaticBody2D" parent="Border" unique_id=476749661]
+position = Vector2(380, 272)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Up" unique_id=714834622]
+shape = SubResource("RectangleShape2D_6j5ir")

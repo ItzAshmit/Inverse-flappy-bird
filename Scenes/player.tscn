@@ -48,7 +48,7 @@ _data = {
 }
 
 [node name="player" type="CharacterBody2D" unique_id=1757279582]
-collision_mask = 7
+collision_mask = 15
 script = ExtResource("1_v0iea")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=548325269]
@@ -71,25 +71,39 @@ limit_bottom = 250
 
 [node name="front" type="RayCast2D" parent="." unique_id=304648439]
 target_position = Vector2(150, 0)
-collision_mask = 6
+collision_mask = 14
 collide_with_areas = true
 
 [node name="front-above" type="RayCast2D" parent="." unique_id=251978010]
-target_position = Vector2(50, -50)
-collision_mask = 6
+target_position = Vector2(40, -30)
+collision_mask = 14
 collide_with_areas = true
 
 [node name="front-below" type="RayCast2D" parent="." unique_id=140456417]
-target_position = Vector2(50, 50)
-collision_mask = 6
+target_position = Vector2(40, 30)
+collision_mask = 14
 collide_with_areas = true
 
 [node name="below" type="RayCast2D" parent="." unique_id=580898188]
+position = Vector2(-4, 0)
 target_position = Vector2(0, 30)
 collision_mask = 6
 collide_with_areas = true
 
+[node name="below2" type="RayCast2D" parent="." unique_id=1138045831]
+position = Vector2(4, 0)
+target_position = Vector2(0, 30)
+collision_mask = 14
+collide_with_areas = true
+
 [node name="above" type="RayCast2D" parent="." unique_id=469731841]
+position = Vector2(-4, 0)
 target_position = Vector2(0, -30)
-collision_mask = 6
+collision_mask = 14
+collide_with_areas = true
+
+[node name="above2" type="RayCast2D" parent="." unique_id=2033643367]
+position = Vector2(4, 0)
+target_position = Vector2(0, -30)
+collision_mask = 14
 collide_with_areas = true

@@ -7,5 +7,11 @@ func _process(delta: float) -> void:
 
 
 
-func _on_upper_body_entered(_body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
+	call_deferred("over")
+func over():
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+
+
+func _on_screen_exited() -> void:
+	queue_free()
