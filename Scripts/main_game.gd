@@ -5,6 +5,7 @@ func pipe_spawner() -> void:
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
 	if pipe.global_position.x< 380: pipe.global_position.x=380
+	if pipe.global_position.x> 440: pipe.global_position.x=440
 	if pipe.global_position.y<310:
 		pipe.get_node("Upper").queue_free()
 		$pipes.add_child(pipe)           

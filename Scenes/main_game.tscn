@@ -2,8 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/player.tscn" id="1_l756w"]
 [ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
-[ext_resource type="Texture2D" uid="uid://bude5cpw7e2wd" path="res://Assets/Flappy Bird Assets/Background/Background1.png" id="2_0e3vx"]
+[ext_resource type="Texture2D" uid="uid://dbf5oomjbomqb" path="res://Assets/Flappy Bird Assets/background1.png" id="2_18r40"]
+[ext_resource type="Texture2D" uid="uid://clv0q67vps27k" path="res://Assets/Flappy Bird Assets/background4.png" id="3_6y7pd"]
 [ext_resource type="Script" uid="uid://bihwmakb88jb2" path="res://Scripts/label.gd" id="4_6j5ir"]
+[ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
+[ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
 size = Vector2(242, 11)
@@ -12,14 +15,44 @@ size = Vector2(242, 11)
 script = ExtResource("1_pu3va")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=996593774]
+scroll_scale = Vector2(0, 0)
 repeat_size = Vector2(256, 0)
-autoscroll = Vector2(-20, 0)
+autoscroll = Vector2(-2, 0)
 repeat_times = 3
 
 [node name="Background1" type="Sprite2D" parent="Parallax2D" unique_id=921126319]
 texture_filter = 1
 position = Vector2(411, 314)
-texture = ExtResource("2_0e3vx")
+texture = ExtResource("2_18r40")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=835574643]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-5, 0)
+repeat_times = 3
+
+[node name="Background2" type="Sprite2D" parent="Parallax2D2" unique_id=432487150]
+position = Vector2(411, 314)
+texture = ExtResource("3_6y7pd")
+
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=804164733]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 3
+
+[node name="Background3" type="Sprite2D" parent="Parallax2D3" unique_id=1412827050]
+position = Vector2(411, 314)
+texture = ExtResource("4_73nn6")
+
+[node name="Parallax2D4" type="Parallax2D" parent="." unique_id=405569709]
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 3
+
+[node name="Background4" type="Sprite2D" parent="Parallax2D4" unique_id=91330307]
+position = Vector2(411, 314)
+texture = ExtResource("5_r0mdn")
 
 [node name="player" parent="." unique_id=1757279582 instance=ExtResource("1_l756w")]
 position = Vector2(300, 354)
@@ -38,12 +71,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("4_6j5ir")
 
-[node name="Border" type="Node2D" parent="." unique_id=666152375]
-
-[node name="Down" type="StaticBody2D" parent="Border" unique_id=1227874653]
+[node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
 position = Vector2(380, 464)
 collision_layer = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border/Down" unique_id=2050395866]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
 position = Vector2(5, -26)
 shape = SubResource("RectangleShape2D_6j5ir")
