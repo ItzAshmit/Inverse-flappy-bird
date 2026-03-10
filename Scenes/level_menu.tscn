@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://ccx2lshl1jcbo"]
 
 [ext_resource type="Script" uid="uid://47k0mklfq8ft" path="res://Scripts/level_menu.gd" id="1_ymr0u"]
+[ext_resource type="Texture2D" uid="uid://dsunbfl6ob0n4" path="res://Assets/Flappy Bird Assets/level1.png" id="2_ymr0u"]
+[ext_resource type="Texture2D" uid="uid://d08bswfi0awxb" path="res://Assets/Flappy Bird Assets/level2.png" id="3_iio8b"]
+[ext_resource type="Texture2D" uid="uid://bm656yojvnkm1" path="res://Assets/Flappy Bird Assets/level3.png" id="4_cjntd"]
+[ext_resource type="Texture2D" uid="uid://c4cuyl3d45vwv" path="res://Assets/Flappy Bird Assets/level4.png" id="5_dsbtr"]
+[ext_resource type="Texture2D" uid="uid://b0dlvdm5frnqp" path="res://Assets/Flappy Bird Assets/level5.png" id="6_3ie8g"]
+[ext_resource type="Texture2D" uid="uid://d2eb8gvciyao7" path="res://Assets/Flappy Bird Assets/level6.png" id="7_iwiyi"]
+[ext_resource type="Texture2D" uid="uid://bdk6i0tsjwjmu" path="res://Assets/Flappy Bird Assets/level7.png" id="8_qowhx"]
+[ext_resource type="Texture2D" uid="uid://7m50dfhww2ol" path="res://Assets/Flappy Bird Assets/level8.png" id="9_m8bk1"]
+[ext_resource type="Texture2D" uid="uid://blw5uo1ltqfcw" path="res://Assets/Flappy Bird Assets/level9.png" id="10_papg5"]
 
 [node name="LevelMenu" type="Control" unique_id=958304429]
 layout_mode = 3
@@ -10,6 +19,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ymr0u")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1119497222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(3.080368e-06, 0.7824721, 0.7833063, 1)
 
 [node name="Levels" type="GridContainer" parent="." unique_id=2062547666]
 layout_mode = 1
@@ -22,164 +40,363 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 5
 
-[node name="Button" type="Button" parent="Levels" unique_id=1210298016]
+[node name="Level1" type="TextureRect" parent="Levels" unique_id=310745003]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("2_ymr0u")
+
+[node name="Button" type="Button" parent="Levels/Level1" unique_id=1210298016]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button2" type="Button" parent="Levels" unique_id=184383564]
+[node name="Level2" type="TextureRect" parent="Levels" unique_id=950744883]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "2
+texture = ExtResource("3_iio8b")
+
+[node name="Button" type="Button" parent="Levels/Level2" unique_id=2117539678]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
 
 "
 
-[node name="Button3" type="Button" parent="Levels" unique_id=818223655]
+[node name="Level3" type="TextureRect" parent="Levels" unique_id=355743202]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "3
+texture = ExtResource("4_cjntd")
+
+[node name="Button" type="Button" parent="Levels/Level3" unique_id=1314961546]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button4" type="Button" parent="Levels" unique_id=951725056]
+[node name="Level4" type="TextureRect" parent="Levels" unique_id=594525954]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "4
+texture = ExtResource("5_dsbtr")
+
+[node name="Button" type="Button" parent="Levels/Level4" unique_id=910108128]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button5" type="Button" parent="Levels" unique_id=75080073]
+[node name="Level5" type="TextureRect" parent="Levels" unique_id=1879640241]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "5
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level5" unique_id=345591824]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button6" type="Button" parent="Levels" unique_id=2016460761]
+[node name="Level6" type="TextureRect" parent="Levels" unique_id=68837157]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("7_iwiyi")
+
+[node name="Button" type="Button" parent="Levels/Level6" unique_id=1481732902]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button7" type="Button" parent="Levels" unique_id=998831940]
+[node name="Level7" type="TextureRect" parent="Levels" unique_id=2088493947]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("8_qowhx")
+
+[node name="Button" type="Button" parent="Levels/Level7" unique_id=863420923]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button8" type="Button" parent="Levels" unique_id=667356987]
+[node name="Level8" type="TextureRect" parent="Levels" unique_id=1934081869]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("9_m8bk1")
+
+[node name="Button" type="Button" parent="Levels/Level8" unique_id=1278995905]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button9" type="Button" parent="Levels" unique_id=611037776]
+[node name="Level9" type="TextureRect" parent="Levels" unique_id=167257185]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("10_papg5")
+
+[node name="Button" type="Button" parent="Levels/Level9" unique_id=1132429367]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button10" type="Button" parent="Levels" unique_id=13134305]
+[node name="Level10" type="TextureRect" parent="Levels" unique_id=1921723614]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level10" unique_id=1872033099]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button11" type="Button" parent="Levels" unique_id=1970104042]
+[node name="Level11" type="TextureRect" parent="Levels" unique_id=1855319372]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level11" unique_id=1213514249]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button12" type="Button" parent="Levels" unique_id=702778181]
+[node name="Level12" type="TextureRect" parent="Levels" unique_id=1863812678]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level12" unique_id=1743624772]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button13" type="Button" parent="Levels" unique_id=119143679]
+[node name="Level13" type="TextureRect" parent="Levels" unique_id=1293347557]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level13" unique_id=226349539]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button14" type="Button" parent="Levels" unique_id=1915883650]
+[node name="Level14" type="TextureRect" parent="Levels" unique_id=2092260997]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level14" unique_id=1763261403]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button15" type="Button" parent="Levels" unique_id=609679957]
+[node name="Level15" type="TextureRect" parent="Levels" unique_id=2144372032]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level15" unique_id=470688815]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button16" type="Button" parent="Levels" unique_id=30423768]
+[node name="Level16" type="TextureRect" parent="Levels" unique_id=1366165972]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level16" unique_id=1698712701]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button17" type="Button" parent="Levels" unique_id=1113992506]
+[node name="Level17" type="TextureRect" parent="Levels" unique_id=1599019165]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level17" unique_id=1306241786]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button18" type="Button" parent="Levels" unique_id=51623163]
+[node name="Level18" type="TextureRect" parent="Levels" unique_id=1155164098]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level18" unique_id=546249914]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button19" type="Button" parent="Levels" unique_id=2096603394]
+[node name="Level19" type="TextureRect" parent="Levels" unique_id=1886697977]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level19" unique_id=1312979171]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[node name="Button20" type="Button" parent="Levels" unique_id=1645020252]
+[node name="Level20" type="TextureRect" parent="Levels" unique_id=1468431795]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "1
+texture = ExtResource("6_3ie8g")
+
+[node name="Button" type="Button" parent="Levels/Level20" unique_id=147825973]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 189.0
+offset_bottom = 110.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+
 "
 
-[connection signal="pressed" from="Levels/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button3" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button4" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button5" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button6" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button7" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button8" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button9" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button10" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button11" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button12" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button13" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button14" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button15" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button16" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button17" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button18" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button19" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Button20" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level3/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level4/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level5/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level6/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level7/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level8/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level9/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level10/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level11/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level12/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level13/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level14/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level15/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level16/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level17/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level18/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level19/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Level20/Button" to="." method="_on_button_pressed"]
