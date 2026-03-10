@@ -32,15 +32,18 @@ repeat_size = Vector2(256, 0)
 autoscroll = Vector2(-2, 0)
 repeat_times = 3
 
+[node name="PointLight2D" type="PointLight2D" parent="Parallax2D" unique_id=1049038600]
+position = Vector2(667, 311)
+scale = Vector2(5, 5)
+color = Color(0.88235295, 0.4117647, 0.60784316, 1)
+energy = 0.8
+texture = SubResource("GradientTexture2D_6y7pd")
+texture_scale = 0.2
+
 [node name="Background1" type="Sprite2D" parent="Parallax2D" unique_id=921126319]
 texture_filter = 1
 position = Vector2(411, 314)
 texture = ExtResource("2_18r40")
-
-[node name="PointLight2D" type="PointLight2D" parent="Parallax2D" unique_id=1049038600]
-position = Vector2(722, 275.00003)
-scale = Vector2(5, 5)
-texture = SubResource("GradientTexture2D_6y7pd")
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=835574643]
 scroll_scale = Vector2(0, 0)
