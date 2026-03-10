@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dwiv5yugy1vkm"]
+
+[ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/bird.tscn" id="1_jo8hp"]
+[ext_resource type="Script" uid="uid://d4le4pfukhixo" path="res://Scripts/pheonix.gd" id="2_jfj45"]
+
+[node name="Pheonix" unique_id=1757279582 instance=ExtResource("1_jo8hp")]
+script = ExtResource("2_jfj45")
+health = 100

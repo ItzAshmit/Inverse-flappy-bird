@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://br7dxfo4bl2nb"]
 
-[ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/player.tscn" id="1_l756w"]
+[ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/bird.tscn" id="1_l756w"]
 [ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
 [ext_resource type="Texture2D" uid="uid://dbf5oomjbomqb" path="res://Assets/Flappy Bird Assets/background1.png" id="2_18r40"]
 [ext_resource type="Texture2D" uid="uid://clv0q67vps27k" path="res://Assets/Flappy Bird Assets/background4.png" id="3_6y7pd"]
@@ -74,9 +74,6 @@ repeat_times = 3
 position = Vector2(411, 314)
 texture = ExtResource("5_r0mdn")
 
-[node name="player" parent="." unique_id=1757279582 instance=ExtResource("1_l756w")]
-position = Vector2(300, 354)
-
 [node name="Timer" type="Node2D" parent="." unique_id=99128431]
 
 [node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
@@ -98,3 +95,7 @@ collision_layer = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
 position = Vector2(5, -26)
 shape = SubResource("RectangleShape2D_6j5ir")
+
+[node name="Bird" parent="." unique_id=1757279582 instance=ExtResource("1_l756w")]
+position = Vector2(300, 354)
+health = 100
