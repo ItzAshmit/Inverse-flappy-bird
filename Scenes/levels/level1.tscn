@@ -38,7 +38,7 @@ repeat_times = 3
 position = Vector2(667, 311)
 scale = Vector2(5, 5)
 color = Color(0.88235295, 0.4117647, 0.60784316, 1)
-energy = 0.8
+energy = 1.5
 texture = SubResource("GradientTexture2D_6y7pd")
 texture_scale = 0.2
 
