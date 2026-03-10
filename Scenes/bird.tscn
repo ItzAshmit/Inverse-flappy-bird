@@ -15,9 +15,9 @@ script = ExtResource("1_v0iea")
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1505559911]
-position = Vector2(156, -39)
-zoom = Vector2(3, 3)
-limit_top = 490
+position = Vector2(80, -40)
+zoom = Vector2(5, 5)
+limit_top = 450
 limit_bottom = 250
 
 [node name="front" type="RayCast2D" parent="." unique_id=304648439]
