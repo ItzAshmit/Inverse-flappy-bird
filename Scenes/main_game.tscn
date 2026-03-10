@@ -11,7 +11,7 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
 
 [sub_resource type="Gradient" id="Gradient_18r40"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1, 0.7529412, 0.047058824, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_6y7pd"]
 gradient = SubResource("Gradient_18r40")
@@ -22,34 +22,55 @@ fill_to = Vector2(0.78695655, 0.20869565)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
 size = Vector2(242, 11)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18r40"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y7pd"]
+bg_color = Color(1, 0.6, 0, 0.19607843)
+
 [node name="MainGame" type="Node2D" unique_id=1605266567]
 script = ExtResource("1_pu3va")
+metadata/_edit_horizontal_guides_ = [211.0]
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=996593774]
 material = SubResource("CanvasItemMaterial_18r40")
 scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(57, 55)
 repeat_size = Vector2(256, 0)
 autoscroll = Vector2(-2, 0)
-repeat_times = 3
-
-[node name="PointLight2D" type="PointLight2D" parent="Parallax2D" unique_id=1049038600]
-position = Vector2(667, 311)
-scale = Vector2(5, 5)
-color = Color(0.88235295, 0.4117647, 0.60784316, 1)
-energy = 0.8
-texture = SubResource("GradientTexture2D_6y7pd")
-texture_scale = 0.2
+repeat_times = 4
 
 [node name="Background1" type="Sprite2D" parent="Parallax2D" unique_id=921126319]
 texture_filter = 1
 position = Vector2(411, 314)
 texture = ExtResource("2_18r40")
 
+[node name="PointLight2D" type="PointLight2D" parent="Parallax2D" unique_id=1049038600]
+position = Vector2(666, 311)
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_6y7pd")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Parallax2D" unique_id=1663273561]
+position = Vector2(923, 309)
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_6y7pd")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Parallax2D" unique_id=1377583813]
+position = Vector2(411, 308)
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_6y7pd")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Parallax2D" unique_id=57277718]
+position = Vector2(154, 310)
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_6y7pd")
+
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=835574643]
 scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(57, 55)
 repeat_size = Vector2(256, 0)
 autoscroll = Vector2(-5, 0)
-repeat_times = 3
+repeat_times = 4
 
 [node name="Background2" type="Sprite2D" parent="Parallax2D2" unique_id=432487150]
 position = Vector2(411, 314)
@@ -57,18 +78,20 @@ texture = ExtResource("3_6y7pd")
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=804164733]
 scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(57, 55)
 repeat_size = Vector2(256, 0)
 autoscroll = Vector2(-10, 0)
-repeat_times = 3
+repeat_times = 4
 
 [node name="Background3" type="Sprite2D" parent="Parallax2D3" unique_id=1412827050]
 position = Vector2(411, 314)
 texture = ExtResource("4_73nn6")
 
 [node name="Parallax2D4" type="Parallax2D" parent="." unique_id=405569709]
+scroll_offset = Vector2(57, 55)
 repeat_size = Vector2(256, 0)
 autoscroll = Vector2(-20, 0)
-repeat_times = 3
+repeat_times = 4
 
 [node name="Background4" type="Sprite2D" parent="Parallax2D4" unique_id=91330307]
 position = Vector2(411, 314)
@@ -77,6 +100,7 @@ texture = ExtResource("5_r0mdn")
 [node name="Timer" type="Node2D" parent="." unique_id=99128431]
 
 [node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
+wait_time = 2.0
 one_shot = true
 
 [node name="pipes" type="Node" parent="." unique_id=966294912]
@@ -89,13 +113,39 @@ offset_bottom = 23.0
 script = ExtResource("4_6j5ir")
 
 [node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
-position = Vector2(380, 464)
+position = Vector2(456, 518)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
 position = Vector2(5, -26)
 shape = SubResource("RectangleShape2D_6j5ir")
 
+<<<<<<< HEAD
 [node name="Bird" parent="." unique_id=1757279582 instance=ExtResource("1_l756w")]
 position = Vector2(300, 354)
 health = 100
+=======
+[node name="ColorRect" type="ColorRect" parent="." unique_id=157451270]
+offset_left = 183.0
+offset_top = 218.0
+offset_right = 758.0
+offset_bottom = 526.0
+color = Color(1, 1, 0.3529412, 0.078431375)
+
+[node name="Button" type="Button" parent="." unique_id=425019453]
+offset_left = 560.0
+offset_top = 214.0
+offset_right = 672.0
+offset_bottom = 504.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6y7pd")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_18r40")
+theme_override_styles/focus = SubResource("StyleBoxFlat_18r40")
+>>>>>>> d812e2bf31dfa6dd688f9fe040269a18aceb45c3
