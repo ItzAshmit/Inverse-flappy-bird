@@ -129,6 +129,11 @@ shape = SubResource("RectangleShape2D_hnit7")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=639065489]
 
+[node name="Timer" type="Timer" parent="." unique_id=839380944]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="body_entered" from="Upper" to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Lower" to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 class_name Bird
-@export var health: int
+@export var health: float = 100
 var speed:int = 150
 var gravity:int = 10
 var jumped = false

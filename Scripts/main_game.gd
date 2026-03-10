@@ -22,3 +22,6 @@ func _input(event):
 	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
 		$Timer/PipeSpawner.start()
 		pipe_spawner()
+
+func _process(_delta: float) -> void:
+	$CanvasLayer/health/healthline.scale.x = $Bird.health/100
