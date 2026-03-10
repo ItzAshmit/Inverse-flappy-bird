@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="inverse_flappy_bird"
-run/main_scene="uid://br7dxfo4bl2nb"
+run/main_scene="uid://prveo4rtfbyf"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

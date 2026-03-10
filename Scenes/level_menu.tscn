@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ccx2lshl1jcbo"]
 
-[ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="1_c64aj"]
+[ext_resource type="Script" uid="uid://47k0mklfq8ft" path="res://Scripts/level_menu.gd" id="1_ymr0u"]
 
 [node name="LevelMenu" type="Control" unique_id=958304429]
 layout_mode = 3
@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ymr0u")
 
 [node name="Levels" type="GridContainer" parent="." unique_id=2062547666]
 layout_mode = 1
@@ -21,158 +22,164 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 5
 
-[node name="TextureRect" type="TextureRect" parent="Levels" unique_id=1747739553]
+[node name="Button" type="Button" parent="Levels" unique_id=1210298016]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect2" type="TextureRect" parent="Levels" unique_id=1392285526]
+[node name="Button2" type="Button" parent="Levels" unique_id=184383564]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "2
 
-[node name="TextureRect3" type="TextureRect" parent="Levels" unique_id=1815850175]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+"
 
-[node name="TextureRect4" type="TextureRect" parent="Levels" unique_id=1847237647]
+[node name="Button3" type="Button" parent="Levels" unique_id=818223655]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "3
+"
 
-[node name="TextureRect5" type="TextureRect" parent="Levels" unique_id=1914728318]
+[node name="Button4" type="Button" parent="Levels" unique_id=951725056]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "4
+"
 
-[node name="TextureRect6" type="TextureRect" parent="Levels" unique_id=2141052052]
+[node name="Button5" type="Button" parent="Levels" unique_id=75080073]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "5
+"
 
-[node name="TextureRect7" type="TextureRect" parent="Levels" unique_id=336444236]
+[node name="Button6" type="Button" parent="Levels" unique_id=2016460761]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect8" type="TextureRect" parent="Levels" unique_id=1975248012]
+[node name="Button7" type="Button" parent="Levels" unique_id=998831940]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect9" type="TextureRect" parent="Levels" unique_id=857835856]
+[node name="Button8" type="Button" parent="Levels" unique_id=667356987]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect10" type="TextureRect" parent="Levels" unique_id=533284722]
+[node name="Button9" type="Button" parent="Levels" unique_id=611037776]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect11" type="TextureRect" parent="Levels" unique_id=937884224]
+[node name="Button10" type="Button" parent="Levels" unique_id=13134305]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect12" type="TextureRect" parent="Levels" unique_id=1032802720]
+[node name="Button11" type="Button" parent="Levels" unique_id=1970104042]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect13" type="TextureRect" parent="Levels" unique_id=1269252818]
+[node name="Button12" type="Button" parent="Levels" unique_id=702778181]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect14" type="TextureRect" parent="Levels" unique_id=1144535359]
+[node name="Button13" type="Button" parent="Levels" unique_id=119143679]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect15" type="TextureRect" parent="Levels" unique_id=1282326117]
+[node name="Button14" type="Button" parent="Levels" unique_id=1915883650]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect16" type="TextureRect" parent="Levels" unique_id=583171426]
+[node name="Button15" type="Button" parent="Levels" unique_id=609679957]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect17" type="TextureRect" parent="Levels" unique_id=1400955152]
+[node name="Button16" type="Button" parent="Levels" unique_id=30423768]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect18" type="TextureRect" parent="Levels" unique_id=1312159329]
+[node name="Button17" type="Button" parent="Levels" unique_id=1113992506]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect19" type="TextureRect" parent="Levels" unique_id=900809461]
+[node name="Button18" type="Button" parent="Levels" unique_id=51623163]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect20" type="TextureRect" parent="Levels" unique_id=1676082410]
+[node name="Button19" type="Button" parent="Levels" unique_id=2096603394]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect21" type="TextureRect" parent="Levels" unique_id=1583726070]
+[node name="Button20" type="Button" parent="Levels" unique_id=1645020252]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+text = "1
+"
 
-[node name="TextureRect22" type="TextureRect" parent="Levels" unique_id=607689945]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
-
-[node name="TextureRect23" type="TextureRect" parent="Levels" unique_id=918893859]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
-
-[node name="TextureRect24" type="TextureRect" parent="Levels" unique_id=1572802709]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
-
-[node name="TextureRect25" type="TextureRect" parent="Levels" unique_id=1321838818]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
-
-[node name="TextureRect26" type="TextureRect" parent="Levels" unique_id=2127121922]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-texture = ExtResource("1_c64aj")
+[connection signal="pressed" from="Levels/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button5" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button6" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button7" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button8" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button9" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button10" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button11" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button12" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button13" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button14" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button15" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button16" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button17" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button18" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button19" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/Button20" to="." method="_on_button_pressed"]
