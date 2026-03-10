@@ -8,6 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
 [ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
+
+[sub_resource type="Gradient" id="Gradient_18r40"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6y7pd"]
+gradient = SubResource("Gradient_18r40")
+fill = 1
+fill_from = Vector2(0.4826087, 0.50869566)
+fill_to = Vector2(0.78695655, 0.20869565)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
 size = Vector2(242, 11)
 
@@ -15,6 +26,7 @@ size = Vector2(242, 11)
 script = ExtResource("1_pu3va")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=996593774]
+material = SubResource("CanvasItemMaterial_18r40")
 scroll_scale = Vector2(0, 0)
 repeat_size = Vector2(256, 0)
 autoscroll = Vector2(-2, 0)
@@ -24,6 +36,11 @@ repeat_times = 3
 texture_filter = 1
 position = Vector2(411, 314)
 texture = ExtResource("2_18r40")
+
+[node name="PointLight2D" type="PointLight2D" parent="Parallax2D" unique_id=1049038600]
+position = Vector2(722, 275.00003)
+scale = Vector2(5, 5)
+texture = SubResource("GradientTexture2D_6y7pd")
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=835574643]
 scroll_scale = Vector2(0, 0)
