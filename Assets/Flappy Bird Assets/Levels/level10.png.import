@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blw5uo1ltqfcw"
-path="res://.godot/imported/level9.png-06a328e314b66e0e6176bc6e4156d40b.ctex"
+uid="uid://c8wwkw1dy2poe"
+path="res://.godot/imported/level10.png-a849ef656d4b3001796ba184e015c86b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Flappy Bird Assets/level9.png"
-dest_files=["res://.godot/imported/level9.png-06a328e314b66e0e6176bc6e4156d40b.ctex"]
+source_file="res://Assets/Flappy Bird Assets/Levels/level10.png"
+dest_files=["res://.godot/imported/level10.png-a849ef656d4b3001796ba184e015c86b.ctex"]
 
 [params]
 
