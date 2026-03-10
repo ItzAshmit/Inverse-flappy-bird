@@ -7,6 +7,43 @@
 radius = 6.0
 height = 12.0
 
+[sub_resource type="Animation" id="Animation_mcegt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dnvpi"]
+resource_name = "new_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vl8r2"]
+_data = {
+&"RESET": SubResource("Animation_mcegt"),
+&"new_animation": SubResource("Animation_dnvpi")
+}
+
 [node name="Bird" type="CharacterBody2D" unique_id=1757279582]
 collision_mask = 15
 script = ExtResource("1_v0iea")
@@ -15,7 +52,7 @@ script = ExtResource("1_v0iea")
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1505559911]
-position = Vector2(80, -40)
+position = Vector2(100, -50)
 zoom = Vector2(5, 5)
 limit_top = 450
 limit_bottom = 250
@@ -63,3 +100,6 @@ collide_with_areas = true
 position = Vector2(-2.815, 2.22)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_cvnsp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1114684160]
+libraries/ = SubResource("AnimationLibrary_vl8r2")

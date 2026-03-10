@@ -4,8 +4,9 @@ func _process(delta: float) -> void:
 	position.x -= speed*delta
 
 func _on_body_entered(_body: Node2D) -> void:
-	$"../../Bird".health-=50
-	if($"../../Bird".health==0): 
+	$"../../Bird".health -= 50
+	$"../../Bird".animation.play("new_animation")
+	if($"../../Bird".health == 0): 
 		$Timer.start()
 
 func over():

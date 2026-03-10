@@ -5,6 +5,7 @@ var speed:int = 150
 var gravity:int = 10
 var jumped = false
 var goingdown = false
+@onready var animation:AnimationPlayer = $AnimationPlayer
 var birdup = preload("res://Assets/Flappy Bird Assets/Birdup.png")
 var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 func _ready() -> void:
