@@ -7,6 +7,7 @@ func _on_body_entered(_body: Node2D) -> void:
 	$"../../BirdParent".get_child(0).health -= 50
 	$"../../BirdParent".get_child(0).animation.play("new_animation")
 	if($"../../BirdParent".get_child(0).health == 0):
+		await get_tree().create_timer(0.5).timeout
 		call_deferred("over")
 
 
