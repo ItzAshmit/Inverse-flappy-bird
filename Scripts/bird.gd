@@ -39,7 +39,7 @@ func _physics_process(_delta: float) -> void:
 				goingdown=false
 				jump()
 		else:
-			if ($"../pipes".get_child_count()==0) and (not $front.is_colliding()) and (not $above.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
+			if ($"../../pipes".get_child_count()==0) and (not $front.is_colliding()) and (not $above.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
 				goingdown = false
 			if $"front-above".is_colliding() or $"front-below".is_colliding():
 				if $"front-above".is_colliding():

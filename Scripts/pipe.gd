@@ -4,10 +4,9 @@ func _process(delta: float) -> void:
 	position.x -= speed*delta
 
 func _on_body_entered(_body: Node2D) -> void:
-	$"../../Bird".health -= 50
-	$"../../Bird".animation.play("new_animation")
-	if($"../../Bird".health == 0):
-		print("00000")
+	$"../../BirdParent".get_child(0).health -= 50
+	$"../../BirdParent".get_child(0).animation.play("new_animation")
+	if($"../../BirdParent".get_child(0).health == 0):
 		call_deferred("over")
 
 
@@ -16,6 +15,3 @@ func over():
 
 func _on_screen_exited() -> void:
 	queue_free()
-
-
-

@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://br7dxfo4bl2nb"]
+
+[ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
+[ext_resource type="Texture2D" uid="uid://dbf5oomjbomqb" path="res://Assets/Flappy Bird Assets/background1.png" id="2_18r40"]
+[ext_resource type="Texture2D" uid="uid://clv0q67vps27k" path="res://Assets/Flappy Bird Assets/background4.png" id="3_6y7pd"]
+[ext_resource type="Script" uid="uid://bihwmakb88jb2" path="res://Scripts/label.gd" id="4_6j5ir"]
+[ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
+[ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
+[ext_resource type="Texture2D" uid="uid://5lebhd1j3sxi" path="res://Assets/Flappy Bird Assets/heathbar.png" id="7_73nn6"]
+[ext_resource type="Texture2D" uid="uid://yg3le2c5ate" path="res://Assets/Flappy Bird Assets/heathline.png" id="8_r0mdn"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
+
+[sub_resource type="Gradient" id="Gradient_18r40"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6y7pd"]
+gradient = SubResource("Gradient_18r40")
+fill = 1
+fill_from = Vector2(0.4826087, 0.50869566)
+fill_to = Vector2(0.78695655, 0.20869565)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
+size = Vector2(242, 11)
+
+[sub_resource type="Animation" id="Animation_jfump"]
+resource_name = "shaking"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qptf1"]
+_data = {
+&"shaking": SubResource("Animation_jfump")
+}
+
+[node name="MainGame" type="Node2D" unique_id=1605266567]
+script = ExtResource("1_pu3va")
+
+[node name="Background" type="Node2D" parent="." unique_id=1716216993]
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=996593774]
+material = SubResource("CanvasItemMaterial_18r40")
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-2, 0)
+repeat_times = 3
+
+[node name="PointLight2D" type="PointLight2D" parent="Background/Parallax2D" unique_id=1049038600]
+position = Vector2(667, 311)
+scale = Vector2(5, 5)
+color = Color(0.88235295, 0.4117647, 0.60784316, 1)
+energy = 1.5
+texture = SubResource("GradientTexture2D_6y7pd")
+texture_scale = 0.2
+
+[node name="Background1" type="Sprite2D" parent="Background/Parallax2D" unique_id=921126319]
+texture_filter = 1
+position = Vector2(411, 314)
+texture = ExtResource("2_18r40")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=835574643]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-5, 0)
+repeat_times = 3
+
+[node name="Background2" type="Sprite2D" parent="Background/Parallax2D2" unique_id=432487150]
+position = Vector2(411, 314)
+texture = ExtResource("3_6y7pd")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=804164733]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 3
+
+[node name="Background3" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1412827050]
+position = Vector2(411, 314)
+texture = ExtResource("4_73nn6")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=405569709]
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 3
+
+[node name="Background4" type="Sprite2D" parent="Background/Parallax2D4" unique_id=91330307]
+position = Vector2(411, 314)
+texture = ExtResource("5_r0mdn")
+
+[node name="Timer" type="Node2D" parent="." unique_id=99128431]
+
+[node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
+one_shot = true
+
+[node name="pipes" type="Node" parent="." unique_id=966294912]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=757289853]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1370715056]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("4_6j5ir")
+
+[node name="health" type="Node2D" parent="CanvasLayer" unique_id=1614454641]
+scale = Vector2(3, 3)
+
+[node name="healthline" type="TextureRect" parent="CanvasLayer/health" unique_id=731348502]
+offset_right = 64.0
+offset_bottom = 40.0
+pivot_offset = Vector2(14.15, 18.8)
+texture = ExtResource("8_r0mdn")
+
+[node name="healthbar" type="TextureRect" parent="CanvasLayer/health" unique_id=371756134]
+offset_right = 64.0
+offset_bottom = 40.0
+texture = ExtResource("7_73nn6")
+
+[node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
+position = Vector2(380, 464)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
+position = Vector2(5, -26)
+shape = SubResource("RectangleShape2D_6j5ir")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=44392916]
+libraries/ = SubResource("AnimationLibrary_qptf1")
+
+[node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
+position = Vector2(300, 354)

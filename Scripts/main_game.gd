@@ -24,4 +24,4 @@ func _input(event):
 		pipe_spawner()
 
 func _process(_delta: float) -> void:
-	$CanvasLayer/health/healthline.scale.x = $Bird.health/100
+	$CanvasLayer/health/healthline.scale.x = $BirdParent.get_child(0).health/100
