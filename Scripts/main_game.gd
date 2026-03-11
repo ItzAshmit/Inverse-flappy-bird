@@ -1,5 +1,9 @@
 extends Node2D
 func _ready() -> void:
+	if($BirdParent.get_child_count()==0):
+		var birdscene = preload("res://Scenes/bird.tscn")
+		var bird = birdscene.instantiate()
+		$BirdParent.add_child(bird)
 	$CanvasLayer/health.scale.x = $CanvasLayer/health.scale.x*$BirdParent.get_child(0).maxhealth/100
 	$CanvasLayer/health/healthline.pivot_offset = Vector2(14.14,18.8)
 func pipe_spawner() -> void:
