@@ -38,31 +38,25 @@ vertical_alignment = 1
 
 [node name="Button2" type="Button" parent="." unique_id=1660255817]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -75.0
-offset_top = -92.0
-offset_right = 100.0
-grow_horizontal = 2
+offset_left = -311.0
+offset_top = -96.0
+grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 64
 text = "REMATCH"
 
 [node name="Button3" type="Button" parent="." unique_id=114780106]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -143.0
-offset_top = -190.0
-offset_right = 168.0
-offset_bottom = -94.0
-grow_horizontal = 2
+offset_top = -96.0
+offset_right = 357.0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 64
 text = "Main Menu"

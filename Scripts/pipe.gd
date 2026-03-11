@@ -8,7 +8,7 @@ func _on_body_entered(_body: Node2D) -> void:
 	$"../../Bird".animation.play("new_animation")
 	if($"../../Bird".health == 0):
 		print("00000")
-		over()
+		call_deferred("over")
 
 
 func over():

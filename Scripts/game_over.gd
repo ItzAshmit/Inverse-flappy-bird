@@ -5,7 +5,7 @@ extends Control
 
 
 func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
+	get_tree().reload_current_scene()
 
 
 func _on_button_3_pressed() -> void:
