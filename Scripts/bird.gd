@@ -1,6 +1,9 @@
 extends CharacterBody2D
 class_name Bird
-@export var health: float = 100
+@export var maxhealth: float = 100
+@export var defense: float = 50
+@export var lives: int = 1
+var health : float
 var speed:int = 150
 var gravity:int = 10
 var jumped = false
@@ -9,6 +12,7 @@ var goingdown = false
 var birdup = preload("res://Assets/Flappy Bird Assets/Birdup.png")
 var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 func _ready() -> void:
+	health = maxhealth
 	velocity =  Vector2.UP*speed
 
 func jump():
@@ -16,10 +20,24 @@ func jump():
 	velocity.y = -speed
 	jumped = true
 	goingdown = false
+
 func get_collider_layer(ray) -> int:
 	if ray.is_colliding():
 		return ray.get_collider().collision_layer
 	return -1
+
+func die():
+	lives-=1
+	if(lives==0):
+		call_deferred("over")
+	else:
+		health = maxhealth
+
+func over():
+	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+
+func damage(pipe):
+	health -= pipe.damage-defense
 
 func _physics_process(_delta: float) -> void:
 	if(velocity.y>0): $Image.texture = birddown

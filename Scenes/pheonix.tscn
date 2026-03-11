@@ -5,4 +5,3 @@
 
 [node name="Pheonix" unique_id=1757279582 instance=ExtResource("1_jo8hp")]
 script = ExtResource("2_jfj45")
-health = 100
