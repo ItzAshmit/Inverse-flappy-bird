@@ -105,7 +105,6 @@ scale = Vector2(3, 3)
 [node name="healthline" type="TextureRect" parent="CanvasLayer/health" unique_id=731348502]
 offset_right = 64.0
 offset_bottom = 40.0
-pivot_offset = Vector2(14.15, 18.8)
 texture = ExtResource("8_r0mdn")
 
 [node name="healthbar" type="TextureRect" parent="CanvasLayer/health" unique_id=371756134]

@@ -1,4 +1,7 @@
 extends Node2D
+func _ready() -> void:
+	$CanvasLayer/health.scale.x = $CanvasLayer/health.scale.x*$BirdParent.get_child(0).maxhealth/100
+	$CanvasLayer/health/healthline.pivot_offset = Vector2(14.14,18.8)
 func pipe_spawner() -> void:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()

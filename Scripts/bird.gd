@@ -38,6 +38,8 @@ func over():
 
 func damage(pipe):
 	health -= pipe.damage-defense
+	if(health<0): health =0
+
 
 func _physics_process(_delta: float) -> void:
 	if(velocity.y>0): $Image.texture = birddown
