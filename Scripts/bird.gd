@@ -13,6 +13,9 @@ var birdup = preload("res://Assets/Flappy Bird Assets/Birdup.png")
 var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 func _ready() -> void:
 	health = maxhealth
+	$CanvasLayer/TextureProgressBar.visible = true
+	$CanvasLayer/TextureProgressBar.max_value = maxhealth
+	$CanvasLayer/TextureProgressBar.value = health
 	velocity =  Vector2.UP*speed
 
 func jump():
@@ -38,10 +41,17 @@ func over():
 
 func damage(pipe):
 	health -= pipe.damage-defense
+	create_tween().tween_property($CanvasLayer/TextureProgressBar, "value", health, 1.5).set_trans(Tween.TRANS_BOUNCE)
 	if(health<0): health =0
 
 
 func _physics_process(_delta: float) -> void:
+
+
+
+
+
+
 	if(velocity.y>0): $Image.texture = birddown
 	else: $Image.texture = birdup
 	jumped = false
