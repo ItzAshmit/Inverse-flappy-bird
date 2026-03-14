@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/bird.tscn" id="1_3dclw"]
 [ext_resource type="Script" uid="uid://dn3ib3e323dmf" path="res://Scripts/huma.gd" id="2_jd7eg"]
 
-[node name="Huma" unique_id=1757279582 instance=ExtResource("1_3dclw")]
+[node name="bird" unique_id=1757279582 instance=ExtResource("1_3dclw")]
 script = ExtResource("2_jd7eg")
 
 [node name="Timer" type="Timer" parent="." index="11" unique_id=1419543528]
