@@ -3,6 +3,7 @@ class_name Bird
 @export var maxhealth: float = 100
 @export var defense: float = 50
 @export var lives: int = 1
+var ran_factor = 0
 var health : float
 var speed:int = 150
 var gravity:int = 10
@@ -65,39 +66,36 @@ func damage(pipe):
 	if(health <= 0):
 		die()
 
-
 func _physics_process(_delta: float) -> void:
-
-
-
-
-
-
-	if(velocity.y>0): $Image.texture = birddown
-	else: $Image.texture = birdup
-	jumped = false
-	velocity.y += gravity
-	if $below.is_colliding() or $below2.is_colliding() and (get_collider_layer($below) == 4 or get_collider_layer($below2) == 4):
-		goingdown=false
-		jump()
-	elif ($above.is_colliding() or $above2.is_colliding()) and (get_collider_layer($above) == 2 or get_collider_layer($above2) == 2):
-		goingdown=true
-	else:
-		if $front.is_colliding():
-			if $front.get_collider().collision_layer == 2:
-				goingdown=true
-			else:
-				goingdown=false
-				jump()
+	if(randf()>=ran_factor):
+		if(velocity.y>0): $Image.texture = birddown
+		else: $Image.texture = birdup
+		jumped = false
+		velocity.y += gravity
+		if $below.is_colliding() or $below2.is_colliding() and (get_collider_layer($below) == 4 or get_collider_layer($below2) == 4):
+			goingdown=false
+			jump()
+		elif ($above.is_colliding() or $above2.is_colliding()) and (get_collider_layer($above) == 2 or get_collider_layer($above2) == 2):
+			goingdown=true
 		else:
-			if ($"../../pipes".get_child_count()==0) and (not $front.is_colliding()) and (not $above.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
-				goingdown = false
-			if $"front-above".is_colliding() or $"front-below".is_colliding():
-				if $"front-above".is_colliding():
-					goingdown = true
-				else: 
-					goingdown = false
+			if $front.is_colliding():
+				if $front.get_collider().collision_layer == 2:
+					goingdown=true
+				else:
+					goingdown=false
 					jump()
-			if(global_position.y >= randi_range(350,450)):
-				jump()
-	move_and_slide()
+			else:
+				if ($"../../pipes".get_child_count()==0) and (not $front.is_colliding()) and (not $above.is_colliding()) and (not $"front-above".is_colliding()) and (not $below.is_colliding()) and (not $"front-below".is_colliding()):
+					goingdown = false
+				if $"front-above".is_colliding() or $"front-below".is_colliding():
+					if $"front-above".is_colliding():
+						goingdown = true
+					else: 
+						goingdown = false
+						jump()
+				if(global_position.y >= randi_range(350,450)):
+					jump()
+		move_and_slide()
+	else:
+		if(global_position.y>320):
+			jump()

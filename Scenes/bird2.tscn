@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cs10eo4ahy8l8"]
 
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/bird.tscn" id="1_i7n8m"]
+[ext_resource type="Script" uid="uid://dleyvi5qb3yl1" path="res://Scripts/bird2.gd" id="2_a1sky"]
 
 [node name="bird" unique_id=1757279582 instance=ExtResource("1_i7n8m")]
-maxhealth = 150.0
+script = ExtResource("2_a1sky")
