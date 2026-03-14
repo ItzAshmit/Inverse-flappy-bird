@@ -46,6 +46,8 @@ func die():
 		get_tree().paused = true
 	else:
 		health = maxhealth
+		create_tween().tween_property($CanvasLayer/TextureProgressBar, "value", health, 1.5).set_trans(Tween.TRANS_BOUNCE)
+
 
 func over():
 	var config = ConfigFile.new()
