@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
 [ext_resource type="Texture2D" uid="uid://dbf5oomjbomqb" path="res://Assets/Flappy Bird Assets/background1.png" id="2_18r40"]
 [ext_resource type="Texture2D" uid="uid://clv0q67vps27k" path="res://Assets/Flappy Bird Assets/background4.png" id="3_6y7pd"]
-[ext_resource type="Script" uid="uid://bihwmakb88jb2" path="res://Scripts/label.gd" id="4_6j5ir"]
 [ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
 [ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
+[ext_resource type="Texture2D" uid="uid://c46khfpnqhmbd" path="res://Assets/Flappy Bird Assets/cooldown-Sheet.png" id="6_iycpb"]
+[ext_resource type="Script" uid="uid://uideqdtdrdyn" path="res://Scenes/levels/cooldown.gd" id="7_fbpkw"]
 [ext_resource type="Script" uid="uid://cqgivp1mbt8ie" path="res://Scripts/tween.gd" id="8_iycpb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
@@ -93,10 +94,13 @@ one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=757289853]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1370715056]
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("4_6j5ir")
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=2137958733]
+texture_filter = 1
+position = Vector2(1123, 69)
+scale = Vector2(3, 3)
+texture = ExtResource("6_iycpb")
+hframes = 8
+script = ExtResource("7_fbpkw")
 
 [node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
 position = Vector2(380, 464)

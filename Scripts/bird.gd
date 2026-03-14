@@ -39,6 +39,7 @@ func die():
 	if(lives==0):
 		bird_died.emit()
 		await get_tree().create_timer(0.5).timeout
+		create_tween().tween_property($CanvasLayer/TextureProgressBar, "value", health, 1.5).set_trans(Tween.TRANS_BOUNCE)
 		$CanvasLayer/Game_over.visible = true
 		$CanvasLayer/Game_over.scale = Vector2(0.001,0.001)
 		create_tween().tween_property($CanvasLayer/Game_over, "scale", Vector2(1,1), 1.5).set_trans(Tween.TRANS_ELASTIC)
