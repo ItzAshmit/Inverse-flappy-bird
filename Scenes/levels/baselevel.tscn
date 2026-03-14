@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://bihwmakb88jb2" path="res://Scripts/label.gd" id="4_6j5ir"]
 [ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
 [ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
-[ext_resource type="PackedScene" uid="uid://6nb0hsbl8xp6" path="res://Scenes/game_over.tscn" id="7_158fo"]
 [ext_resource type="Script" uid="uid://cqgivp1mbt8ie" path="res://Scripts/tween.gd" id="8_iycpb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
@@ -112,13 +111,6 @@ libraries/ = SubResource("AnimationLibrary_qptf1")
 
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
 position = Vector2(300, 354)
-
-[node name="Game_over" parent="." unique_id=1217476244 instance=ExtResource("7_158fo")]
-offset_left = 278.0
-offset_top = 276.0
-offset_right = 1492.9999
-offset_bottom = 1010.9999
-scale = Vector2(0.2, 0.2)
 
 [node name="tween" type="Node" parent="." unique_id=392293881]
 process_mode = 3
