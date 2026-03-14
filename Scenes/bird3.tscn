@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c24mgio770pq0"]
+
+[ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/bird.tscn" id="1_s70wh"]
+
+[node name="bird" unique_id=1757279582 instance=ExtResource("1_s70wh")]
