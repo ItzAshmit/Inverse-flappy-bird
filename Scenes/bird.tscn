@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://buh4lb8ftgphd"]
+
+[ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://5lebhd1j3sxi" path="res://Assets/Flappy Bird Assets/heathbar.png" id="3_vl8r2"]
+[ext_resource type="Texture2D" uid="uid://yg3le2c5ate" path="res://Assets/Flappy Bird Assets/heathline.png" id="4_rr33m"]
+[ext_resource type="PackedScene" uid="uid://6nb0hsbl8xp6" path="res://Scenes/game_over.tscn" id="5_rr33m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
+radius = 6.0
+height = 12.0
+
+[sub_resource type="Animation" id="Animation_mcegt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dnvpi"]
+resource_name = "new_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vl8r2"]
+_data = {
+&"RESET": SubResource("Animation_mcegt"),
+&"new_animation": SubResource("Animation_dnvpi")
+}
+
+[node name="bird" type="CharacterBody2D" unique_id=1757279582]
+collision_mask = 15
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=252428101]
+shape = SubResource("CapsuleShape2D_cvnsp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1505559911]
+position = Vector2(100, -50)
+zoom = Vector2(5, 5)
+limit_top = 450
+limit_bottom = 250
+
+[node name="front" type="RayCast2D" parent="." unique_id=304648439]
+target_position = Vector2(85, 0)
+collision_mask = 14
+collide_with_areas = true
+
+[node name="front-above" type="RayCast2D" parent="." unique_id=251978010]
+target_position = Vector2(40, -30)
+collision_mask = 14
+collide_with_areas = true
+
+[node name="front-below" type="RayCast2D" parent="." unique_id=140456417]
+target_position = Vector2(30, 20)
+collision_mask = 14
+collide_with_areas = true
+
+[node name="below" type="RayCast2D" parent="." unique_id=580898188]
+position = Vector2(-4, 0)
+target_position = Vector2(0, 20)
+collision_mask = 6
+collide_with_areas = true
+
+[node name="below2" type="RayCast2D" parent="." unique_id=1138045831]
+position = Vector2(4, 0)
+target_position = Vector2(0, 20)
+collision_mask = 14
+collide_with_areas = true
+
+[node name="above" type="RayCast2D" parent="." unique_id=469731841]
+position = Vector2(-4, 0)
+target_position = Vector2(0, -30)
+collision_mask = 14
+collide_with_areas = true
+
+[node name="above2" type="RayCast2D" parent="." unique_id=2033643367]
+position = Vector2(4, 0)
+target_position = Vector2(0, -30)
+collision_mask = 14
+collide_with_areas = true
+
+[node name="Image" type="Sprite2D" parent="." unique_id=1310102526]
+position = Vector2(-2.815, 2.22)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_cvnsp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1114684160]
+libraries/ = SubResource("AnimationLibrary_vl8r2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542817364]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=205597822]
+visible = false
+texture_filter = 1
+offset_right = 64.0
+offset_bottom = 40.0
+scale = Vector2(5, 5)
+value = 50.0
+texture_under = ExtResource("3_vl8r2")
+texture_progress = ExtResource("4_rr33m")
+
+[node name="Game_over" parent="CanvasLayer" unique_id=1217476244 instance=ExtResource("5_rr33m")]
+visible = false
+scale = Vector2(1, 1)
