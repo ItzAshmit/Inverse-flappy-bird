@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dtijx2s0yldls"]
 
-[ext_resource type="PackedScene" uid="uid://cbyvfvk8tjjr8" path="res://Scenes/levels/baselevel.tscn" id="1_rahoo"]
+[ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_rahoo"]
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_rahoo")]
 
