@@ -1,9 +1,12 @@
 extends Node2D
 func _ready() -> void:
+	$Game_over.visible = false
 	if($BirdParent.get_child_count()==0):
-		var birdscene = preload("res://Scenes/bird.tscn")
+		var birdscene = load("res://Scenes/bird.tscn")
 		var bird = birdscene.instantiate()
 		$BirdParent.add_child(bird)
+		bird.name = "bird"
+		bird.bird_died.connect(_bird_died)
 func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
@@ -29,3 +32,10 @@ func _input(event):
 	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
 		if(pipe_spawner()==1):
 			$Timer/PipeSpawner.start()
+
+
+
+
+func _bird_died():
+	get_tree().paused = true
+	$Game_over.visible = true
