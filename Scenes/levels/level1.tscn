@@ -5,4 +5,22 @@
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_rahoo")]
 
+[node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=426013423]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Buttons" index="0" unique_id=731623270]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1093.0
+offset_right = 1160.0
+offset_bottom = 31.0
+grow_horizontal = 0
+toggle_mode = true
+text = "clickme"
+
 [node name="Bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("1_l756w")]
