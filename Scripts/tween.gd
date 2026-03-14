@@ -4,7 +4,7 @@ var bird
 
 func _ready():
 	await get_tree().create_timer(2).timeout
-	bird = $"../BirdParent/bird"
+	bird = $"../BirdParent".get_child(0)
 	bird.bird_died.connect(_bird_died)
 
 
