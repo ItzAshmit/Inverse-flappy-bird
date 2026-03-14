@@ -112,18 +112,6 @@ offset_right = 64.0
 offset_bottom = 40.0
 texture = ExtResource("7_73nn6")
 
-[node name="Buttons" type="Control" parent="CanvasLayer" unique_id=664428575]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button" type="Button" parent="CanvasLayer/Buttons" unique_id=1471892183]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-toggle_mode = true
-
 [node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
 position = Vector2(380, 464)
 collision_layer = 8
