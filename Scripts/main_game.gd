@@ -5,6 +5,7 @@ func _ready() -> void:
 		var birdscene = load("res://Scenes/bird.tscn")
 		var bird = birdscene.instantiate()
 		$BirdParent.add_child(bird)
+		bird.name = "bird"
 		bird.bird_died.connect(_bird_died)
 func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
