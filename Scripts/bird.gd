@@ -11,6 +11,9 @@ var goingdown = false
 @onready var animation:AnimationPlayer = $AnimationPlayer
 var birdup = preload("res://Assets/Flappy Bird Assets/Birdup.png")
 var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
+
+signal bird_died
+
 func _ready() -> void:
 	health = maxhealth
 	$CanvasLayer/TextureProgressBar.visible = true
@@ -42,7 +45,9 @@ func over():
 func damage(pipe):
 	health -= pipe.damage-defense
 	create_tween().tween_property($CanvasLayer/TextureProgressBar, "value", health, 1.5).set_trans(Tween.TRANS_BOUNCE)
-	if(health<0): health =0
+	if(health <= 0):
+		bird_died.emit()
+		die()
 
 
 func _physics_process(_delta: float) -> void:
