@@ -49,6 +49,9 @@ _data = {
 [node name="Bird" type="CharacterBody2D" unique_id=1757279582]
 collision_mask = 15
 script = ExtResource("1_v0iea")
+maxhealth = null
+defense = null
+lives = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=252428101]
 shape = SubResource("CapsuleShape2D_cvnsp")

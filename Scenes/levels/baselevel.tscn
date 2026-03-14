@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cbyvfvk8tjjr8"]
+[gd_scene format=3 uid="uid://br7dxfo4bl2nb"]
 
 [ext_resource type="Script" uid="uid://c5hn5fufekxwl" path="res://Scripts/main_game.gd" id="1_pu3va"]
 [ext_resource type="Texture2D" uid="uid://dbf5oomjbomqb" path="res://Assets/Flappy Bird Assets/background1.png" id="2_18r40"]
