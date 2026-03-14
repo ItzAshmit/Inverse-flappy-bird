@@ -2,6 +2,17 @@
 
 [ext_resource type="Script" uid="uid://da3pis5jsyuu3" path="res://Scripts/game_over.gd" id="1_ojehl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
+bg_color = Color(1, 0, 0, 0.078431375)
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color(0.8, 0, 0, 1)
+border_blend = true
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [sub_resource type="LabelSettings" id="LabelSettings_8fo1c"]
 font_size = 128
 font_color = Color(1, 0, 0, 1)
@@ -52,6 +63,7 @@ border_color = Color(0, 0.93333316, 1, 1)
 corner_radius_top_right = 100
 
 [node name="Game_over" type="Control" unique_id=1217476244]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,14 +73,14 @@ grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_ojehl")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=595518043]
+[node name="Panel" type="Panel" parent="." unique_id=626936539]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0, 0, 0.19215687)
+theme_override_styles/panel = SubResource("StyleBoxFlat_rjluv")
 
 [node name="Label" type="Label" parent="." unique_id=840121333]
 layout_mode = 1

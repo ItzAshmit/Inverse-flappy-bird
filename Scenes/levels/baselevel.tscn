@@ -112,7 +112,9 @@ libraries/ = SubResource("AnimationLibrary_qptf1")
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
 position = Vector2(300, 354)
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=572870947]
-
-[node name="Game_over" parent="CanvasLayer2" unique_id=1217476244 instance=ExtResource("7_158fo")]
-scale = Vector2(0.4, 0.4)
+[node name="Game_over" parent="." unique_id=1217476244 instance=ExtResource("7_158fo")]
+offset_left = 278.0
+offset_top = 276.0
+offset_right = 1492.9999
+offset_bottom = 1010.9999
+scale = Vector2(0.2, 0.2)

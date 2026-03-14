@@ -35,7 +35,7 @@ func get_collider_layer(ray) -> int:
 func die():
 	lives-=1
 	if(lives==0):
-		call_deferred("over")
+		bird_died.emit()
 	else:
 		health = maxhealth
 
@@ -46,7 +46,6 @@ func damage(pipe):
 	health -= pipe.damage-defense
 	create_tween().tween_property($CanvasLayer/TextureProgressBar, "value", health, 1.5).set_trans(Tween.TRANS_BOUNCE)
 	if(health <= 0):
-		bird_died.emit()
 		die()
 
 

@@ -1,6 +1,6 @@
 extends Node2D
 func _ready() -> void:
-	$CanvasLayer2/Game_over.visible = false
+	$Game_over.visible = false
 	if($BirdParent.get_child_count()==0):
 		var birdscene = load("res://Scenes/bird.tscn")
 		var bird = birdscene.instantiate()
@@ -36,5 +36,5 @@ func _input(event):
 
 
 func _bird_died():
-	$CanvasLayer2/Game_over.visible = true
-	pass
+	get_tree().paused = true
+	$Game_over.visible = true
