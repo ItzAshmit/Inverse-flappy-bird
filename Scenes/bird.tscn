@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dqeymoih4ycwl" path="res://Scripts/bird.gd" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://5lebhd1j3sxi" path="res://Assets/Flappy Bird Assets/heathbar.png" id="3_vl8r2"]
+[ext_resource type="Texture2D" uid="uid://yg3le2c5ate" path="res://Assets/Flappy Bird Assets/heathline.png" id="4_rr33m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvnsp"]
 radius = 6.0
@@ -103,3 +105,15 @@ texture = ExtResource("2_cvnsp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1114684160]
 libraries/ = SubResource("AnimationLibrary_vl8r2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542817364]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=205597822]
+visible = false
+texture_filter = 1
+offset_right = 64.0
+offset_bottom = 40.0
+scale = Vector2(5, 5)
+value = 50.0
+texture_under = ExtResource("3_vl8r2")
+texture_progress = ExtResource("4_rr33m")

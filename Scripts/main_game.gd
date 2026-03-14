@@ -4,15 +4,13 @@ func _ready() -> void:
 		var birdscene = preload("res://Scenes/bird.tscn")
 		var bird = birdscene.instantiate()
 		$BirdParent.add_child(bird)
-	$CanvasLayer/health.scale.x = $CanvasLayer/health.scale.x*$BirdParent.get_child(0).maxhealth/100
-	$CanvasLayer/health/healthline.pivot_offset = Vector2(14.14,18.8)
 func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
-	if($CanvasLayer/Buttons.get_child(0).button_pressed):
-		pipe.damage = 125
-		$CanvasLayer/Buttons.get_child(0).button_pressed=false
+	# if($CanvasLayer/Buttons.get_child(0).button_pressed):
+	# 	pipe.damage = 125
+	# 	$CanvasLayer/Buttons.get_child(0).button_pressed=false
 	if pipe.global_position.x< 380: 
 		pipe.global_position.x=380
 	if pipe.global_position.x< 440: 
@@ -31,6 +29,3 @@ func _input(event):
 	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
 		if(pipe_spawner()==1):
 			$Timer/PipeSpawner.start()
-
-func _process(_delta: float) -> void:
-	$CanvasLayer/health/healthline.scale.x = $BirdParent.get_child(0).health/100

@@ -51,13 +51,13 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 5
 
-[node name="Level1" type="TextureRect" parent="Levels" unique_id=310745003]
+[node name="level1" type="TextureRect" parent="Levels" unique_id=310745003]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("2_ymr0u")
 
-[node name="Button" type="Button" parent="Levels/Level1" unique_id=1210298016]
+[node name="Button" type="Button" parent="Levels/level1" unique_id=1210298016]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 189.0
@@ -68,13 +68,13 @@ text = "
 
 "
 
-[node name="Level2" type="TextureRect" parent="Levels" unique_id=950744883]
+[node name="level2" type="TextureRect" parent="Levels" unique_id=950744883]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("3_iio8b")
 
-[node name="Button" type="Button" parent="Levels/Level2" unique_id=2117539678]
+[node name="Button" type="Button" parent="Levels/level2" unique_id=2117539678]
 modulate = Color(0, 0, 0, 0)
 layout_mode = 0
 offset_right = 189.0
@@ -85,13 +85,13 @@ text = "
 
 "
 
-[node name="Level3" type="TextureRect" parent="Levels" unique_id=355743202]
+[node name="level3" type="TextureRect" parent="Levels" unique_id=355743202]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("4_cjntd")
 
-[node name="Button" type="Button" parent="Levels/Level3" unique_id=1314961546]
+[node name="Button" type="Button" parent="Levels/level3" unique_id=1314961546]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 189.0
@@ -102,13 +102,13 @@ text = "
 
 "
 
-[node name="Level4" type="TextureRect" parent="Levels" unique_id=594525954]
+[node name="level4" type="TextureRect" parent="Levels" unique_id=594525954]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("5_dsbtr")
 
-[node name="Button" type="Button" parent="Levels/Level4" unique_id=910108128]
+[node name="Button" type="Button" parent="Levels/level4" unique_id=910108128]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 189.0
@@ -119,13 +119,13 @@ text = "
 
 "
 
-[node name="Level5" type="TextureRect" parent="Levels" unique_id=1879640241]
+[node name="level5" type="TextureRect" parent="Levels" unique_id=1879640241]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("6_3ie8g")
 
-[node name="Button" type="Button" parent="Levels/Level5" unique_id=345591824]
+[node name="Button" type="Button" parent="Levels/level5" unique_id=345591824]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 189.0
@@ -391,11 +391,11 @@ text = "
 
 "
 
-[connection signal="pressed" from="Levels/Level1/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Level2/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Level3/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Level4/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Levels/Level5/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/level1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/level2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/level3/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/level4/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Levels/level5/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Levels/Level6/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Levels/Level7/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Levels/Level8/Button" to="." method="_on_button_pressed"]

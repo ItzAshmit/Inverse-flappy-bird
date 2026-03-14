@@ -1,5 +1,5 @@
 [gd_scene format=3 uid="uid://debsvbxmloxp1"]
 
-[ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_2pt7t"]
+[ext_resource type="PackedScene" uid="uid://cbyvfvk8tjjr8" path="res://Scenes/levels/baselevel.tscn" id="1_2pt7t"]
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_2pt7t")]
