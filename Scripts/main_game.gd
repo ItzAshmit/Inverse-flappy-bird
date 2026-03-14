@@ -1,10 +1,10 @@
 extends Node2D
 func _ready() -> void:
-	if($BirdParent.get_child_count()==0):
+	"""if($BirdParent.get_child_count()==0):
 		var birdscene = load("res://Scenes/bird.tscn")
 		var bird = birdscene.instantiate()
 		$BirdParent.add_child(bird)
-		bird.name = "bird"
+		bird.name = "bird"""
 func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()

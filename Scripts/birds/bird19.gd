@@ -1,4 +1,4 @@
 extends Bird
 func _ready() -> void:
 	super()
-	ran_factor=0.1
+	ran_factor=0.05
