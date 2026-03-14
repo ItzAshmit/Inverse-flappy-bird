@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cha1145scq3n"]
 
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/birds/bird.tscn" id="1_ojv3e"]
+[ext_resource type="Script" uid="uid://by40ljbm2866v" path="res://Scripts/birds/bird19.gd" id="2_8egw2"]
 
 [node name="bird" unique_id=1757279582 instance=ExtResource("1_ojv3e")]
+script = ExtResource("2_8egw2")
