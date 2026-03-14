@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://beoy3ntvhlapa"]
 
-[ext_resource type="PackedScene" uid="uid://cbyvfvk8tjjr8" path="res://Scenes/levels/baselevel.tscn" id="1_a0jgv"]
+[ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_a0jgv"]
+[ext_resource type="PackedScene" uid="uid://cha1145scq3n" path="res://Scenes/birds/bird19.tscn" id="2_8an5l"]
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_a0jgv")]
+
+[node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_8an5l")]

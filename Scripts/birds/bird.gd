@@ -48,8 +48,6 @@ func die():
 		get_tree().paused = true
 	else:
 		health = maxhealth
-		create_tween().tween_property($CanvasLayer/TextureProgressBar, "value", health, 1.5).set_trans(Tween.TRANS_BOUNCE)
-
 
 func over():
 	var config = ConfigFile.new()
@@ -98,5 +96,6 @@ func _physics_process(_delta: float) -> void:
 					jump()
 		move_and_slide()
 	else:
+		print("hi")
 		if(global_position.y>320):
 			jump()
