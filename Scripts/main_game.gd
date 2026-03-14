@@ -8,7 +8,12 @@ func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
-	if pipe.global_position.x> 380 and pipe.global_position.x< 440: 
+	if($CanvasLayer/Buttons.get_child(0).button_pressed):
+		pipe.damage = 125
+		$CanvasLayer/Buttons.get_child(0).button_pressed=false
+	if pipe.global_position.x< 380: 
+		pipe.global_position.x=380
+	if pipe.global_position.x< 440: 
 		if pipe.global_position.y<310:
 			pipe.get_node("Upper").queue_free()
 			$pipes.add_child(pipe)           
