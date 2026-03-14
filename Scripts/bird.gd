@@ -49,8 +49,8 @@ func die():
 func over():
 	var config = ConfigFile.new()
 	config.load("user://save.cfg")
-	var len = get_tree().current_scene.scene_file_path.length()-30
-	var level = get_tree().current_scene.scene_file_path.substr(25,len).to_int()
+	var len_ = get_tree().current_scene.scene_file_path.length()-30
+	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	config.set_value("progress", "levels_cleared", level)
 	config.save("user://save.cfg")
 	get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
