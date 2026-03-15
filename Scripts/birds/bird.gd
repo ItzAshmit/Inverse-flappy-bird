@@ -120,3 +120,4 @@ func _pipe_spawned(y_value):
 
 func _pipe_crossed(y_value):
 	jump_value.erase(y_value)
+	jump_value = y_value

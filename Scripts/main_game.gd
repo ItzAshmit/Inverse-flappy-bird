@@ -14,6 +14,7 @@ func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
+	pipe_manager(pipe)
 	# if($CanvasLayer/Buttons.get_child(0).button_pressed):
 	# 	pipe.damage = 125
 	# 	$CanvasLayer/Buttons.get_child(0).button_pressed=false
@@ -40,3 +41,21 @@ func _input(event):
 
 func _pipe_crossed(_body,y_value):
 	pipe_crossed.emit(y_value)
+
+
+
+
+func pipe_manager(pipe):
+	var len_ = get_tree().current_scene.scene_file_path.length() - 30
+	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
+	if(level==5):
+		if($CanvasLayer/Buttons/Button.button_pressed):
+			pipe.upspeed = 15
+			$CanvasLayer/Buttons/Button.button_pressed=false
+
+
+
+
+
+
+
