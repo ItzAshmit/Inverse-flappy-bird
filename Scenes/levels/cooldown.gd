@@ -13,7 +13,6 @@ func _ready():
 
 func _process(_delta):
 	if pipe_spawner.wait_time - pipe_spawner.time_left  != 1:
-		print(pipe_spawner.wait_time - pipe_spawner.time_left)
 		if step * frame <= (pipe_spawner.wait_time - pipe_spawner.time_left):
 			if frame <= 6:
 				frame += 1
@@ -25,5 +24,4 @@ func _on_pipe_spawner_timeout() -> void:
 			frame = i * -1
 		else:
 			frame = 0
-			print("k")
 		await get_tree().create_timer(0.03).timeout
