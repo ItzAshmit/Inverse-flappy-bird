@@ -5,4 +5,7 @@
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_wdgcd")]
 
+[node name="PipeSpawner" parent="Timer" parent_id_path=PackedInt32Array(99128431) index="0" unique_id=1410041825]
+wait_time = 0.7
+
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_cyurg")]
