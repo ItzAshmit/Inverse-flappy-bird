@@ -49,6 +49,16 @@ func pipe_manager(pipe):
 	var len_ = get_tree().current_scene.scene_file_path.length() - 30
 	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	if(level==5):
+		if($CanvasLayer/Buttons.get_child(1).button_pressed):
+			pipe.upspeed = 15
+			$CanvasLayer/Buttons.get_child(1).button_pressed=false
+		elif($CanvasLayer/Buttons.get_child(0).button_pressed):
+			pipe.upspeed = -15
+			$CanvasLayer/Buttons.get_child(0).button_pressed=false
+	elif(level==7):
+		pipe.speed = 120
+	elif(level==8):
+		pipe.speed = 150
+	if(level==9):
 		if($CanvasLayer/Buttons/Button.button_pressed):
-			pipe.downspeed = 15
-			$CanvasLayer/Buttons/Button.button_pressed = false
+			$CanvasLayer/Buttons/Button.button_pressed=false
