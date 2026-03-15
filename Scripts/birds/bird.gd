@@ -92,7 +92,7 @@ func _physics_process(_delta: float) -> void:
 					else: 
 						goingdown = false
 						jump()
-				if(global_position.y >= randi_range(350,450)):
+				if(global_position.y >= randi_range(300,350)):
 					jump()
 		move_and_slide()
 	else:

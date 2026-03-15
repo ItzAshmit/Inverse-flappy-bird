@@ -21,7 +21,7 @@ fill_from = Vector2(0.4826087, 0.50869566)
 fill_to = Vector2(0.78695655, 0.20869565)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
-size = Vector2(242, 11)
+size = Vector2(466, 11)
 
 [sub_resource type="Animation" id="Animation_jfump"]
 resource_name = "shaking"
@@ -107,7 +107,7 @@ position = Vector2(380, 464)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
-position = Vector2(5, -26)
+position = Vector2(21, -26)
 shape = SubResource("RectangleShape2D_6j5ir")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=44392916]
@@ -121,11 +121,11 @@ process_mode = 3
 script = ExtResource("8_iycpb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=307828148]
-position = Vector2(400, -50)
+position = Vector2(475, -50)
 zoom = Vector2(3, 3)
-limit_left = -9999676
-limit_top = 188
-limit_right = 10000324
-limit_bottom = 441
+limit_left = -9998990
+limit_top = 187
+limit_right = 10001010
+limit_bottom = 440
 
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]

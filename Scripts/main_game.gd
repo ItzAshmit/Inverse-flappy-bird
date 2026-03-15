@@ -1,10 +1,10 @@
 extends Node2D
 func _ready() -> void:
-	"""if($BirdParent.get_child_count()==0):
+	if($BirdParent.get_child_count() == 0):
 		var birdscene = load("res://Scenes/bird.tscn")
 		var bird = birdscene.instantiate()
 		$BirdParent.add_child(bird)
-		bird.name = "bird"""
+		bird.name = bird
 func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
@@ -12,9 +12,7 @@ func pipe_spawner() -> int:
 	# if($CanvasLayer/Buttons.get_child(0).button_pressed):
 	# 	pipe.damage = 125
 	# 	$CanvasLayer/Buttons.get_child(0).button_pressed=false
-	if pipe.global_position.x< 380: 
-		pipe.global_position.x=380
-	if pipe.global_position.x< 440: 
+	if pipe.global_position.x > 550: 
 		if pipe.global_position.y<310:
 			pipe.get_node("Upper").queue_free()
 			$pipes.add_child(pipe)           
@@ -28,5 +26,5 @@ func pipe_spawner() -> int:
 	
 func _input(event):
 	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
-		if(pipe_spawner()==1):
+		if(pipe_spawner() == 1):
 			$Timer/PipeSpawner.start()
