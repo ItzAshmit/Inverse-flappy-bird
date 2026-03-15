@@ -9,7 +9,7 @@ var speed:int = 150
 var gravity:int = 10
 var jumped = false
 var goingdown = false
-var jump_value:float = 300
+var jump_value:Array = []
 @onready var animation:AnimationPlayer = $AnimationPlayer
 var birdup = preload("res://Assets/Flappy Bird Assets/Birdup.png")
 var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
@@ -18,6 +18,7 @@ signal bird_died
 
 func _ready() -> void:
 	get_parent().get_parent().pipe_spawned.connect(_pipe_spawned)
+	get_parent().get_parent().pipe_crossed.connect(_pipe_crossed)
 	$CanvasLayer/Game_over.visible = false
 	health = maxhealth
 	$CanvasLayer/TextureProgressBar.visible = true
@@ -68,6 +69,10 @@ func damage(pipe):
 		die()
 
 func _physics_process(_delta: float) -> void:
+	var value:float
+	if jump_value.is_empty(): value = 300 
+	else: value = jump_value[0]
+
 	if(randf() >= ran_factor):
 		if(velocity.y>0): $Image.texture = birddown
 		else: $Image.texture = birdup
@@ -94,13 +99,12 @@ func _physics_process(_delta: float) -> void:
 					else: 
 						goingdown = false
 						jump()
-				if(global_position.y >= randf_range(jump_value,jump_value + 50.0)):
+				if(global_position.y >= randf_range(value,value + 50.0)):
 					jump()
 
 		
 	else:
-		print("hi")
-		if(global_position.y >= randf_range(jump_value,jump_value + 50.0)):
+		if(global_position.y >= randf_range(value,value + 50.0)):
 			jump()
 	move_and_slide()
 
@@ -108,5 +112,11 @@ func _physics_process(_delta: float) -> void:
 
 
 func _pipe_spawned(y_value):
-	jump_value = y_value
+	jump_value.append(y_value)
+	print(jump_value)
 
+
+
+
+func _pipe_crossed(y_value):
+	jump_value.erase(y_value)

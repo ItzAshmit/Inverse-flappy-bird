@@ -2,7 +2,7 @@ extends Node2D
 
 
 signal pipe_spawned(y_axis:float)
-
+signal pipe_crossed(y_axis:float)
 
 func _ready() -> void:
 	if($BirdParent.get_child_count() == 0):
@@ -26,6 +26,7 @@ func pipe_spawner() -> int:
 			$pipes.add_child(pipe)   
 		else:
 			$pipes.add_child(pipe)
+		pipe.Area.body_exited.connect(_pipe_crossed.bind(pipe.global_position.y))
 		return 1
 	return 0
 	
@@ -34,3 +35,8 @@ func _input(event):
 		if pipe_spawner():
 			pipe_spawned.emit(get_global_mouse_position().y)
 			$Timer/PipeSpawner.start()
+
+
+
+func _pipe_crossed(_body,y_value):
+	pipe_crossed.emit(y_value)
