@@ -6,3 +6,4 @@
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_vpksi")]
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_3qgfs")]
+maxhealth = 125.0
