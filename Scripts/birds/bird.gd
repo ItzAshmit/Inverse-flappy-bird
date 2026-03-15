@@ -109,4 +109,3 @@ func _physics_process(_delta: float) -> void:
 
 func _pipe_spawned(y_value):
 	jump_value = y_value
-
