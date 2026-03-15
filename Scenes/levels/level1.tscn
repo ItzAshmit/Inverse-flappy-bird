@@ -24,3 +24,4 @@ toggle_mode = true
 text = "clickme"
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_skpnj")]
+ran_factor = 0.1

@@ -19,6 +19,7 @@ func _ready():
 func _bird_died():
 	var tween := create_tween()
 
-	tween.tween_property($"../Camera2D", "position", Vector2(400,-50), 2).set_trans(Tween.TRANS_ELASTIC)
 	tween.tween_property(bird, "rotation_degrees", 90, 0.5)
+	tween.tween_property($"../Camera2D", "position", Vector2(400,-50), 2).set_trans(Tween.TRANS_ELASTIC)
+	tween.parallel()
 	tween.tween_property(bird, "global_position", Vector2(bird.global_position.x, 500), 0.5)

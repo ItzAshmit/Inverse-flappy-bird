@@ -3,12 +3,13 @@ class_name Bird
 @export var maxhealth: float = 100
 @export var defense: float = 50
 @export var lives: int = 1
-@export var ran_factor = 0
+@export var ran_factor:float = 0
 var health : float
 var speed:int = 150
 var gravity:int = 10
 var jumped = false
 var goingdown = false
+var jump_value:float = 300
 @onready var animation:AnimationPlayer = $AnimationPlayer
 var birdup = preload("res://Assets/Flappy Bird Assets/Birdup.png")
 var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
@@ -16,6 +17,7 @@ var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 signal bird_died
 
 func _ready() -> void:
+	get_parent().get_parent().pipe_spawned.connect(_pipe_spawned)
 	$CanvasLayer/Game_over.visible = false
 	health = maxhealth
 	$CanvasLayer/TextureProgressBar.visible = true
@@ -92,10 +94,19 @@ func _physics_process(_delta: float) -> void:
 					else: 
 						goingdown = false
 						jump()
-				if(global_position.y >= randi_range(300,350)):
+				if(global_position.y >= randf_range(jump_value,jump_value + 50.0)):
 					jump()
-		move_and_slide()
+
+		
 	else:
 		print("hi")
-		if(global_position.y>320):
+		if(global_position.y >= randf_range(jump_value,jump_value + 50.0)):
 			jump()
+	move_and_slide()
+
+
+
+
+func _pipe_spawned(y_value):
+	jump_value = y_value
+

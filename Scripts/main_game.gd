@@ -1,4 +1,9 @@
 extends Node2D
+
+
+signal pipe_spawned(y_axis:float)
+
+
 func _ready() -> void:
 	if($BirdParent.get_child_count() == 0):
 		var birdscene = load("res://Scenes/bird.tscn")
@@ -26,5 +31,6 @@ func pipe_spawner() -> int:
 	
 func _input(event):
 	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
-		if(pipe_spawner() == 1):
+		if pipe_spawner():
+			pipe_spawned.emit(get_global_mouse_position().y)
 			$Timer/PipeSpawner.start()
