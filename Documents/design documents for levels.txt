@@ -1,0 +1,12 @@
+| Level                 | Idea                                                                                      |
+| ------                | ---------------------------------------------------------------                           |
+| 1,2                   | Normal bird. Player spawns basic pipes.                                                   |
+| 3,4                   | Bird have more health.                                                                    |
+| 5                     | New pipes slowly move left/right after spawning.                                          |
+| 6                     | Pipes cooldown get small (Basic ones).                  			                        |
+| 7,8                   | Pipes get fast (Bird Advantage).                    				                        |
+| 9                     | Fake pipes appear that disappear when bird reaches them and thus AI can be tricked.       |
+| 10,11                 | Bird can dash/teleport                                                                    |
+| 12,13                 | Bird can be invisible                                                                     |
+| 14,15                 | New invisible pipes that has a large cooldown but AI will have a hard time dodging them.  |
+| 15,16,17,18,19,20     | Everything at once, bird will use all powers.                                             |

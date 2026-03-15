@@ -3,7 +3,7 @@ class_name Bird
 @export var maxhealth: float = 100
 @export var defense: float = 50
 @export var lives: int = 1
-var ran_factor = 0
+@export var ran_factor = 0
 var health : float
 var speed:int = 150
 var gravity:int = 10
@@ -66,7 +66,7 @@ func damage(pipe):
 		die()
 
 func _physics_process(_delta: float) -> void:
-	if(randf()>=ran_factor):
+	if(randf() >= ran_factor):
 		if(velocity.y>0): $Image.texture = birddown
 		else: $Image.texture = birdup
 		jumped = false
