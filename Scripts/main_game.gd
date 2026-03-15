@@ -50,12 +50,5 @@ func pipe_manager(pipe):
 	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	if(level==5):
 		if($CanvasLayer/Buttons/Button.button_pressed):
-			pipe.upspeed = 15
-			$CanvasLayer/Buttons/Button.button_pressed=false
-
-
-
-
-
-
-
+			pipe.downspeed = 15
+			$CanvasLayer/Buttons/Button.button_pressed = false
