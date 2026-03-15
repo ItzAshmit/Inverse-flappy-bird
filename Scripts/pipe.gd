@@ -15,5 +15,3 @@ func _on_body_entered(_body: Node2D) -> void:
 
 func _on_screen_exited() -> void:
 	queue_free()
-
-
