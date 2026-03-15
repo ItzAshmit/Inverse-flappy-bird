@@ -54,12 +54,6 @@ script = ExtResource("1_rr33m")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=252428101]
 shape = SubResource("CapsuleShape2D_cvnsp")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1505559911]
-position = Vector2(100, -50)
-zoom = Vector2(5, 5)
-limit_top = 450
-limit_bottom = 250
-
 [node name="front" type="RayCast2D" parent="." unique_id=304648439]
 target_position = Vector2(85, 0)
 collision_mask = 14

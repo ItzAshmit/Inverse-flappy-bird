@@ -120,4 +120,12 @@ position = Vector2(300, 354)
 process_mode = 3
 script = ExtResource("8_iycpb")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=307828148]
+position = Vector2(400, -50)
+zoom = Vector2(3, 3)
+limit_left = -9999676
+limit_top = 188
+limit_right = 10000324
+limit_bottom = 441
+
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]

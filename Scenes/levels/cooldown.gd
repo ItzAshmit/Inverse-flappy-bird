@@ -26,4 +26,4 @@ func _on_pipe_spawner_timeout() -> void:
 		else:
 			frame = 0
 			print("k")
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(0.03).timeout

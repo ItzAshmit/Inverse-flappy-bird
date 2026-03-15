@@ -5,3 +5,7 @@
 
 [node name="bird" unique_id=1757279582 instance=ExtResource("1_ym0lw")]
 script = ExtResource("2_lurda")
+
+[node name="Camera2D" parent="." index="1" unique_id=1505559911]
+enabled = false
+zoom = Vector2(3, 3)
