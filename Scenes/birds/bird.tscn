@@ -114,5 +114,4 @@ texture_under = ExtResource("3_vl8r2")
 texture_progress = ExtResource("4_rr33m")
 
 [node name="Game_over" parent="CanvasLayer" unique_id=1217476244 instance=ExtResource("5_rr33m")]
-visible = false
 scale = Vector2(1, 1)

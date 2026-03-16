@@ -3,20 +3,34 @@
 [ext_resource type="Script" uid="uid://da3pis5jsyuu3" path="res://Scripts/game_over.gd" id="1_ojehl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
-bg_color = Color(1, 0, 0, 0.078431375)
+bg_color = Color(0, 0.83333325, 1, 0.078431375)
 border_width_left = 100
 border_width_top = 100
 border_width_right = 100
 border_width_bottom = 100
-border_color = Color(0.8, 0, 0, 1)
+border_color = Color(0, 0.8, 0.4533333, 1)
 border_blend = true
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="LabelSettings" id="LabelSettings_8fo1c"]
-font_size = 128
-font_color = Color(1, 0, 0, 1)
+font_size = 64
 outline_size = 20
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_ojehl"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var list = [\"You kiiled the bird..🙂\", \"You won Wow😒\", \"My bird.. 😞\", \"It took so long to build and you just...\", \"Great placing of pipes..🙂\", \"whatever, you won😒\", \"You dont have a heart\", \"wheres the humanity\", \"you cant just.. kill\", \"you muderer.... my bird\"]
+	text = list.pick_random()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoghk"]
 bg_color = Color(0, 0.9666667, 1, 0.6)
@@ -62,6 +76,31 @@ border_width_top = 20
 border_color = Color(0, 0.93333316, 1, 1)
 corner_radius_top_right = 100
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjtdd"]
+bg_color = Color(0, 0.9666667, 1, 0.6)
+border_width_top = 20
+border_width_right = 20
+border_color = Color(0, 0.93333316, 1, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uylih"]
+bg_color = Color(0, 0.9666667, 1, 0.6)
+border_width_top = 10
+border_color = Color(0, 0.93333316, 1, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3817r"]
+bg_color = Color(0, 0.9666667, 1, 0.6)
+border_width_top = 20
+border_color = Color(0, 0.93333316, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+
 [node name="Game_over" type="Control" unique_id=1217476244]
 process_mode = 3
 layout_mode = 3
@@ -89,10 +128,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "GAME OVER"
+text = "You beated the Bird"
 label_settings = SubResource("LabelSettings_8fo1c")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
+script = SubResource("GDScript_ojehl")
 
 [node name="Button2" type="Button" parent="." unique_id=1660255817]
 layout_mode = 1
@@ -123,7 +164,24 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_ojehl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8fo1c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ek8ke")
+text = "Next Level"
+
+[node name="Button4" type="Button" parent="." unique_id=1316815170]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 398.0
+offset_top = -104.0
+offset_right = 850.0
+offset_bottom = 4.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_gjtdd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uylih")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3817r")
 text = "Main Menu"
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_next_level_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_3_pressed"]

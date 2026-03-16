@@ -58,7 +58,7 @@ func over():
 	var maxlevel = config.get_value("progress", "levels_cleared", 0)
 	var len_ = get_tree().current_scene.scene_file_path.length() - 30
 	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
-	if(maxlevel<level):
+	if(maxlevel < level):
 		config.set_value("progress", "levels_cleared", level)
 	config.save("user://save.cfg")
 
