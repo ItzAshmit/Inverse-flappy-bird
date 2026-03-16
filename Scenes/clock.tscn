@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c1hnuutvfirvv"]
+
+[ext_resource type="Script" uid="uid://du7nln134c7i3" path="res://Scripts/clock.gd" id="1_pdqta"]
+[ext_resource type="Texture2D" uid="uid://c3gif6aeb37cc" path="res://Assets/Flappy Bird Assets/clock.png" id="1_s7hhp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdqta"]
+atlas = ExtResource("1_s7hhp")
+region = Rect2(3, 1, 26, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga67c"]
+atlas = ExtResource("1_s7hhp")
+region = Rect2(47, 12, 2, 6)
+
+[node name="clock" type="Control" unique_id=503738122]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_pdqta")
+
+[node name="clock" type="Sprite2D" parent="." unique_id=713267023]
+texture_filter = 1
+texture = SubResource("AtlasTexture_pdqta")
+
+[node name="hand" type="Sprite2D" parent="." unique_id=1848822774]
+texture_filter = 1
+position = Vector2(0.48750305, 2.565731)
+texture = SubResource("AtlasTexture_ga67c")
+offset = Vector2(-0.4875035, -2.565731)

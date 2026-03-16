@@ -1,12 +1,14 @@
 extends Node2D
 
-
+var has_started:bool = false
+@export var time:float = 300.0
 signal pipe_spawned(y_axis:float)
 signal pipe_crossed(y_axis:float)
 
 func _ready() -> void:
+	$CanvasLayer/clock.finished.connect(_timer_finished)
 	if($BirdParent.get_child_count() == 0):
-		var birdscene = load("res://Scenes/bird.tscn")
+		var birdscene = load("res://Scenes/birds/bird.tscn")
 		var bird = birdscene.instantiate()
 		$BirdParent.add_child(bird)
 		bird.name = bird
@@ -32,6 +34,9 @@ func pipe_spawner() -> int:
 	return 0
 	
 func _input(event):
+	if not has_started:
+		$CanvasLayer/clock.start_clock(time)
+		has_started = true
 	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
 		if pipe_spawner():
 			pipe_spawned.emit(get_global_mouse_position().y)
@@ -62,3 +67,11 @@ func pipe_manager(pipe):
 	if(level==9):
 		if($CanvasLayer/Buttons/Button.button_pressed):
 			$CanvasLayer/Buttons/Button.button_pressed=false
+
+
+
+
+
+func _timer_finished():
+	print("over")
+	

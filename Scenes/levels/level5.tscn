@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_0oj8u"]
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/birds/bird.tscn" id="2_0kbvy"]
 
-[node name="MainGame" unique_id=1605266567 instance=ExtResource("1_0oj8u")]
+[node name="MainGame2" unique_id=1605266567 instance=ExtResource("1_0oj8u")]
 
 [node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=901978466]
 layout_mode = 3
@@ -16,9 +16,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.748
 anchor_bottom = 0.782
-offset_left = 1133.0
-offset_right = 1141.0
-offset_bottom = 8.0
+offset_left = 95.0
+offset_top = -3.920002
+offset_right = 210.0
+offset_bottom = 25.72
 text = "don't click me"
 
 [node name="Buttonup" type="Button" parent="CanvasLayer/Buttons" index="1" unique_id=2138611530]
