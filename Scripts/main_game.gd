@@ -73,5 +73,6 @@ func pipe_manager(pipe):
 
 
 func _timer_finished():
-	print("over")
+	get_tree().paused = true
+	
 	

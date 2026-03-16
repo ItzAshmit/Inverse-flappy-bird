@@ -87,7 +87,7 @@ _data = {
 
 [node name="MainGame" type="Node2D" unique_id=1605266567]
 script = ExtResource("1_pu3va")
-time = 250.0
+time = 10.0
 
 [node name="Background" type="Node2D" parent="." unique_id=1716216993]
 texture_filter = 1
@@ -178,13 +178,10 @@ collision_layer = 8
 position = Vector2(21, -26)
 shape = SubResource("RectangleShape2D_6j5ir")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=44392916]
-libraries/ = SubResource("AnimationLibrary_qptf1")
-
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
 position = Vector2(300, 354)
 
-[node name="tween" type="Node" parent="." unique_id=392293881]
+[node name="animation" type="Node" parent="." unique_id=392293881]
 process_mode = 3
 script = ExtResource("8_iycpb")
 
@@ -195,5 +192,8 @@ limit_left = -9998990
 limit_top = 187
 limit_right = 10001010
 limit_bottom = 440
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2068506116]
+libraries/ = SubResource("AnimationLibrary_qptf1")
 
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]

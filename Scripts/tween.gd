@@ -1,17 +1,23 @@
 extends Node
 
 var bird
+var animation
+var clock
 
 func _ready():
 	await get_tree().create_timer(2).timeout
 	bird = $"../BirdParent".get_child(0)
+	animation = get_parent().get_node("AnimationPlayer")
+	clock = get_parent().get_node("CanvasLayer/clock")
+	clock.finished.connect(_timer_ended)
 	bird.bird_died.connect(_bird_died)
 
 
 
 
 
-
+func _timer_ended():
+	animation.play("shaking")
 
 
 

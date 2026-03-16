@@ -1,8 +1,10 @@
 extends Control
 
 
+@export var is_timer_out:bool = false
 
-
+func _ready():
+	pass
 
 func _on_button_2_pressed() -> void:
 	get_tree().paused = false
