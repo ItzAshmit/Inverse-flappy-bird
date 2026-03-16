@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_0oj8u"]
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/birds/bird.tscn" id="2_0kbvy"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kbvy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="MainGame2" unique_id=1605266567 instance=ExtResource("1_0oj8u")]
 
 [node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=901978466]
@@ -31,6 +34,8 @@ offset_left = 849.0
 offset_right = 1160.0
 offset_bottom = 122.0
 grow_horizontal = 0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0kbvy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0kbvy")
 toggle_mode = true
 text = "clickme"
 

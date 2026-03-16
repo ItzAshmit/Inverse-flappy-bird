@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://da3pis5jsyuu3" path="res://Scripts/game_over.gd" id="1_ojehl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
-bg_color = Color(0, 0.83333325, 1, 0.078431375)
+bg_color = Color(0, 0.83333325, 1, 0)
 border_width_left = 100
 border_width_top = 100
 border_width_right = 100
 border_width_bottom = 100
-border_color = Color(0, 0.8, 0.4533333, 1)
+border_color = Color(0, 0.8, 0.4533333, 0)
 border_blend = true
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
@@ -164,7 +164,7 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_ojehl")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8fo1c")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ek8ke")
-text = "Next Level"
+text = "Main Menu"
 
 [node name="Button4" type="Button" parent="." unique_id=1316815170]
 layout_mode = 1
@@ -180,8 +180,8 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_gjtdd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_uylih")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3817r")
-text = "Main Menu"
+text = "Next Level"
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_next_level_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_next_level_pressed"]
