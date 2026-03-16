@@ -16,11 +16,8 @@ func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
-	pipe_manager(pipe)
-	# if($CanvasLayer/Buttons.get_child(0).button_pressed):
-	# 	pipe.damage = 125
-	# 	$CanvasLayer/Buttons.get_child(0).button_pressed=false
-	if pipe.global_position.x > 550: 
+	var ret = pipe_manager(pipe)
+	if pipe.global_position.x > 550 and pipe.global_position.x < 635: 
 		if pipe.global_position.y<310:
 			pipe.get_node("Upper").queue_free()
 			$pipes.add_child(pipe)           
@@ -30,6 +27,8 @@ func pipe_spawner() -> int:
 		else:
 			$pipes.add_child(pipe)
 		pipe.Area.body_exited.connect(_pipe_crossed.bind(pipe.global_position.y))
+		if(ret): $Timer/PipeSpawner.start()
+		else: $Timer/Timer.start()
 		return 1
 	return 0
 	
@@ -37,12 +36,9 @@ func _input(event):
 	if not has_started:
 		$CanvasLayer/clock.start_clock(time)
 		has_started = true
-	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0:
+	if event is InputEventMouseButton and $"Timer/PipeSpawner".time_left==0 and $Timer/Timer.time_left==0:
 		if pipe_spawner():
 			pipe_spawned.emit(get_global_mouse_position().y)
-			$Timer/PipeSpawner.start()
-
-
 
 func _pipe_crossed(_body,y_value):
 	pipe_crossed.emit(y_value)
@@ -50,7 +46,8 @@ func _pipe_crossed(_body,y_value):
 
 
 
-func pipe_manager(pipe):
+func pipe_manager(pipe) -> int:
+	var ret = 1
 	var len_ = get_tree().current_scene.scene_file_path.length() - 30
 	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	if(level==5):
@@ -66,13 +63,17 @@ func pipe_manager(pipe):
 		pipe.speed = 150
 	if(level==9):
 		if($CanvasLayer/Buttons/Button.button_pressed):
+			pipe.damage =0
+			ret = 0
 			$CanvasLayer/Buttons/Button.button_pressed=false
-
+	return ret
 
 
 
 
 func _timer_finished():
+	if(!$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").visible): 
+		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").visible = true
 	get_tree().paused = true
 	
 	

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqeymoih4ycwl" path="res://Scripts/birds/bird.gd" id="1_022x4"]
 [ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://cui7kukopkq78" path="res://Scenes/game_lost.tscn" id="3_8ilfl"]
 [ext_resource type="Texture2D" uid="uid://5lebhd1j3sxi" path="res://Assets/Flappy Bird Assets/heathbar.png" id="3_vl8r2"]
 [ext_resource type="Texture2D" uid="uid://yg3le2c5ate" path="res://Assets/Flappy Bird Assets/heathline.png" id="4_rr33m"]
 [ext_resource type="PackedScene" uid="uid://6nb0hsbl8xp6" path="res://Scenes/game_over.tscn" id="5_rr33m"]
@@ -103,8 +104,11 @@ libraries/ = SubResource("AnimationLibrary_vl8r2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=542817364]
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=205597822]
+[node name="Game_over" parent="CanvasLayer" unique_id=1217476244 instance=ExtResource("3_8ilfl")]
 visible = false
+scale = Vector2(1, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=205597822]
 texture_filter = 1
 offset_right = 64.0
 offset_bottom = 40.0
@@ -113,5 +117,6 @@ value = 50.0
 texture_under = ExtResource("3_vl8r2")
 texture_progress = ExtResource("4_rr33m")
 
-[node name="Game_over" parent="CanvasLayer" unique_id=1217476244 instance=ExtResource("5_rr33m")]
+[node name="Game_lost" parent="CanvasLayer" unique_id=1389937986 instance=ExtResource("5_rr33m")]
+visible = false
 scale = Vector2(1, 1)

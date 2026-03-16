@@ -146,6 +146,10 @@ texture = ExtResource("5_r0mdn")
 [node name="PipeSpawner" type="Timer" parent="Timer" unique_id=1410041825]
 one_shot = true
 
+[node name="Timer" type="Timer" parent="Timer" unique_id=1212296526]
+wait_time = 0.25
+one_shot = true
+
 [node name="pipes" type="Node" parent="." unique_id=966294912]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=757289853]
