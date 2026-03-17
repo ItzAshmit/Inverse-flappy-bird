@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4cv4dpb0qrod" path="res://Assets/Flappy Bird Assets/pipebody.png" id="3_6yjks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnit7"]
-size = Vector2(36, 486)
+size = Vector2(36, 1185)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1buf"]
 size = Vector2(1, 451)
@@ -67,8 +67,80 @@ position = Vector2(0, -376)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_6yjks")
 
+[node name="Sprite2D9" type="Sprite2D" parent="Upper" unique_id=1593863149]
+texture_filter = 1
+position = Vector2(0, -436)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Upper" unique_id=996646207]
+texture_filter = 1
+position = Vector2(0, -496)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Upper" unique_id=387964416]
+texture_filter = 1
+position = Vector2(0, -550)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Upper" unique_id=1885165206]
+texture_filter = 1
+position = Vector2(0, -612)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Upper" unique_id=615916708]
+texture_filter = 1
+position = Vector2(0, -666)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Upper" unique_id=1465979698]
+texture_filter = 1
+position = Vector2(0, -730)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Upper" unique_id=1328962211]
+texture_filter = 1
+position = Vector2(0, -778)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Upper" unique_id=559836625]
+texture_filter = 1
+position = Vector2(0, -826)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Upper" unique_id=1910470223]
+texture_filter = 1
+position = Vector2(0, -890)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Upper" unique_id=1950613365]
+texture_filter = 1
+position = Vector2(0, -954)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Upper" unique_id=721369842]
+texture_filter = 1
+position = Vector2(0, -1018)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Upper" unique_id=614729049]
+texture_filter = 1
+position = Vector2(0, -1082)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Upper" unique_id=476777213]
-position = Vector2(0, -172)
+position = Vector2(0, -521.5)
 shape = SubResource("RectangleShape2D_hnit7")
 
 [node name="Lower" type="Area2D" parent="." unique_id=2086436659]
@@ -126,8 +198,80 @@ position = Vector2(0, -376)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_6yjks")
 
+[node name="Sprite2D9" type="Sprite2D" parent="Lower" unique_id=1247159478]
+texture_filter = 1
+position = Vector2(-3.864087e-05, -441)
+scale = Vector2(0.5, 0.515625)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Lower" unique_id=1295315303]
+texture_filter = 1
+position = Vector2(-4.4235927e-05, -506)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Lower" unique_id=1016081353]
+texture_filter = 1
+position = Vector2(-4.9830982e-05, -570)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Lower" unique_id=1012892719]
+texture_filter = 1
+position = Vector2(-5.542604e-05, -634)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Lower" unique_id=1059116052]
+texture_filter = 1
+position = Vector2(-6.10211e-05, -698)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Lower" unique_id=300217915]
+texture_filter = 1
+position = Vector2(-6.661616e-05, -762)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Lower" unique_id=1465443872]
+texture_filter = 1
+position = Vector2(-7.2211216e-05, -826)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Lower" unique_id=2019900014]
+texture_filter = 1
+position = Vector2(-7.7806275e-05, -890)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Lower" unique_id=2040535049]
+texture_filter = 1
+position = Vector2(-8.200256e-05, -938)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Lower" unique_id=730613908]
+texture_filter = 1
+position = Vector2(-8.7597626e-05, -1002)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D19" type="Sprite2D" parent="Lower" unique_id=404441858]
+texture_filter = 1
+position = Vector2(-9.3192684e-05, -1066)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
+[node name="Sprite2D20" type="Sprite2D" parent="Lower" unique_id=107859362]
+texture_filter = 1
+position = Vector2(-9.8787736e-05, -1130)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_6yjks")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lower" unique_id=1824116837]
-position = Vector2(1.8189894e-12, -169)
+position = Vector2(-4.5634693e-05, -522)
 shape = SubResource("RectangleShape2D_hnit7")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=639065489]

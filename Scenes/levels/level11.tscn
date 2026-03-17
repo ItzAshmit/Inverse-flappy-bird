@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://debsvbxmloxp1"]
 
 [ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_2pt7t"]
-[ext_resource type="PackedScene" uid="uid://b2otyhoyr30by" path="res://Scenes/birds/bird11.tscn" id="2_lxa32"]
+[ext_resource type="PackedScene" uid="uid://cmnyjqepathmv" path="res://Scenes/birds/simurgh.tscn" id="2_lxa32"]
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_2pt7t")]
 

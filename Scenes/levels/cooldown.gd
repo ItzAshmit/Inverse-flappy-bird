@@ -9,11 +9,9 @@ func _ready():
 	cooldown = pipe_spawner.wait_time
 	step = cooldown / 8
 	frame = 0
-	print(step)
 
 
 func _process(_delta):
-	print(frame)
 	var elapsed := pipe_spawner.wait_time - pipe_spawner.time_left
 	var target_frame := int(elapsed / step)
 	frame = clamp(target_frame, 0, 7)

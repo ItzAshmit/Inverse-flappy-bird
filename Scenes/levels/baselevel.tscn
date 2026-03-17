@@ -21,8 +21,19 @@ fill = 1
 fill_from = Vector2(0.4826087, 0.50869566)
 fill_to = Vector2(0.78695655, 0.20869565)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbpkw"]
+bg_color = Color(1, 0.84313726, 0.84313726, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_blend = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbpkw"]
+size = Vector2(190.5, 321)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
-size = Vector2(466, 11)
+size = Vector2(181, 11)
 
 [sub_resource type="Animation" id="Animation_fbpkw"]
 length = 0.001
@@ -150,6 +161,22 @@ one_shot = true
 wait_time = 0.25
 one_shot = true
 
+[node name="Area2D" type="Area2D" parent="." unique_id=480107176]
+position = Vector2(244, -10)
+collision_mask = 255
+
+[node name="Panel" type="Panel" parent="Area2D" unique_id=1160482908]
+offset_left = 306.0
+offset_top = 145.0
+offset_right = 460.0
+offset_bottom = 483.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fbpkw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=237772333]
+position = Vector2(339.25, 321)
+shape = SubResource("RectangleShape2D_fbpkw")
+
 [node name="pipes" type="Node" parent="." unique_id=966294912]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=757289853]
@@ -176,10 +203,11 @@ scale = Vector2(5, 5)
 
 [node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
 position = Vector2(380, 464)
-collision_layer = 8
+collision_layer = 255
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
-position = Vector2(21, -26)
+position = Vector2(-19.5, -26)
 shape = SubResource("RectangleShape2D_6j5ir")
 
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
@@ -202,3 +230,5 @@ process_mode = 3
 libraries/ = SubResource("AnimationLibrary_qptf1")
 
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
