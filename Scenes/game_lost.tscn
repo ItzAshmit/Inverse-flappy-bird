@@ -26,10 +26,6 @@ script/source = "extends Label
 func _ready() -> void:
 	var list = [\"You kiiled the bird..🙂\", \"You won Wow😒\", \"My bird.. 😞\", \"It took so long to build and you just...\", \"Great placing of pipes..🙂\", \"whatever, you won😒\", \"You dont have a heart\", \"wheres the humanity\", \"you cant just.. kill\", \"you muderer.... my bird\"]
 	text = list.pick_random()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 "
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoghk"]

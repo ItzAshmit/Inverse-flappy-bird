@@ -9,19 +9,16 @@ func _ready():
 	cooldown = pipe_spawner.wait_time
 	step = cooldown / 8
 	frame = 0
+	print(step)
 
 
 func _process(_delta):
-	if pipe_spawner.wait_time - pipe_spawner.time_left  != 1:
-		if step * frame <= (pipe_spawner.wait_time - pipe_spawner.time_left):
-			if frame <= 6:
-				frame += 1
+	print(frame)
+	var elapsed := pipe_spawner.wait_time - pipe_spawner.time_left
+	var target_frame := int(elapsed / step)
+	frame = clamp(target_frame, 0, 7)
 
 
 func _on_pipe_spawner_timeout() -> void:
-	for i in range(-7,1):
-		if not frame == 0:
-			frame = i * -1
-		else:
-			frame = 0
-		await get_tree().create_timer(0.03).timeout
+	frame = 0
+	await get_tree().create_timer(0.03).timeout
