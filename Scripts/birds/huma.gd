@@ -1,6 +1,5 @@
 extends Bird
-func teleport():
-	global_position.x += 50
+
 
 func becomeInvisible():
 	if($Timer.time_left > 0 or  modulate.a < 1): return

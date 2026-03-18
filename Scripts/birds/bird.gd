@@ -16,6 +16,10 @@ var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 
 signal bird_died
 
+func teleport():
+	$CollisionShape2D.disabled = true
+	position.x+=50
+	$CollisionShape2D.disabled = false
 func _ready() -> void:
 	get_parent().get_parent().pipe_spawned.connect(_pipe_spawned)
 	get_parent().get_parent().pipe_crossed.connect(_pipe_crossed)
@@ -77,7 +81,9 @@ func _physics_process(_delta: float) -> void:
 		goingdown = false
 		jump()
 
-
+	if Input.is_action_just_pressed("Jump"):
+		teleport()
+		return
 	if(randf() >= ran_factor):
 		if(velocity.y>0): $Image.texture = birddown
 		else: $Image.texture = birdup
