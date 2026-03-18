@@ -4,6 +4,7 @@ var levels_cleared = 0
 
 func _ready():
 	load_data()
+	Audio.menu_music(true)
 	for i in $Levels.get_children():
 		var level_num = str(i.name).substr(5,-1).to_int()
 		if not (level_num <= (levels_cleared + 1)):
@@ -17,6 +18,8 @@ func _on_button_pressed() -> void:
 		var level = str(button.get_parent().name).substr(5,-1).to_int()
 		if(level <= (levels_cleared + 1)):
 			get_tree().change_scene_to_file("res://Scenes/levels/" + str(button.get_parent().name) + ".tscn")
+			await Audio.menu_music(false)
+			Audio.playing = true
 
 func load_data():
 	var config = ConfigFile.new()

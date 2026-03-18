@@ -73,6 +73,11 @@ func _physics_process(_delta: float) -> void:
 	if jump_value.is_empty(): value = 300 
 	else: value = jump_value[0]
 
+	if global_position.y > 430 and health > 0:
+		goingdown = false
+		jump()
+
+
 	if(randf() >= ran_factor):
 		if(velocity.y>0): $Image.texture = birddown
 		else: $Image.texture = birdup

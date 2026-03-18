@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://uideqdtdrdyn" path="res://Scenes/levels/cooldown.gd" id="7_fbpkw"]
 [ext_resource type="Script" uid="uid://cqgivp1mbt8ie" path="res://Scripts/tween.gd" id="8_iycpb"]
 [ext_resource type="PackedScene" uid="uid://c1hnuutvfirvv" path="res://Scenes/clock.tscn" id="9_fbpkw"]
+[ext_resource type="AudioStream" uid="uid://das4t1ixjm7jr" path="res://Assets/Audio/Alarm Clock.mp3" id="10_xb5p2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
 
@@ -31,9 +32,6 @@ border_blend = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbpkw"]
 size = Vector2(190.5, 215)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
-size = Vector2(181, 11)
 
 [sub_resource type="Animation" id="Animation_fbpkw"]
 length = 0.001
@@ -60,6 +58,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_jfump"]
@@ -88,6 +98,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.6666665),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qptf1"]
@@ -194,20 +216,12 @@ modulate = Color(1, 0, 0, 1)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 41.00006
-offset_top = 85.0
-offset_right = 41.00006
-offset_bottom = 85.0
+offset_left = 30.0
+offset_top = 130.0
+offset_right = 30.0
+offset_bottom = 130.0
 grow_horizontal = 2
 scale = Vector2(5, 5)
-
-[node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
-position = Vector2(384, 470)
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
-position = Vector2(-19, -19)
-shape = SubResource("RectangleShape2D_6j5ir")
 
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
 position = Vector2(300, 354)
@@ -227,6 +241,10 @@ limit_bottom = 440
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2068506116]
 process_mode = 3
 libraries/ = SubResource("AnimationLibrary_qptf1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=989731961]
+process_mode = 3
+stream = ExtResource("10_xb5p2")
 
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

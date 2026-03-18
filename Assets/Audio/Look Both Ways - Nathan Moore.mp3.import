@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgwq6iu24jwfx"
+path="res://.godot/imported/Look Both Ways - Nathan Moore.mp3-8a89ff53e612b09d34e5007f659c720b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Look Both Ways - Nathan Moore.mp3"
+dest_files=["res://.godot/imported/Look Both Ways - Nathan Moore.mp3-8a89ff53e612b09d34e5007f659c720b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
