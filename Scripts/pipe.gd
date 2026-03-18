@@ -1,11 +1,17 @@
 extends Node2D
 
 @onready var Area:Area2D = $Area2D
-
+@export var gap = 150
 @export var speed = 100
 @export var damage = 100
 @export var upspeed = 0
 @export var downspeed = 0
+
+func _ready() -> void:
+	@warning_ignore("integer_division")
+	$Upper.position.y = -gap/2
+	@warning_ignore("integer_division")
+	$Lower.position.y = gap/2
 func _process(delta: float) -> void:
 	if upspeed:
 		position.y -= upspeed * delta

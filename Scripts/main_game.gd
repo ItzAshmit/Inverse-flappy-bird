@@ -79,9 +79,11 @@ func pipe_manager(pipe) -> int:
 			pipe.modulate = Color(1.0,1.0,1.0,0.5)
 			ret = 0
 			$CanvasLayer/Buttons/Button.button_pressed=false
+	if(level == 14):
+		pipe.gap -= 20
+	if(level == 15):
+		pipe.gap -= 40
 	return ret
-
-
 
 
 func _timer_finished():
