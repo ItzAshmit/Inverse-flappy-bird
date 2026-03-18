@@ -86,5 +86,8 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jvvi0")
 toggle_mode = true
 text = "up"
 
+[node name="CollisionShape2D" parent="Border" parent_id_path=PackedInt32Array(1227874653) index="0" unique_id=2050395866]
+position = Vector2(-16, -21)
+
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_0kbvy")]
 lives = 2

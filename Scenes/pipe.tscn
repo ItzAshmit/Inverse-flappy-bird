@@ -17,6 +17,7 @@ script = ExtResource("1_hnit7")
 position = Vector2(0, -75)
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
+collision_mask = 128
 
 [node name="Sprite2D" type="Sprite2D" parent="Upper" unique_id=192697183]
 texture_filter = 1
@@ -148,6 +149,7 @@ position = Vector2(0, 75)
 rotation = 3.1415927
 scale = Vector2(0.5, 0.5)
 collision_layer = 4
+collision_mask = 128
 
 [node name="Sprite2D" type="Sprite2D" parent="Lower" unique_id=337826634]
 texture_filter = 1

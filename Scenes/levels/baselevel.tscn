@@ -30,7 +30,7 @@ border_width_bottom = 10
 border_blend = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbpkw"]
-size = Vector2(190.5, 321)
+size = Vector2(190.5, 215)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6j5ir"]
 size = Vector2(181, 11)
@@ -167,14 +167,14 @@ collision_mask = 255
 
 [node name="Panel" type="Panel" parent="Area2D" unique_id=1160482908]
 offset_left = 306.0
-offset_top = 145.0
+offset_top = 207.0
 offset_right = 460.0
-offset_bottom = 483.0
+offset_bottom = 429.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fbpkw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=237772333]
-position = Vector2(339.25, 321)
+position = Vector2(340, 318.5)
 shape = SubResource("RectangleShape2D_fbpkw")
 
 [node name="pipes" type="Node" parent="." unique_id=966294912]
@@ -202,12 +202,11 @@ grow_horizontal = 2
 scale = Vector2(5, 5)
 
 [node name="Border" type="StaticBody2D" parent="." unique_id=1227874653]
-position = Vector2(380, 464)
-collision_layer = 255
+position = Vector2(384, 470)
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=2050395866]
-position = Vector2(-19.5, -26)
+position = Vector2(-19, -19)
 shape = SubResource("RectangleShape2D_6j5ir")
 
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
