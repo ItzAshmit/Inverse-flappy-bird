@@ -5,6 +5,9 @@
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_nolck")]
 
+[node name="Background" parent="." index="0" unique_id=1716216993]
+modulate = Color(0.63087165, 0.0030491794, 0.90818286, 1)
+
 [node name="PipeSpawner" parent="Timer" parent_id_path=PackedInt32Array(99128431) index="0" unique_id=1410041825]
 wait_time = 1.5
 

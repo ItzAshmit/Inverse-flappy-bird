@@ -37,6 +37,9 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_1mqd3")]
 
+[node name="Background" parent="." index="0" unique_id=1716216993]
+modulate = Color(0.9915133, 0.0006630492, 0.96619016, 1)
+
 [node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=386152794]
 layout_mode = 3
 anchors_preset = 15
