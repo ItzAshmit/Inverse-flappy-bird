@@ -243,6 +243,7 @@ process_mode = 3
 libraries/ = SubResource("AnimationLibrary_qptf1")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=989731961]
+unique_name_in_owner = true
 process_mode = 3
 stream = ExtResource("10_xb5p2")
 

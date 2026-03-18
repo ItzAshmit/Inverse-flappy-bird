@@ -18,6 +18,8 @@ func _ready():
 
 func _timer_ended():
 	animation.play("shaking")
+	Audio.volume_db = -10
+	%AudioStreamPlayer2D.playing = true
 
 
 
