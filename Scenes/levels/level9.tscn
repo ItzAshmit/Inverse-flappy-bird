@@ -40,6 +40,12 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [node name="Background" parent="." index="0" unique_id=1716216993]
 modulate = Color(0.9915133, 0.0006630492, 0.96619016, 1)
 
+[node name="clock" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=1630860171]
+offset_left = 41.00006
+offset_top = 85.0
+offset_right = 41.00006
+offset_bottom = 85.0
+
 [node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=386152794]
 layout_mode = 3
 anchors_preset = 15
@@ -47,6 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Buttons" index="0" unique_id=1628599584]
 layout_mode = 1

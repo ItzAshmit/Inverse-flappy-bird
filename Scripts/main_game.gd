@@ -19,7 +19,7 @@ func pipe_spawner() -> int:
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
 	var ret = pipe_manager(pipe)
-	print( $Area2D.get_overlapping_areas())
+	print(not $Area2D.get_overlapping_areas().size())
 	if is_in_area and not $Area2D.get_overlapping_areas().size() and get_local_mouse_position().x > 550:
 		if pipe.global_position.y<310:
 			pipe.get_node("Upper").queue_free()
@@ -80,9 +80,15 @@ func pipe_manager(pipe) -> int:
 			ret = 0
 			$CanvasLayer/Buttons/Button.button_pressed=false
 	if(level == 14):
-		pipe.gap -= 20
+		if($CanvasLayer/Buttons/Button.button_pressed):
+			pipe.gap -= 20
+			ret = 0
+			$CanvasLayer/Buttons/Button.button_pressed=false
 	if(level == 15):
-		pipe.gap -= 40
+		if($CanvasLayer/Buttons/Button.button_pressed):
+			pipe.gap -= 40
+			ret = 0
+			$CanvasLayer/Buttons/Button.button_pressed=false
 	return ret
 
 
@@ -95,6 +101,7 @@ func _timer_finished():
 
 
 func _on_area_2d_mouse_entered() -> void:
+	print("hi")
 	is_in_area = true
 	var tween := create_tween()
 	tween.tween_property($Area2D/Panel, "modulate:a", 1, 0.5)

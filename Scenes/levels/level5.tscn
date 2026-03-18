@@ -60,6 +60,7 @@ offset_top = 30.239998
 offset_right = 26.0
 offset_bottom = 80.24
 grow_horizontal = 0
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_0f7ud")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wa4fy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0kbvy")
@@ -79,6 +80,7 @@ offset_top = -21.760002
 offset_right = -119.0
 offset_bottom = 28.239998
 grow_horizontal = 0
+mouse_filter = 1
 theme_override_styles/normal = SubResource("StyleBoxFlat_0f7ud")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wa4fy")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0kbvy")
@@ -86,8 +88,11 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jvvi0")
 toggle_mode = true
 text = "up"
 
-[node name="CollisionShape2D" parent="Border" parent_id_path=PackedInt32Array(1227874653) index="0" unique_id=2050395866]
-position = Vector2(-16, -21)
+[node name="clock" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=1630860171]
+offset_left = 41.00006
+offset_top = 85.0
+offset_right = 41.00006
+offset_bottom = 85.0
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_0kbvy")]
 lives = 2

@@ -3,6 +3,72 @@
 [ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_6ahyh"]
 [ext_resource type="PackedScene" uid="uid://cmnyjqepathmv" path="res://Scenes/birds/simurgh.tscn" id="2_vfglw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfglw"]
+bg_color = Color(0.138738, 0.2117418, 0.84537643, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cgb10"]
+bg_color = Color(0.07733212, 0.12599382, 0.57387567, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 200
+corner_radius_top_right = 200
+corner_radius_bottom_right = 200
+corner_radius_bottom_left = 200
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amvkl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51htc"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_6ahyh")]
+
+[node name="clock" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=1630860171]
+offset_left = 41.00006
+offset_top = 85.0
+offset_right = 41.00006
+offset_bottom = 85.0
+
+[node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=2127948136]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Buttons" index="0" unique_id=290099611]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.999
+anchor_top = 0.158
+anchor_right = 0.999
+anchor_bottom = 0.158
+offset_left = -75.0
+offset_right = -25.0
+offset_bottom = 50.000008
+grow_horizontal = 0
+mouse_filter = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_vfglw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cgb10")
+theme_override_styles/hover = SubResource("StyleBoxFlat_amvkl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_51htc")
+toggle_mode = true
+text = "hard"
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_vfglw")]
