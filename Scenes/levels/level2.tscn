@@ -5,4 +5,7 @@
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_e0h1l")]
 
+[node name="Background" parent="." index="0" unique_id=1716216993]
+modulate = Color(0.648276, 0.59166116, 0.2727727, 1)
+
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_q0wn2")]

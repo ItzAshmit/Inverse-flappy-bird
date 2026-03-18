@@ -5,5 +5,8 @@
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_6khha")]
 
+[node name="Background" parent="." index="0" unique_id=1716216993]
+modulate = Color(0.7504275, 0.49079806, 0.14281955, 1)
+
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_ou4ko")]
 maxhealth = 175.0
