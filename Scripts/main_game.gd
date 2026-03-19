@@ -12,7 +12,7 @@ signal pipe_crossed(y_axis:float)
 func _ready() -> void:
 	len_ = get_tree().current_scene.scene_file_path.length() - 30
 	level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
-	if(level<=5): time = 300
+	if(level<=5): time = 30
 	elif(level<=10): time = 20
 	elif(level<=15): time = 15
 	else: time = 10

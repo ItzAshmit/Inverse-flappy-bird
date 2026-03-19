@@ -22,6 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://ca5rgqapojg3a" path="res://Assets/Flappy Bird Assets/Levels/level19.png" id="20_4wtbj"]
 [ext_resource type="Texture2D" uid="uid://ihcfq7jcv3v" path="res://Assets/Flappy Bird Assets/Levels/level20.png" id="21_ive8o"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ive8o"]
+font_size = 128
+outline_size = 20
+outline_color = Color(0, 1, 1, 1)
+
 [node name="LevelMenu" type="Control" unique_id=958304429]
 layout_mode = 3
 anchors_preset = 15
@@ -40,6 +45,17 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(3.080368e-06, 0.7824721, 0.7833063, 1)
 
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=636555598]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 176.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(4.8323272e-05, 0.96684366, 0.966844, 1)
+
 [node name="Levels" type="GridContainer" parent="." unique_id=2062547666]
 layout_mode = 1
 anchors_preset = -1
@@ -49,6 +65,9 @@ anchor_right = 0.9
 anchor_bottom = 0.9
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(480, 218)
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
 columns = 5
 
 [node name="level1" type="TextureRect" parent="Levels" unique_id=310745003]
@@ -62,6 +81,7 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_right = 189.0
 offset_bottom = 110.0
+pivot_offset = Vector2(95, 98)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "
@@ -391,23 +411,72 @@ text = "
 
 "
 
+[node name="Label" type="Label" parent="." unique_id=500665415]
+layout_mode = 0
+offset_left = 373.0
+offset_top = 19.0
+offset_right = 805.0
+offset_bottom = 194.0
+text = "LEVELS"
+label_settings = SubResource("LabelSettings_ive8o")
+
+[connection signal="mouse_entered" from="Levels/level1/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/level1/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/level1/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/level2/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/level2/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/level2/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/level3/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/level3/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/level3/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/level4/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/level4/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/level4/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/level5/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/level5/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/level5/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level6/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level6/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level6/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level7/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level7/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level7/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level8/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level8/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level8/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level9/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level9/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level9/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level10/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level10/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level10/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level11/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level11/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level11/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level12/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level12/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level12/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level13/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level13/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level13/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level14/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level14/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level14/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level15/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level15/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level15/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level16/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level16/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level16/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level17/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level17/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level17/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level18/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level18/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level18/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level19/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level19/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level19/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Levels/Level20/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Levels/Level20/Button" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Levels/Level20/Button" to="." method="_on_button_pressed"]

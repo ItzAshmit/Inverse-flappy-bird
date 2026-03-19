@@ -15,7 +15,7 @@ font_size = 256
 outline_size = 20
 outline_color = Color(1, 0.7529412, 0.7529412, 1)
 shadow_size = 10
-shadow_color = Color(0, 0, 0, 0.40392157)
+shadow_color = Color(1, 1, 1, 0.40392157)
 shadow_offset = Vector2(-50, 7)
 
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
@@ -23,7 +23,7 @@ font_size = 128
 outline_size = 20
 outline_color = Color(1, 0.7529412, 0.7529412, 1)
 shadow_size = 10
-shadow_color = Color(0, 0, 0, 0.40392157)
+shadow_color = Color(1, 1, 1, 0.40392157)
 shadow_offset = Vector2(-70, 20)
 
 [sub_resource type="Gradient" id="Gradient_18r40"]

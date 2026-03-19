@@ -118,6 +118,16 @@ _data = {
 &"shaking": SubResource("Animation_jfump")
 }
 
+[sub_resource type="Gradient" id="Gradient_myia5"]
+offsets = PackedFloat32Array(0.19277108, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xb5p2"]
+gradient = SubResource("Gradient_myia5")
+fill = 1
+fill_from = Vector2(0.526087, 0.5043478)
+fill_to = Vector2(0.62608695, 0.5782609)
+
 [node name="MainGame" type="Node2D" unique_id=1605266567]
 script = ExtResource("1_pu3va")
 time = 10.0
@@ -288,6 +298,23 @@ libraries/ = SubResource("AnimationLibrary_qptf1")
 unique_name_in_owner = true
 process_mode = 3
 stream = ExtResource("10_xb5p2")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=492321350]
+modulate = Color(1, 1, 1, 0.33333334)
+texture_filter = 1
+position = Vector2(577, 229)
+amount = 100
+texture = SubResource("GradientTexture2D_xb5p2")
+lifetime = 20.0
+speed_scale = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(200, 50)
+direction = Vector2(-600, 100)
+gravity = Vector2(0, 0)
+initial_velocity_max = 30.0
+scale_amount_min = 0.1
+hue_variation_min = -1.0
+hue_variation_max = 1.0
 
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

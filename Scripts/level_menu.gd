@@ -4,7 +4,6 @@ var levels_cleared = 0
 
 func _ready():
 	load_data()
-	Audio.menu_music(true)
 	for i in $Levels.get_children():
 		var level_num = str(i.name).substr(5,-1).to_int()
 		if not (level_num <= (levels_cleared + 1)):
@@ -30,3 +29,19 @@ func load_data():
 	else:
 		config.set_value("progress", "levels_cleared", 0)
 		config.save(save_path)
+
+
+
+
+
+
+
+var hover_node
+func _on_button_mouse_entered() -> void:
+	hover_node = get_viewport().gui_get_hovered_control()
+	hover_node.get_parent().scale = Vector2(1.5,1.5)
+
+
+func _on_button_mouse_exited() -> void:
+	if hover_node:
+		hover_node.get_parent().scale = Vector2.ONE
