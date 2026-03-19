@@ -25,6 +25,9 @@ func _on_body_entered(_body: Node2D) -> void:
 	$"../../BirdParent".get_child(0).animation.play("new_animation")
 
 func _on_screen_exited() -> void:
+	var tween := create_tween()
+	tween.tween_property(self, "modulate", Color.RED, 0.5).set_trans(Tween.TRANS_ELASTIC)
+	await tween.finished
 	queue_free()
 
 

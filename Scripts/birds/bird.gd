@@ -9,7 +9,7 @@ var len_
 var level
 var health : float
 var pipes
-var speed:int = 150
+var speed:int = 100
 var gravity:int = 320
 var jumped = false
 var goingdown = false
