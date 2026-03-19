@@ -8,5 +8,8 @@
 [node name="Background" parent="." index="0" unique_id=1716216993]
 modulate = Color(0.08873118, 0.342971, 0.1801919, 1)
 
+[node name="Buttons" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=900641882]
+visible = true
+
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_3qgfs")]
 maxhealth = 125.0

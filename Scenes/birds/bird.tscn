@@ -73,6 +73,26 @@ _data = {
 &"new_animation": SubResource("Animation_dnvpi")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_myia5"]
+font_size = 64
+font_color = Color(0.14901961, 0.78431374, 0.36862746, 1)
+outline_size = 15
+outline_color = Color(0.6509804, 0.12941177, 0.12941177, 1)
+
+[sub_resource type="GDScript" id="GDScript_at70g"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	text = str($\"..\".value) + \"%\"
+"
+
 [node name="bird" type="CharacterBody2D" unique_id=1757279582]
 collision_layer = 144
 collision_mask = 0
@@ -145,6 +165,18 @@ scale = Vector2(5, 5)
 value = 50.0
 texture_under = ExtResource("3_vl8r2")
 texture_progress = ExtResource("4_rr33m")
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureProgressBar" unique_id=34602014]
+layout_mode = 0
+offset_left = 18.599998
+offset_top = 3.1999998
+offset_right = 647.4888
+offset_bottom = 178.2
+scale = Vector2(0.09, 0.09)
+label_settings = SubResource("LabelSettings_myia5")
+vertical_alignment = 1
+autowrap_mode = 3
+script = SubResource("GDScript_at70g")
 
 [node name="Game_lost" parent="CanvasLayer" unique_id=1389937986 instance=ExtResource("5_rr33m")]
 visible = false

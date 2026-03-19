@@ -11,11 +11,27 @@ modulate = Color(0, 0.69803923, 1, 1)
 [node name="Buttons" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=900641882]
 visible = true
 
-[node name="ButtonUp" parent="CanvasLayer/Buttons" index="0" unique_id=1827578824]
+[node name="ButtonDown" parent="CanvasLayer/Buttons" index="0" unique_id=967273571]
 visible = true
+offset_left = 1008.0
+offset_top = 263.0
+offset_right = 1111.0
+offset_bottom = 294.0
 
-[node name="ButtonDown" parent="CanvasLayer/Buttons" index="1" unique_id=967273571]
+[node name="ButtonUp" parent="CanvasLayer/Buttons" index="1" unique_id=1827578824]
 visible = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 962.0
+offset_top = 175.0
+offset_right = 1072.0
+offset_bottom = 206.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_0kbvy")]
 lives = 2

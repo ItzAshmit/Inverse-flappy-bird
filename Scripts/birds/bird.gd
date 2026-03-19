@@ -45,7 +45,7 @@ func jump():
 	goingdown = false
 
 func get_collider_layer(ray) -> int:
-	if ray.is_colliding():
+	if ray.is_colliding() and ray.get_collider():
 		return ray.get_collider().collision_layer
 	return -1
 
@@ -106,7 +106,7 @@ func _physics_process(delta: float) -> void:
 		elif ($above.is_colliding() or $above2.is_colliding()) and (get_collider_layer($above) == 2 or get_collider_layer($above2) == 2):
 			goingdown=true
 		else:
-			if $front.is_colliding():
+			if $front.is_colliding() and $front.get_collider():
 				if $front.get_collider().collision_layer == 2:
 					goingdown=true
 				else:
