@@ -93,10 +93,10 @@ func pipe_manager(pipe) -> int:
 			pipe.upspeed = -15
 			$CanvasLayer/Buttons.get_child(0).button_pressed=false
 	if(level>=19):
-		if($CanvasLayer/Buttons/Button.button_pressed):
+		if($CanvasLayer/Buttons.get_child(3).button_pressed):
 			pipe.gap -= 20
 			ret = 0
-			$CanvasLayer/Buttons/Button.button_pressed=false
+			$CanvasLayer/Buttons.get_child(3).button_pressed=false
 	return ret
 
 

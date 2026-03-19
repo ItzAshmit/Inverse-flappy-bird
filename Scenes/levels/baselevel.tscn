@@ -227,12 +227,10 @@ scale = Vector2(5, 5)
 visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [node name="ButtonDown" type="Button" parent="CanvasLayer/Buttons" unique_id=967273571]
 visible = false
-layout_mode = 0
+layout_mode = 1
 offset_right = 53.0
 offset_bottom = 31.0
 mouse_filter = 1
