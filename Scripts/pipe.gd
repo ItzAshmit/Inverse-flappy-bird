@@ -4,8 +4,8 @@ extends Node2D
 @export var gap = 150
 @export var speed = 100
 @export var damage = 100
-@export var upspeed = 0
-@export var downspeed = 0
+@export var upspeed: int = 0
+@export var downspeed: int = 0
 
 func _ready() -> void:
 	@warning_ignore("integer_division")

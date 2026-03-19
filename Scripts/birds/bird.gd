@@ -5,6 +5,7 @@ class_name Bird
 @export var lives: int = 1
 @export var ran_factor:float = 0
 var health : float
+var pipes
 var speed:int = 150
 var gravity:int = 10
 var jumped = false
@@ -21,6 +22,7 @@ func teleport():
 	position.x+=50
 	$CollisionShape2D.disabled = false
 func _ready() -> void:
+	pipes = self.get_parent().get_parent().get_node("pipes")
 	get_parent().get_parent().pipe_spawned.connect(_pipe_spawned)
 	get_parent().get_parent().pipe_crossed.connect(_pipe_crossed)
 	$CanvasLayer/Game_over.visible = false
@@ -80,10 +82,16 @@ func _physics_process(_delta: float) -> void:
 	if global_position.y > 430 and health > 0:
 		goingdown = false
 		jump()
-
-	if Input.is_action_just_pressed("Jump"):
-		teleport()
-		return
+	
+	if($Teleport_timer.time_left==0):
+		velocity.x = 0
+		if(pipes.get_child_count()!=0):
+			print(pipes.get_child(0).global_position.x - global_position.x)
+			if(will_collide(pipes.get_child(0))):
+				teleport()
+				$Teleport_timer.start()
+				velocity.x = -50
+				return
 	if(randf() >= ran_factor):
 		if(velocity.y>0): $Image.texture = birddown
 		else: $Image.texture = birdup
@@ -119,14 +127,19 @@ func _physics_process(_delta: float) -> void:
 			jump()
 	move_and_slide()
 
-
-
-
 func _pipe_spawned(y_value):
 	jump_value.append(y_value)
 
-
-
-
 func _pipe_crossed(y_value):
 	jump_value.erase(y_value)
+
+func will_collide(pipe):
+	var pipe_vel = Vector2(pipe.speed,pipe.upspeed-pipe.downspeed)
+	var rel_vel = velocity + pipe_vel
+	var rel_pos = pipe.global_position - global_position
+	rel_vel = rel_vel/rel_vel.x*rel_pos.x
+	if(rel_pos.x<40 and rel_pos.x>0):
+		if(abs(rel_vel.y-rel_pos.y)<pipe.gap/2):
+			return false
+		return true
+	return false

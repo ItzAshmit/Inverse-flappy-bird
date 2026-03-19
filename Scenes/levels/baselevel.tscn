@@ -216,10 +216,10 @@ modulate = Color(1, 0, 0, 1)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 30.0
-offset_top = 130.0
-offset_right = 30.0
-offset_bottom = 130.0
+offset_left = 41.00006
+offset_top = 85.0
+offset_right = 41.00006
+offset_bottom = 85.0
 grow_horizontal = 2
 scale = Vector2(5, 5)
 

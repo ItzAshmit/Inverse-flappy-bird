@@ -149,3 +149,6 @@ texture_progress = ExtResource("4_rr33m")
 [node name="Game_lost" parent="CanvasLayer" unique_id=1389937986 instance=ExtResource("5_rr33m")]
 visible = false
 scale = Vector2(1, 1)
+
+[node name="Teleport_timer" type="Timer" parent="." unique_id=869009339]
+one_shot = true

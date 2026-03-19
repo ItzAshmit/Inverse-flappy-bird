@@ -19,7 +19,6 @@ func pipe_spawner() -> int:
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
 	var ret = pipe_manager(pipe)
-	print(not $Area2D.get_overlapping_areas().size())
 	if is_in_area and not $Area2D.get_overlapping_areas().size() and get_local_mouse_position().x > 550:
 		if pipe.global_position.y<310:
 			pipe.get_node("Upper").queue_free()
@@ -31,7 +30,7 @@ func pipe_spawner() -> int:
 			$pipes.add_child(pipe)
 		pipe.Area.body_exited.connect(_pipe_crossed.bind(pipe.global_position.y))
 		if(ret): $Timer/PipeSpawner.start()
-		else: $Timer/Timer.start()
+		else: $Timer/Timer.start()   
 		return 1
 	return 0
 	
