@@ -44,6 +44,7 @@ func _input(event):
 			pipe_spawned.emit(get_global_mouse_position().y)
 
 func _pipe_crossed(_body,y_value):
+	print(y_value)
 	pipe_crossed.emit(y_value)
 
 

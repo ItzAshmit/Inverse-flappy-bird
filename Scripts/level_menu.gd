@@ -19,7 +19,7 @@ func _on_button_pressed() -> void:
 		if(level <= (levels_cleared + 1)):
 			get_tree().change_scene_to_file("res://Scenes/levels/" + str(button.get_parent().name) + ".tscn")
 			await Audio.menu_music(false)
-			Audio.playing = true
+
 
 func load_data():
 	var config = ConfigFile.new()

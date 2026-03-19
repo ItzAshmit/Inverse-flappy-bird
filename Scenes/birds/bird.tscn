@@ -74,7 +74,7 @@ _data = {
 }
 
 [node name="bird" type="CharacterBody2D" unique_id=1757279582]
-collision_layer = 128
+collision_layer = 144
 collision_mask = 0
 script = ExtResource("1_022x4")
 

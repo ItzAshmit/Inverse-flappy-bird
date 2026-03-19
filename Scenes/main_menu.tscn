@@ -1,6 +1,149 @@
 [gd_scene format=3 uid="uid://prveo4rtfbyf"]
 
 [ext_resource type="Script" uid="uid://dul4dyrnopxlw" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://dbf5oomjbomqb" path="res://Assets/Flappy Bird Assets/background1.png" id="2_opfnp"]
+[ext_resource type="Texture2D" uid="uid://clv0q67vps27k" path="res://Assets/Flappy Bird Assets/background4.png" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_yhxw7"]
+[ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_trj04"]
+[ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="6_opfnp"]
+[ext_resource type="Texture2D" uid="uid://dtpiooeoqk1ff" path="res://Assets/Flappy Bird Assets/Birdup.png" id="7_cp0ys"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vr1f0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
+font_size = 256
+outline_size = 20
+outline_color = Color(1, 0.7529412, 0.7529412, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.40392157)
+shadow_offset = Vector2(-50, 7)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
+font_size = 128
+outline_size = 20
+outline_color = Color(1, 0.7529412, 0.7529412, 1)
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.40392157)
+shadow_offset = Vector2(-70, 20)
+
+[sub_resource type="Gradient" id="Gradient_18r40"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t1dhk"]
+gradient = SubResource("Gradient_18r40")
+fill = 1
+fill_from = Vector2(0.4826087, 0.50869566)
+fill_to = Vector2(0.78695655, 0.20869565)
+
+[sub_resource type="Animation" id="Animation_yhxw7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Birddown:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_opfnp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Birddown:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(353, 348)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(420, 383)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_opfnp"]
+resource_name = "play"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Birddown:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.7, 0.9666667, 1.44, 1.7066667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_cp0ys"), ExtResource("6_opfnp"), ExtResource("7_cp0ys"), ExtResource("6_opfnp"), ExtResource("7_cp0ys"), ExtResource("6_opfnp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Birddown:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.47, 0.7, 0.9499999, 1.17, 1.44, 1.69, 1.9100001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(353, 364), Vector2(353, 348), Vector2(353, 375), Vector2(353, 364), Vector2(353, 348), Vector2(353, 375), Vector2(353, 364), Vector2(353, 348), Vector2(353, 375)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.43, 0.81, 1.15, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(399, 377), Vector2(420, 383), Vector2(441, 399), Vector2(429, 392.7143), Vector2(416.64706, 386.2437)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.43, 0.81, 1.15, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cp0ys"]
+_data = {
+&"RESET": SubResource("Animation_yhxw7"),
+&"play": SubResource("Animation_opfnp")
+}
 
 [node name="MainMenu" type="Control" unique_id=12103859]
 layout_mode = 3
@@ -19,5 +162,97 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Play"
+
+[node name="Background" type="Node2D" parent="." unique_id=569172561]
+texture_filter = 1
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=1663378257]
+material = SubResource("CanvasItemMaterial_vr1f0")
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-5, 0)
+repeat_times = 3
+
+[node name="Background1" type="Sprite2D" parent="Background/Parallax2D" unique_id=1355261811]
+texture_filter = 1
+position = Vector2(411, 314)
+texture = ExtResource("2_opfnp")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=1977934147]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-10, 0)
+repeat_times = 3
+
+[node name="Background2" type="Sprite2D" parent="Background/Parallax2D2" unique_id=356008958]
+position = Vector2(411, 314)
+texture = ExtResource("3_cp0ys")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=870887836]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 3
+
+[node name="Background3" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1984439567]
+position = Vector2(411, 314)
+texture = ExtResource("4_yhxw7")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=1990321532]
+repeat_size = Vector2(256, 0)
+autoscroll = Vector2(-40, 0)
+repeat_times = 3
+
+[node name="Background4" type="Sprite2D" parent="Background/Parallax2D4" unique_id=1539876784]
+position = Vector2(411, 314)
+texture = ExtResource("5_trj04")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=668418636]
+position = Vector2(494, 313)
+zoom = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="." unique_id=2127975472]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 194.0
+offset_right = 1318.0
+offset_bottom = 543.0
+scale = Vector2(0.3, 0.3)
+text = "INVERSE"
+label_settings = SubResource("LabelSettings_cp0ys")
+
+[node name="Label2" type="Label" parent="." unique_id=1566856408]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 276.0
+offset_right = 1118.0
+offset_bottom = 451.0
+scale = Vector2(0.4, 0.4)
+text = "FLAPPY BIRD"
+label_settings = SubResource("LabelSettings_yhxw7")
+
+[node name="Birddown" type="Sprite2D" parent="." unique_id=284704675]
+position = Vector2(353, 348)
+texture = ExtResource("6_opfnp")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=502011357]
+position = Vector2(688, 199)
+scale = Vector2(20, 18.821)
+color = Color(0.88235295, 0.4117647, 0.60784316, 1)
+energy = 1.5
+texture = SubResource("GradientTexture2D_t1dhk")
+texture_scale = 0.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1674739781]
+libraries/ = SubResource("AnimationLibrary_cp0ys")
+autoplay = &"play"
+
+[node name="Label3" type="Label" parent="." unique_id=2041001592]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 383.0
+offset_right = 604.0002
+offset_bottom = 406.0
+text = "Press anywhere to start"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

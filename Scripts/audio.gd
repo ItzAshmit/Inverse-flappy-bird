@@ -11,7 +11,7 @@ func _on_finished() -> void:
 
 func menu_music(play_:bool):
 	if play_:
-		stream = load("res://Assets/Audio/The Theme - Alex Jones _ Xander Jones.mp3")
+		stream = load("res://Assets/Audio/On The Flip - The Grey Room _ Density & Time.mp3")
 		playing = true
 
 	else:
@@ -19,5 +19,8 @@ func menu_music(play_:bool):
 			volume_db = -i
 			await get_tree().create_timer(0.05).timeout
 		stream = audio_list.pick_random()
-		volume_db = 1.0
 		playing = true
+		for i in range(40):
+			if volume_db < 0:
+				volume_db += 1
+				await get_tree().create_timer(0.05).timeout

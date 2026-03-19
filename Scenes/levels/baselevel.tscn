@@ -6,18 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
 [ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
 [ext_resource type="Texture2D" uid="uid://c46khfpnqhmbd" path="res://Assets/Flappy Bird Assets/cooldown-Sheet.png" id="6_iycpb"]
-[ext_resource type="Script" uid="uid://uideqdtdrdyn" path="res://Scenes/levels/cooldown.gd" id="7_fbpkw"]
+[ext_resource type="Script" uid="uid://uideqdtdrdyn" path="res://Scripts/cooldown.gd" id="7_fbpkw"]
 [ext_resource type="Script" uid="uid://cqgivp1mbt8ie" path="res://Scripts/tween.gd" id="8_iycpb"]
 [ext_resource type="PackedScene" uid="uid://c1hnuutvfirvv" path="res://Scenes/clock.tscn" id="9_fbpkw"]
 [ext_resource type="AudioStream" uid="uid://das4t1ixjm7jr" path="res://Assets/Audio/Alarm Clock.mp3" id="10_xb5p2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
 
-[sub_resource type="Gradient" id="Gradient_18r40"]
+[sub_resource type="Gradient" id="Gradient_xb5p2"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_6y7pd"]
-gradient = SubResource("Gradient_18r40")
+gradient = SubResource("Gradient_xb5p2")
 fill = 1
 fill_from = Vector2(0.4826087, 0.50869566)
 fill_to = Vector2(0.78695655, 0.20869565)
