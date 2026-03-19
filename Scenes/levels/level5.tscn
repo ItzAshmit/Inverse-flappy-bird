@@ -3,91 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_0oj8u"]
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/birds/bird.tscn" id="2_0kbvy"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0f7ud"]
-bg_color = Color(0.138738, 0.2117418, 0.84537643, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 200
-corner_radius_top_right = 200
-corner_radius_bottom_right = 200
-corner_radius_bottom_left = 200
-corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa4fy"]
-bg_color = Color(0.07733212, 0.12599382, 0.57387567, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 200
-corner_radius_top_right = 200
-corner_radius_bottom_right = 200
-corner_radius_bottom_left = 200
-corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kbvy"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvvi0"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
 [node name="MainGame2" unique_id=1605266567 instance=ExtResource("1_0oj8u")]
 
 [node name="Background" parent="." index="0" unique_id=1716216993]
 modulate = Color(0, 0.69803923, 1, 1)
 
-[node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=901978466]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Buttons" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=900641882]
+visible = true
 
-[node name="Buttondown" type="Button" parent="CanvasLayer/Buttons" index="0" unique_id=23814332]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.952
-anchor_top = 0.158
-anchor_right = 0.952
-anchor_bottom = 0.158
-offset_left = -128.40002
-offset_top = 30.239998
-offset_right = 26.0
-offset_bottom = 80.24
-grow_horizontal = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_0f7ud")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_wa4fy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_0kbvy")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jvvi0")
-toggle_mode = true
-text = "down"
+[node name="ButtonUp" parent="CanvasLayer/Buttons" index="0" unique_id=1827578824]
+visible = true
 
-[node name="Buttonup" type="Button" parent="CanvasLayer/Buttons" index="1" unique_id=2138611530]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.999
-anchor_top = 0.158
-anchor_right = 0.999
-anchor_bottom = 0.158
-offset_left = -265.80005
-offset_top = -21.760002
-offset_right = -119.0
-offset_bottom = 28.239998
-grow_horizontal = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_0f7ud")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_wa4fy")
-theme_override_styles/hover = SubResource("StyleBoxFlat_0kbvy")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_jvvi0")
-toggle_mode = true
-text = "up"
-
-[node name="CollisionShape2D" parent="Border" parent_id_path=PackedInt32Array(1227874653) index="0" unique_id=2050395866]
-position = Vector2(-16, -21)
+[node name="ButtonDown" parent="CanvasLayer/Buttons" index="1" unique_id=967273571]
+visible = true
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_0kbvy")]
 lives = 2

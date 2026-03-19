@@ -216,12 +216,56 @@ modulate = Color(1, 0, 0, 1)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 30.0
-offset_top = 130.0
-offset_right = 30.0
-offset_bottom = 130.0
+offset_left = 41.00006
+offset_top = 85.0
+offset_right = 41.00006
+offset_bottom = 85.0
 grow_horizontal = 2
 scale = Vector2(5, 5)
+
+[node name="Buttons" type="Control" parent="CanvasLayer" unique_id=900641882]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonDown" type="Button" parent="CanvasLayer/Buttons" unique_id=967273571]
+visible = false
+layout_mode = 0
+offset_right = 53.0
+offset_bottom = 31.0
+mouse_filter = 1
+toggle_mode = true
+text = "Down"
+
+[node name="ButtonUp" type="Button" parent="CanvasLayer/Buttons" unique_id=1827578824]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_filter = 1
+toggle_mode = true
+text = "Up
+"
+
+[node name="ButtonInvi" type="Button" parent="CanvasLayer/Buttons" unique_id=1858261480]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_filter = 1
+toggle_mode = true
+text = "Invi"
+
+[node name="ButtonHard" type="Button" parent="CanvasLayer/Buttons" unique_id=726347594]
+visible = false
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_filter = 1
+toggle_mode = true
+text = "Hard"
 
 [node name="BirdParent" type="Node2D" parent="." unique_id=1120941888]
 position = Vector2(300, 354)

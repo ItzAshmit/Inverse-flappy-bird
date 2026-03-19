@@ -82,7 +82,7 @@ script = ExtResource("1_022x4")
 shape = SubResource("CapsuleShape2D_cvnsp")
 
 [node name="front" type="RayCast2D" parent="." unique_id=304648439]
-target_position = Vector2(85, 0)
+target_position = Vector2(120, 0)
 collision_mask = 14
 collide_with_areas = true
 
@@ -149,3 +149,10 @@ texture_progress = ExtResource("4_rr33m")
 [node name="Game_lost" parent="CanvasLayer" unique_id=1389937986 instance=ExtResource("5_rr33m")]
 visible = false
 scale = Vector2(1, 1)
+
+[node name="Teleport_timer" type="Timer" parent="." unique_id=869009339]
+wait_time = 5.0
+one_shot = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1489483289]
+one_shot = true

@@ -37,19 +37,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_1mqd3")]
 
-[node name="Background" parent="." index="0" unique_id=1716216993]
-modulate = Color(0.9915133, 0.0006630492, 0.96619016, 1)
-
-[node name="Buttons" type="Control" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=386152794]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Button" type="Button" parent="CanvasLayer/Buttons" index="0" unique_id=1628599584]
-layout_mode = 1
+[node name="CanvasLayer_Buttons#ButtonInvi" type="Button" parent="." index="0" unique_id=1628599584]
 anchors_preset = -1
 anchor_left = 0.999
 anchor_top = 0.158
@@ -65,5 +53,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_8c734")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_547ae")
 toggle_mode = true
 text = "invi"
+
+[node name="Background" parent="." index="1" unique_id=1716216993]
+modulate = Color(0.9915133, 0.0006630492, 0.96619016, 1)
+
+[node name="Buttons" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=900641882]
+visible = true
+
+[node name="ButtonInvi" parent="CanvasLayer/Buttons" index="2" unique_id=1858261480]
+visible = true
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_xjruo")]

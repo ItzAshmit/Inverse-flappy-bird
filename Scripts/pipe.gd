@@ -4,8 +4,8 @@ extends Node2D
 @export var gap = 150
 @export var speed = 100
 @export var damage = 100
-@export var upspeed = 0
-@export var downspeed = 0
+@export var upspeed: int = 0
+@export var downspeed: int = 0
 
 func _ready() -> void:
 	@warning_ignore("integer_division")
@@ -26,3 +26,7 @@ func _on_body_entered(_body: Node2D) -> void:
 
 func _on_screen_exited() -> void:
 	queue_free()
+
+
+func body_entered_2(body: Node2D) -> void:
+	body.will_collide = true

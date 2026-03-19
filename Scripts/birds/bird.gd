@@ -4,9 +4,13 @@ class_name Bird
 @export var defense: float = 50
 @export var lives: int = 1
 @export var ran_factor:float = 0
+var will_collide = false
+var len_
+var level
 var health : float
+var pipes
 var speed:int = 150
-var gravity:int = 10
+var gravity:int = 320
 var jumped = false
 var goingdown = false
 var jump_value:Array = []
@@ -16,7 +20,15 @@ var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 
 signal bird_died
 
+func teleport():
+	$CollisionShape2D.disabled = true
+	position.x+=50
+	$CollisionShape2D.disabled = false
+	will_collide = false
 func _ready() -> void:
+	pipes = self.get_parent().get_parent().get_node("pipes")
+	len_ = get_tree().current_scene.scene_file_path.length() - 30
+	level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	get_parent().get_parent().pipe_spawned.connect(_pipe_spawned)
 	get_parent().get_parent().pipe_crossed.connect(_pipe_crossed)
 	$CanvasLayer/Game_over.visible = false
@@ -56,8 +68,6 @@ func over():
 	var config = ConfigFile.new()
 	config.load("user://save.cfg")
 	var maxlevel = config.get_value("progress", "levels_cleared", 0)
-	var len_ = get_tree().current_scene.scene_file_path.length() - 30
-	var level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	if(maxlevel < level):
 		config.set_value("progress", "levels_cleared", level)
 	config.save("user://save.cfg")
@@ -68,7 +78,7 @@ func damage(pipe):
 	if(health <= 0):
 		die()
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var value:float
 	if jump_value.is_empty(): value = 300 
 	else: value = jump_value[0]
@@ -76,13 +86,20 @@ func _physics_process(_delta: float) -> void:
 	if global_position.y > 430 and health > 0:
 		goingdown = false
 		jump()
-
-
+	
+	if($Teleport_timer.time_left==0 and(level==12 or level == 13 or level>15)):
+		velocity.x = 0
+		if(pipes.get_child_count()!=0):
+			if(will_collide):
+				teleport()
+				$Teleport_timer.start()
+				velocity.x = -10
+				return
 	if(randf() >= ran_factor):
 		if(velocity.y>0): $Image.texture = birddown
 		else: $Image.texture = birdup
 		jumped = false
-		velocity.y += gravity
+		velocity.y += gravity*delta
 		if $below.is_colliding() or $below2.is_colliding() and (get_collider_layer($below) == 4 or get_collider_layer($below2) == 4):
 			goingdown=false
 			jump()
@@ -113,14 +130,8 @@ func _physics_process(_delta: float) -> void:
 			jump()
 	move_and_slide()
 
-
-
-
 func _pipe_spawned(y_value):
 	jump_value.append(y_value)
-
-
-
 
 func _pipe_crossed(y_value):
 	jump_value.erase(y_value)

@@ -5,4 +5,10 @@
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_6ahyh")]
 
+[node name="Background" parent="." index="0" unique_id=1716216993]
+modulate = Color(0.14117648, 0.4, 0.7490196, 1)
+
+[node name="ButtonHard" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="3" unique_id=726347594]
+visible = true
+
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_vfglw")]
