@@ -5,10 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://c4cv4dpb0qrod" path="res://Assets/Flappy Bird Assets/pipeBody.png" id="3_6yjks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hnit7"]
-size = Vector2(36, 1185)
+size = Vector2(36, 1198)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1buf"]
 size = Vector2(1, 451)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6svvj"]
+size = Vector2(52, 1194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yjks"]
+size = Vector2(56, 1197)
 
 [node name="Pipe" type="Node2D" unique_id=1624188297]
 script = ExtResource("1_hnit7")
@@ -285,6 +291,29 @@ collision_layer = 16
 position = Vector2(12, 0)
 shape = SubResource("RectangleShape2D_p1buf")
 
+[node name="Upper2" type="Area2D" parent="." unique_id=1754194674]
+position = Vector2(0, -75)
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Upper2" unique_id=1549841761]
+position = Vector2(0, -517)
+shape = SubResource("RectangleShape2D_6svvj")
+
+[node name="Lower2" type="Area2D" parent="." unique_id=828140875]
+position = Vector2(0, 75)
+rotation = 3.1415927
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lower2" unique_id=857614972]
+position = Vector2(7.500892e-06, -518.5)
+shape = SubResource("RectangleShape2D_6yjks")
+
 [connection signal="body_entered" from="Upper" to="." method="_on_body_entered"]
 [connection signal="body_entered" from="Lower" to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
+[connection signal="body_entered" from="Upper2" to="." method="body_entered_2"]
+[connection signal="body_entered" from="Lower2" to="." method="body_entered_2"]

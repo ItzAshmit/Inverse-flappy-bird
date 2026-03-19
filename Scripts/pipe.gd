@@ -26,3 +26,7 @@ func _on_body_entered(_body: Node2D) -> void:
 
 func _on_screen_exited() -> void:
 	queue_free()
+
+
+func body_entered_2(body: Node2D) -> void:
+	body.will_collide = true
