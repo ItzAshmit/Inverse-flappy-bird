@@ -20,6 +20,16 @@ var birddown = preload("res://Assets/Flappy Bird Assets/Birddown.png")
 
 signal bird_died
 
+func becomeInvisible():
+	if($Timer.time_left > 0 or  modulate.a < 1): return
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 1.0)
+	$Timer.start()
+
+func becomeVisible():
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 1.0, 1.0)
+
 func teleport():
 	$CollisionShape2D.disabled = true
 	position.x+=50
@@ -86,7 +96,8 @@ func _physics_process(delta: float) -> void:
 	if global_position.y > 430 and health > 0:
 		goingdown = false
 		jump()
-	
+	if(health <= 2*maxhealth/3 and $Timer.time_left==0 and(level==10 or level == 11 or level>15)): 
+		becomeInvisible()
 	if($Teleport_timer.time_left==0 and(level==12 or level == 13 or level>15)):
 		velocity.x = 0
 		if(pipes.get_child_count()!=0):
