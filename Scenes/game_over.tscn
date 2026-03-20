@@ -3,64 +3,119 @@
 [ext_resource type="Script" uid="uid://da3pis5jsyuu3" path="res://Scripts/game_over.gd" id="1_ojehl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
-bg_color = Color(0, 0.83333325, 1, 0)
+bg_color = Color(0.60133326, 1, 0.53999996, 0.37254903)
 border_width_left = 100
 border_width_top = 100
 border_width_right = 100
 border_width_bottom = 100
-border_color = Color(0, 0.8, 0.4533333, 0)
+border_color = Color(0, 0.72, 0.40799996, 0.9137255)
 border_blend = true
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [sub_resource type="LabelSettings" id="LabelSettings_8fo1c"]
 font_size = 64
 outline_size = 20
 outline_color = Color(1, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoghk"]
-bg_color = Color(0, 0.9666667, 1, 0.6)
-border_width_left = 20
-border_width_top = 20
-border_color = Color(0, 0.93333316, 1, 1)
-border_blend = true
-corner_radius_top_left = 100
+[sub_resource type="GDScript" id="GDScript_ojehl"]
+script/source = "extends Label
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14u15"]
-bg_color = Color(0, 0.9666667, 1, 0.6)
+
+func _ready() -> void:
+	var list = [\"You can't stand a chance\", \"Lost?🤣 Just Quit\", \"Can't even beat a stupid bird😂\", \"Losing to a bird🤣\", \"You call yourself a Gamer😝\", \"losed? ohh now what? excuses\", \"Cant even beat a stupid bird what will you do in life\", \"Just give up you cant\", \"Just had to kill a bird, and losed\", \"wasting time in a game like this, you deserve that\"]
+	text = list.pick_random()
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx2pa"]
+bg_color = Color(1, 0.63, 0.63, 0.73333335)
+border_width_left = 10
 border_width_top = 10
 border_width_right = 10
-border_color = Color(0, 0.93333316, 1, 1)
-border_blend = true
+border_width_bottom = 10
+border_color = Color(0.5411765, 0.31764707, 0.31764707, 1)
 corner_radius_top_left = 100
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3ryr"]
-bg_color = Color(0, 0.9666667, 1, 0.6)
-border_width_top = 20
-border_color = Color(0, 0.93333316, 1, 1)
-corner_radius_top_left = 100
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojehl"]
-bg_color = Color(0, 0.9666667, 1, 0.6)
-border_width_top = 20
-border_width_right = 20
-border_color = Color(0, 0.93333316, 1, 1)
-border_blend = true
 corner_radius_top_right = 100
-corner_detail = 20
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fo1c"]
-bg_color = Color(0, 0.9666667, 1, 0.6)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdej0"]
+bg_color = Color(1, 0.63, 0.63, 0.73333335)
+border_color = Color(0.5411765, 0.31764707, 0.31764707, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dl3hp"]
+bg_color = Color(1, 0.63, 0.63, 0.73333335)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.5411765, 0.31764707, 0.31764707, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijr2a"]
+bg_color = Color(0.19215687, 0.19215687, 0.19215687, 0.26666668)
+border_width_left = 10
 border_width_top = 10
-border_color = Color(0, 0.93333316, 1, 1)
-border_blend = true
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.20392157, 0.105882354, 0.105882354, 0.39215687)
+corner_radius_top_left = 100
 corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ek8ke"]
-bg_color = Color(0, 0.9666667, 1, 0.6)
-border_width_top = 20
-border_color = Color(0, 0.93333316, 1, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x7fmp"]
+bg_color = Color(1, 0.63, 0.63, 0.73333335)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.5411765, 0.31764707, 0.31764707, 1)
+corner_radius_top_left = 100
 corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0kca"]
+bg_color = Color(1, 0.6313726, 0.6313726, 0.73333335)
+border_color = Color(0.5411765, 0.31764707, 0.31764707, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cinmp"]
+bg_color = Color(1, 0.6313726, 0.6313726, 0.73333335)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.5411765, 0.31764707, 0.31764707, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_esbfh"]
+bg_color = Color(0.19215687, 0.19215687, 0.19215687, 0.26666668)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.20392157, 0.105882354, 0.105882354, 0.39215687)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [node name="Game_over" type="Control" unique_id=1217476244]
 process_mode = 3
@@ -95,36 +150,40 @@ label_settings = SubResource("LabelSettings_8fo1c")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+script = SubResource("GDScript_ojehl")
 
 [node name="Button2" type="Button" parent="." unique_id=1660255817]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -362.0
-offset_top = -108.0
-grow_horizontal = 0
-grow_vertical = 0
+offset_left = 816.0
+offset_top = 554.0
+offset_right = 1200.0
+offset_bottom = 674.0
+mouse_filter = 1
 theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_eoghk")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_14u15")
-theme_override_styles/hover = SubResource("StyleBoxFlat_j3ryr")
-text = "REMATCH"
+theme_override_styles/normal = SubResource("StyleBoxFlat_hx2pa")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rdej0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dl3hp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ijr2a")
+toggle_mode = true
+text = "Rematch"
 
 [node name="Button3" type="Button" parent="." unique_id=114780106]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -108.0
-offset_right = 418.0
+offset_left = 2.0
+offset_top = -166.0
+offset_right = 408.0
+offset_bottom = -46.0
 grow_vertical = 0
+mouse_filter = 1
 theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_ojehl")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8fo1c")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ek8ke")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x7fmp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n0kca")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cinmp")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_esbfh")
+toggle_mode = true
 text = "Main Menu"
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

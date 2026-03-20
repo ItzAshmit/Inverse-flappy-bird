@@ -56,7 +56,7 @@ shader_parameter/text_color = Color(1, 0.40249014, 0.12012402, 1)
 shader_parameter/use_custom_color = true
 shader_parameter/shake_intensity = 0.0
 shader_parameter/enable_pixelation = true
-shader_parameter/pixel_size = 1.0
+shader_parameter/pixel_size = 6.7910002750725
 shader_parameter/adaptive_pixels = true
 shader_parameter/enable_outline = true
 shader_parameter/outline_color = Color(0, 0, 0, 1)
@@ -68,6 +68,18 @@ shader_parameter/aberration_strength = 1.0
 font_size = 128
 outline_size = 20
 outline_color = Color(1, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="Animation" id="Animation_un7i8"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_qn0ea"]
+resource_name = "transition"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7lqc8"]
+_data = {
+&"RESET": SubResource("Animation_un7i8"),
+&"transition": SubResource("Animation_qn0ea")
+}
 
 [node name="LevelMenu" type="Control" unique_id=958304429]
 layout_mode = 3
@@ -550,6 +562,9 @@ size_flags_vertical = 3
 text = "
 
 "
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2092681749]
+libraries/ = SubResource("AnimationLibrary_7lqc8")
 
 [connection signal="mouse_entered" from="Control/level1/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Control/level1/Button" to="." method="_on_button_mouse_exited"]
