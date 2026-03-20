@@ -16,6 +16,8 @@ func _on_button_pressed() -> void:
 	if button:
 		var level = str(button.get_parent().name).substr(5,-1).to_int()
 		if(level <= (levels_cleared + 1)):
+			$AnimationPlayer.play("transition")
+			await get_tree().create_timer(1.1).timeout
 			get_tree().change_scene_to_file("res://Scenes/levels/" + str(button.get_parent().name) + ".tscn")
 			await Audio.menu_music(false)
 
@@ -40,10 +42,10 @@ var hover_node
 func _on_button_mouse_entered() -> void:
 	hover_node = get_viewport().gui_get_hovered_control()
 	var tween := create_tween()
-	tween.tween_property(hover_node.get_parent(), "scale", Vector2(1.5,1.5), 0.5)
+	tween.tween_property(hover_node.get_parent(), "scale", Vector2(1.5,1.5), 0.5).set_trans(Tween.TRANS_ELASTIC)
 
 
 func _on_button_mouse_exited() -> void:
 	if hover_node:
 		var tween := create_tween()
-		tween.tween_property(hover_node.get_parent(), "scale", Vector2(1,1), 0.5)
+		tween.tween_property(hover_node.get_parent(), "scale", Vector2(1,1), 0.5).set_trans(Tween.TRANS_BOUNCE)

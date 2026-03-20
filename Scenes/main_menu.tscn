@@ -6,25 +6,73 @@
 [ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_trj04"]
 [ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="6_opfnp"]
+[ext_resource type="Shader" uid="uid://b6bvrgmoufrim" path="res://Scripts/shaders/label.gdshader" id="6_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://dtpiooeoqk1ff" path="res://Assets/Flappy Bird Assets/Birdup.png" id="7_cp0ys"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vr1f0"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_trj04"]
+shader = ExtResource("6_yhxw7")
+shader_parameter/jitter_strength = 2.0
+shader_parameter/jitter_speed = 8.0
+shader_parameter/jitter_frequency = 12.0
+shader_parameter/separate_xy = true
+shader_parameter/time_offset = 0.0
+shader_parameter/enable_rotation = false
+shader_parameter/rotation_strength = 5.0
+shader_parameter/rotation_speed = 3.0
+shader_parameter/rotation_frequency = 4.0
+shader_parameter/enable_scaling = true
+shader_parameter/scale_strength = 0.018000000855
+shader_parameter/scale_speed = 1.6300000741651202
+shader_parameter/scale_frequency = 2.28200010513512
+shader_parameter/base_scale = 1.0
+shader_parameter/text_color = Color(1, 1, 1, 1)
+shader_parameter/use_custom_color = false
+shader_parameter/shake_intensity = 0.5
+shader_parameter/enable_pixelation = true
+shader_parameter/pixel_size = 20.0770009061575
+shader_parameter/adaptive_pixels = true
+shader_parameter/enable_outline = true
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_thickness = 1.0
+shader_parameter/chromatic_aberration = false
+shader_parameter/aberration_strength = 1.0
+
 [sub_resource type="LabelSettings" id="LabelSettings_cp0ys"]
 font_size = 256
-outline_size = 20
-outline_color = Color(1, 0.7529412, 0.7529412, 1)
-shadow_size = 10
-shadow_color = Color(1, 1, 1, 0.40392157)
 shadow_offset = Vector2(-50, 7)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yhxw7"]
+shader = ExtResource("6_yhxw7")
+shader_parameter/jitter_strength = 2.0
+shader_parameter/jitter_speed = 8.0
+shader_parameter/jitter_frequency = 12.0
+shader_parameter/separate_xy = true
+shader_parameter/time_offset = 0.0
+shader_parameter/enable_rotation = false
+shader_parameter/rotation_strength = 5.0
+shader_parameter/rotation_speed = 3.0
+shader_parameter/rotation_frequency = 4.0
+shader_parameter/enable_scaling = false
+shader_parameter/scale_strength = 0.1
+shader_parameter/scale_speed = 2.5
+shader_parameter/scale_frequency = 6.0
+shader_parameter/base_scale = 1.0
+shader_parameter/text_color = Color(1, 1, 1, 1)
+shader_parameter/use_custom_color = false
+shader_parameter/shake_intensity = 1.0
+shader_parameter/enable_pixelation = true
+shader_parameter/pixel_size = 6.7910002750725
+shader_parameter/adaptive_pixels = true
+shader_parameter/enable_outline = true
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_thickness = 1.0
+shader_parameter/chromatic_aberration = false
+shader_parameter/aberration_strength = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_yhxw7"]
 font_size = 128
-outline_size = 20
-outline_color = Color(1, 0.7529412, 0.7529412, 1)
-shadow_size = 10
-shadow_color = Color(1, 1, 1, 0.40392157)
-shadow_offset = Vector2(-70, 20)
 
 [sub_resource type="Gradient" id="Gradient_18r40"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
@@ -212,6 +260,7 @@ position = Vector2(494, 313)
 zoom = Vector2(3, 3)
 
 [node name="Label" type="Label" parent="." unique_id=2127975472]
+material = SubResource("ShaderMaterial_trj04")
 layout_mode = 0
 offset_left = 290.0
 offset_top = 194.0
@@ -222,6 +271,7 @@ text = "INVERSE"
 label_settings = SubResource("LabelSettings_cp0ys")
 
 [node name="Label2" type="Label" parent="." unique_id=1566856408]
+material = SubResource("ShaderMaterial_yhxw7")
 layout_mode = 0
 offset_left = 330.0
 offset_top = 276.0
