@@ -14,10 +14,4 @@ disabled = false
 [node name="ButtonUp" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="1" unique_id=1827578824]
 disabled = false
 
-[node name="ButtonInvi" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="2" unique_id=1858261480]
-disabled = false
-
-[node name="ButtonHard" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="3" unique_id=726347594]
-disabled = false
-
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_us8fw")]
