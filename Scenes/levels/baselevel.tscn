@@ -431,7 +431,3 @@ hue_variation_max = 1.0
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
-[connection signal="toggled" from="CanvasLayer/Buttons/ButtonDown" to="." method="_on_button_down_toggled"]
-[connection signal="toggled" from="CanvasLayer/Buttons/ButtonUp" to="." method="_on_button_up_toggled"]
-[connection signal="toggled" from="CanvasLayer/Buttons/ButtonInvi" to="." method="_on_button_invi_toggled"]
-[connection signal="toggled" from="CanvasLayer/Buttons/ButtonHard" to="." method="_on_button_hard_toggled"]
