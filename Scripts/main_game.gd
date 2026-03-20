@@ -23,8 +23,8 @@ func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
 	pipe.global_position = get_global_mouse_position()
-	var ret = pipe_manager(pipe)
 	if is_in_area and not $Area2D.get_overlapping_areas().size() and get_local_mouse_position().x > 550:
+		var ret = pipe_manager(pipe)
 		if pipe.global_position.y<220:
 			pipe.get_node("Upper").queue_free()
 			pipe.get_node("Upper2").queue_free()
