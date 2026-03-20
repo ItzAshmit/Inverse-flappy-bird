@@ -4,7 +4,7 @@ var levels_cleared = 0
 
 func _ready():
 	load_data()
-	for i in $Levels.get_children():
+	for i in $Control.get_children():
 		var level_num = str(i.name).substr(5,-1).to_int()
 		if not (level_num <= (levels_cleared + 1)):
 			i.modulate = Color(1.0, 1.0, 1.0, 0.3)
@@ -39,9 +39,11 @@ func load_data():
 var hover_node
 func _on_button_mouse_entered() -> void:
 	hover_node = get_viewport().gui_get_hovered_control()
-	hover_node.get_parent().scale = Vector2(1.5,1.5)
+	var tween := create_tween()
+	tween.tween_property(hover_node.get_parent(), "scale", Vector2(1.5,1.5), 0.5)
 
 
 func _on_button_mouse_exited() -> void:
 	if hover_node:
-		hover_node.get_parent().scale = Vector2.ONE
+		var tween := create_tween()
+		tween.tween_property(hover_node.get_parent(), "scale", Vector2(1,1), 0.5)
