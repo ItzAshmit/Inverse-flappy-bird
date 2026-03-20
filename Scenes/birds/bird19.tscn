@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cha1145scq3n"]
 
 [ext_resource type="PackedScene" uid="uid://df2rcrua7wqpf" path="res://Scenes/birds/bird.tscn" id="1_ojv3e"]
-[ext_resource type="Script" uid="uid://dqeymoih4ycwl" path="res://Scripts/birds/bird.gd" id="2_8egw2"]
 
 [node name="bird" unique_id=1757279582 instance=ExtResource("1_ojv3e")]
-script = ExtResource("2_8egw2")
+
+[node name="Teleport_timer" parent="." index="12" unique_id=869009339]
+wait_time = 7.0

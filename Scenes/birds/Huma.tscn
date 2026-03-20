@@ -6,8 +6,4 @@
 [node name="bird" unique_id=1757279582 instance=ExtResource("1_3dclw")]
 script = ExtResource("2_jd7eg")
 
-[node name="Timer" type="Timer" parent="." index="11" unique_id=1419543528]
-wait_time = 4.0
-one_shot = true
-
 [connection signal="timeout" from="Timer" to="." method="becomeVisible"]
