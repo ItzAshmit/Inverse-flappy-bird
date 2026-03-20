@@ -8,19 +8,13 @@
 [node name="Background" parent="." index="0" unique_id=1716216993]
 modulate = Color(0, 0.7137255, 0.49411765, 1)
 
-[node name="Buttons" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="2" unique_id=900641882]
-visible = true
+[node name="ButtonDown" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="0" unique_id=967273571]
+disabled = false
 
-[node name="ButtonUp" parent="CanvasLayer/Buttons" index="0" unique_id=1827578824]
-visible = true
+[node name="ButtonUp" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="1" unique_id=1827578824]
+disabled = false
 
-[node name="ButtonDown" parent="CanvasLayer/Buttons" index="1" unique_id=967273571]
-visible = true
-
-[node name="ButtonInvi" parent="CanvasLayer/Buttons" index="2" unique_id=1858261480]
-visible = true
-
-[node name="ButtonHard" parent="CanvasLayer/Buttons" index="3" unique_id=726347594]
-visible = true
+[node name="ButtonHard" parent="CanvasLayer/Buttons" parent_id_path=PackedInt32Array(900641882) index="3" unique_id=726347594]
+disabled = false
 
 [node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_8an5l")]
