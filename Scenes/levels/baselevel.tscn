@@ -31,7 +31,7 @@ border_width_bottom = 10
 border_blend = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbpkw"]
-size = Vector2(190.5, 215)
+size = Vector2(172.25, 215)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb5p2"]
 bg_color = Color(1, 0.84313726, 0.6313726, 0.73333335)
@@ -71,7 +71,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.20484135, 0.10422372, 0.10423792, 1)
+border_color = Color(0.20392157, 0.105882354, 0.105882354, 0.39215687)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -91,7 +91,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.20484135, 0.10422372, 0.10423792, 1)
+border_color = Color(0.20392157, 0.105882354, 0.105882354, 0.39215687)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -103,7 +103,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.20484135, 0.10422372, 0.10423792, 1)
+border_color = Color(0.20392157, 0.105882354, 0.105882354, 0.39215687)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -115,7 +115,7 @@ border_width_left = 10
 border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
-border_color = Color(0.20484135, 0.10422372, 0.10423792, 1)
+border_color = Color(0.20392157, 0.105882354, 0.105882354, 0.39215687)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
