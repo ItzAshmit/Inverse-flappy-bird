@@ -96,7 +96,7 @@ func _physics_process(delta: float) -> void:
 	if global_position.y > 430 and health > 0:
 		goingdown = false
 		jump()
-	if(health <= 2*maxhealth/3 and $Timer.time_left==0 and(level==10 or level == 11 or level>15)): 
+	if(health <= 2*maxhealth/3 and $Timer.time_left==0 and(level==10 or level == 11 or level>18)): 
 		becomeInvisible()
 	if($Teleport_timer.time_left==0 and(level==12 or level == 13 or level>15)):
 		velocity.x = 0
