@@ -35,6 +35,7 @@ func pipe_spawner() -> int:
 		else:
 			$pipes.add_child(pipe)
 		pipe.Area.body_exited.connect(_pipe_crossed.bind(pipe.global_position.y))
+		pipe_after+=1
 		if(ret): $Timer/PipeSpawner.start()
 		else: $Timer/Timer.start()   
 		return 1
@@ -49,7 +50,6 @@ func _input(event):
 			pipe_spawned.emit(get_global_mouse_position().y)
 
 func _pipe_crossed(_body,y_value):
-	print(y_value)
 	pipe_crossed.emit(y_value)
 
 func pipe_manager(pipe) -> int:
@@ -57,9 +57,11 @@ func pipe_manager(pipe) -> int:
 	if(level==5):
 		if($CanvasLayer/Buttons.get_child(1).button_pressed):
 			pipe.upspeed = 15
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(1).button_pressed=false
 		elif($CanvasLayer/Buttons.get_child(0).button_pressed):
 			pipe.upspeed = -15
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(0).button_pressed=false
 	elif(level==7):
 		pipe.speed += 20
@@ -70,16 +72,19 @@ func pipe_manager(pipe) -> int:
 			pipe.damage =0
 			pipe.modulate = Color(1.0,1.0,1.0,0.5)
 			ret = 0
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(2).button_pressed=false
 	if(level == 14):
 		if($CanvasLayer/Buttons.get_child(3).button_pressed):
 			pipe.gap -= 20
 			ret = 0
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(3).button_pressed=false
 	if(level == 15):
 		if($CanvasLayer/Buttons.get_child(3).button_pressed):
 			pipe.gap -= 40
 			ret = 0
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(3).button_pressed=false
 	if(level>=16):
 		pipe.speed += 20
@@ -88,14 +93,17 @@ func pipe_manager(pipe) -> int:
 	if(level>=18):
 		if($CanvasLayer/Buttons.get_child(1).button_pressed):
 			pipe.upspeed = 15
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(1).button_pressed=false
 		elif($CanvasLayer/Buttons.get_child(0).button_pressed):
 			pipe.upspeed = -15
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(0).button_pressed=false
 	if(level>=19):
 		if($CanvasLayer/Buttons.get_child(3).button_pressed):
 			pipe.gap -= 20
 			ret = 0
+			pipe_after=-1
 			$CanvasLayer/Buttons.get_child(3).button_pressed=false
 	return ret
 
@@ -117,3 +125,19 @@ func _on_area_2d_mouse_exited() -> void:
 	is_in_area = false
 	var tween := create_tween()
 	tween.tween_property($Area2D/Panel, "modulate:a", 0, 0.5)
+
+
+func _on_button_hard_toggled(toggled_on: bool) -> void:
+	if(toggled_on and pipe_after<2): $CanvasLayer/Buttons/ButtonHard.button_pressed=false
+
+
+func _on_button_invi_toggled(toggled_on: bool) -> void:
+	if(toggled_on and pipe_after<2): $CanvasLayer/Buttons/ButtonInvi.button_pressed=false
+
+
+func _on_button_up_toggled(toggled_on: bool) -> void:
+	if(toggled_on and pipe_after<2): $CanvasLayer/Buttons/ButtonUp.button_pressed=false
+
+
+func _on_button_down_toggled(toggled_on: bool) -> void:
+	if(toggled_on and pipe_after<2): $CanvasLayer/Buttons/ButtonDown.button_pressed=false
