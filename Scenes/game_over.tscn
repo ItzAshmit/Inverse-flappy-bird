@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://da3pis5jsyuu3" path="res://Scripts/game_over.gd" id="1_ojehl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
-bg_color = Color(0.60133326, 1, 0.53999996, 0.37254903)
+bg_color = Color(1, 0.53999996, 0.53999996, 0.37254903)
 border_width_left = 100
 border_width_top = 100
 border_width_right = 100
 border_width_bottom = 100
-border_color = Color(0, 0.72, 0.40799996, 0.9137255)
+border_color = Color(0.72, 0, 0, 0.9137255)
 border_blend = true
 corner_radius_top_left = 100
 corner_radius_top_right = 100

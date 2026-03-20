@@ -109,8 +109,11 @@ func pipe_manager(pipe) -> int:
 
 
 func _timer_finished():
-	if(!$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").visible): 
+	if(!$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").visible):
+		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").scale = Vector2(0.1,0.1)
 		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").visible = true
+		create_tween().tween_property($BirdParent.get_child(0).get_node("CanvasLayer/Game_lost"), "scale", Vector2(1,1),1.5).set_trans(Tween.TRANS_ELASTIC) 
+		await get_tree().create_timer(1.54).timeout
 	get_tree().paused = true
 	
 	
@@ -137,6 +140,7 @@ func _on_button_invi_toggled(toggled_on: bool) -> void:
 
 func _on_button_up_toggled(toggled_on: bool) -> void:
 	if(toggled_on and pipe_after<2): $CanvasLayer/Buttons/ButtonUp.button_pressed=false
+	
 
 
 func _on_button_down_toggled(toggled_on: bool) -> void:
