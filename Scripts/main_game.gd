@@ -130,8 +130,12 @@ func pipe_manager(pipe) -> int:
 
 
 func _timer_finished():
-	if(!$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").visible): 
+	if(!$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").visible):
+		var tween := create_tween()
 		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").visible = true
+		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").scale = Vector2(0.01,0.01)
+		tween.tween_property($BirdParent.get_child(0).get_node("CanvasLayer/Game_lost"), "scale", Vector2(1.0,1.0), 1.5).set_trans(Tween.TRANS_ELASTIC)
+		await tween.finished
 	get_tree().paused = true
 	
 	

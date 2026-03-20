@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4cv4dpb0qrod"
-path="res://.godot/imported/pipeBody.png-043bb880123a7eca122eb58fe1f5e5fd.ctex"
+path="res://.godot/imported/pipebody.png-b99604767e250670c9238295a32048c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Flappy Bird Assets/pipeBody.png"
-dest_files=["res://.godot/imported/pipeBody.png-043bb880123a7eca122eb58fe1f5e5fd.ctex"]
+source_file="res://Assets/Flappy Bird Assets/pipebody.png"
+dest_files=["res://.godot/imported/pipebody.png-b99604767e250670c9238295a32048c0.ctex"]
 
 [params]
 
