@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://fwtb7vio3tmn"]
+
+[ext_resource type="PackedScene" uid="uid://br7dxfo4bl2nb" path="res://Scenes/levels/baselevel.tscn" id="1_gd57p"]
+[ext_resource type="PackedScene" uid="uid://bx4ehd8t2084f" path="res://Scenes/birds/birdendless.tscn" id="2_rjcfj"]
+[ext_resource type="Script" uid="uid://j2qm42j8wxtw" path="res://Scripts/endlessclock.gd" id="3_oft1a"]
+
+[node name="MainGame" unique_id=1605266567 instance=ExtResource("1_gd57p")]
+
+[node name="bird" parent="BirdParent" parent_id_path=PackedInt32Array(1120941888) index="0" unique_id=1757279582 instance=ExtResource("2_rjcfj")]
+time = 2.0
+
+[node name="clock" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=1630860171]
+script = ExtResource("3_oft1a")
+initial_time = 10.0

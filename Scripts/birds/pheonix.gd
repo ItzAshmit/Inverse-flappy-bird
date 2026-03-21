@@ -1,4 +1,4 @@
 extends Bird
 func _ready():
 	super()
-	lives = 2 
+	lives = 2
