@@ -122,16 +122,6 @@ font_size = 64
 outline_size = 20
 outline_color = Color(1, 0, 0, 1)
 
-[sub_resource type="GDScript" id="GDScript_8fo1c"]
-script/source = "extends Label
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var list = [\"You kiiled the bird..🙂\", \"You won Wow😒\", \"My bird.. 😞\", \"It took so long to build and you just...\", \"Great placing of pipes..🙂\", \"whatever, you won😒\", \"You dont have a heart\", \"wheres the humanity\", \"you cant just.. kill\", \"you muderer.... my bird\"]
-	text = list.pick_random()
-"
-
 [node name="Game_over" type="Control" unique_id=1217476244]
 process_mode = 3
 layout_mode = 3
@@ -213,7 +203,6 @@ text = "Score: 0"
 label_settings = SubResource("LabelSettings_ojehl")
 horizontal_alignment = 1
 autowrap_mode = 3
-script = SubResource("GDScript_8fo1c")
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -27,4 +27,6 @@ func _on_next_level_pressed() -> void:
 
 func _process(delta):
 	if is_endless_mode:
-		$Label2.text = "Score - " 
+		var time = self.get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer/Endless timer").time
+		$Label2.text = "Score - " + str(round(time)/10)
+		print($Label2.text)
