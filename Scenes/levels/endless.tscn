@@ -4,6 +4,40 @@
 [ext_resource type="Script" uid="uid://b43y38clfws60" path="res://Scripts/background.gd" id="2_1jdlp"]
 [ext_resource type="PackedScene" uid="uid://bx4ehd8t2084f" path="res://Scenes/birds/birdendless.tscn" id="2_rjcfj"]
 [ext_resource type="Script" uid="uid://j2qm42j8wxtw" path="res://Scripts/endlessclock.gd" id="3_oft1a"]
+[ext_resource type="Shader" uid="uid://b6bvrgmoufrim" path="res://Scripts/shaders/label.gdshader" id="5_c8dm7"]
+[ext_resource type="Script" uid="uid://cerage0jc4lck" path="res://Scripts/endless_timer.gd" id="6_fprm0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fprm0"]
+shader = ExtResource("5_c8dm7")
+shader_parameter/jitter_strength = 2.0
+shader_parameter/jitter_speed = 8.0
+shader_parameter/jitter_frequency = 12.0
+shader_parameter/separate_xy = true
+shader_parameter/time_offset = 0.0
+shader_parameter/enable_rotation = false
+shader_parameter/rotation_strength = 5.0
+shader_parameter/rotation_speed = 3.0
+shader_parameter/rotation_frequency = 4.0
+shader_parameter/enable_scaling = true
+shader_parameter/scale_strength = 0.018000000855
+shader_parameter/scale_speed = 1.6300000741651202
+shader_parameter/scale_frequency = 2.28200010513512
+shader_parameter/base_scale = 1.0
+shader_parameter/text_color = Color(1, 1, 1, 1)
+shader_parameter/use_custom_color = false
+shader_parameter/shake_intensity = 0.5
+shader_parameter/enable_pixelation = true
+shader_parameter/pixel_size = 20.0000009025
+shader_parameter/adaptive_pixels = true
+shader_parameter/enable_outline = true
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_thickness = 1.0
+shader_parameter/chromatic_aberration = false
+shader_parameter/aberration_strength = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dqt6w"]
+font_size = 256
+shadow_offset = Vector2(-50, 7)
 
 [node name="MainGame" unique_id=1605266567 instance=ExtResource("1_gd57p")]
 
@@ -16,3 +50,12 @@ time = 2.0
 [node name="clock" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="1" unique_id=1630860171]
 script = ExtResource("3_oft1a")
 initial_time = 10.0
+
+[node name="Endless timer" type="Label" parent="CanvasLayer" parent_id_path=PackedInt32Array(757289853) index="3" unique_id=690269470]
+material = SubResource("ShaderMaterial_fprm0")
+offset_right = 1361.0
+offset_bottom = 618.0
+scale = Vector2(0.25, 0.25)
+text = "Score - "
+label_settings = SubResource("LabelSettings_dqt6w")
+script = ExtResource("6_fprm0")

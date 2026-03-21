@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dhpy6xdsu1lpb" path="res://Assets/Flappy Bird Assets/Birddown.png" id="6_opfnp"]
 [ext_resource type="Shader" uid="uid://b6bvrgmoufrim" path="res://Scripts/shaders/label.gdshader" id="6_yhxw7"]
 [ext_resource type="Texture2D" uid="uid://dtpiooeoqk1ff" path="res://Assets/Flappy Bird Assets/Birdup.png" id="7_cp0ys"]
+[ext_resource type="Shader" uid="uid://wsyyqj2iknqt" path="res://Scripts/shaders/button.gdshader" id="9_trj04"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vr1f0"]
 
@@ -109,30 +110,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(353, 348)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(420, 383)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Label3:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
 
 [sub_resource type="Animation" id="Animation_opfnp"]
 resource_name = "play"
@@ -162,36 +139,109 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(353, 364), Vector2(353, 348), Vector2(353, 375), Vector2(353, 364), Vector2(353, 348), Vector2(353, 375), Vector2(353, 364), Vector2(353, 348), Vector2(353, 375)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.43, 0.81, 1.15, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(399, 377), Vector2(420, 383), Vector2(441, 399), Vector2(429, 392.7143), Vector2(416.64706, 386.2437)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Label3:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.43, 0.81, 1.15, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.0, 0.0, 0.0, 0.0]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cp0ys"]
 _data = {
 &"RESET": SubResource("Animation_yhxw7"),
 &"play": SubResource("Animation_opfnp")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_16hvj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhxw7"]
+bg_color = Color(0.95, 0.73149997, 0.73149997, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.7490196, 0.5176471, 0.5176471, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
+bg_color = Color(0.95, 0.73149997, 0.73149997, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.7490196, 0.5176471, 0.5176471, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hvj"]
+bg_color = Color(0.95, 0.73149997, 0.73149997, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7490196, 0.5176471, 0.5176471, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vr1f0"]
+shader = ExtResource("9_trj04")
+shader_parameter/blur = 3.5
+shader_parameter/warp_intensity = 1.0
+shader_parameter/strength_x = 12.0
+shader_parameter/strength_y = 12.0
+shader_parameter/offset_x = 0.0
+shader_parameter/offset_y = 0.0
+shader_parameter/corner_radius = 1.0
+shader_parameter/edge_smoothness = 3.0
+shader_parameter/tint = Color(0.29, 0.0841, 0.0841, 0.09019608)
+shader_parameter/edge_highlight = Color(0.7764706, 0.52156866, 0.52156866, 1)
+shader_parameter/edge_width = 10.0
+shader_parameter/chromatic_strength = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t1dhk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5egv6"]
+bg_color = Color(0.95, 0.73149997, 0.73149997, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.7490196, 0.5176471, 0.5176471, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtepg"]
+bg_color = Color(0.95, 0.73149997, 0.73149997, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0.7490196, 0.5176471, 0.5176471, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dnnj"]
+bg_color = Color(0.95, 0.73149997, 0.73149997, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7490196, 0.5176471, 0.5176471, 1)
+border_blend = true
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
 
 [node name="MainMenu" type="Control" unique_id=12103859]
 layout_mode = 3
@@ -201,15 +251,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
-
-[node name="Button" type="Button" parent="." unique_id=1666550412]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Play"
 
 [node name="Background" type="Node2D" parent="." unique_id=569172561]
 texture_filter = 1
@@ -297,12 +338,73 @@ texture_scale = 0.2
 libraries/ = SubResource("AnimationLibrary_cp0ys")
 autoplay = &"play"
 
-[node name="Label3" type="Label" parent="." unique_id=2041001592]
-layout_mode = 0
-offset_left = 420.0
-offset_top = 383.0
-offset_right = 604.0002
-offset_bottom = 406.0
-text = "Press anywhere to start"
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=630932817]
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Levels" type="Button" parent="CanvasLayer" unique_id=414687647]
+material = SubResource("ShaderMaterial_16hvj")
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -173.0
+offset_right = 192.0
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.54901963, 0.2901961, 0.2901961, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_trj04")
+theme_override_styles/hover = SubResource("StyleBoxFlat_16hvj")
+text = "Levels"
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Levels" unique_id=89393345]
+z_index = -1
+material = SubResource("ShaderMaterial_vr1f0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Endless" type="Button" parent="CanvasLayer" unique_id=1156984455]
+material = SubResource("ShaderMaterial_t1dhk")
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -384.0
+offset_top = -173.0
+offset_right = -15.0
+offset_bottom = -65.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.54901963, 0.2901961, 0.2901961, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5egv6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vtepg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8dnnj")
+text = "Endless"
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Endless" unique_id=309338495]
+z_index = -1
+material = SubResource("ShaderMaterial_vr1f0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="pressed" from="CanvasLayer/Levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="CanvasLayer/Endless" to="." method="_on_endless_pressed"]

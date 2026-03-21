@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://b0jo2xo3mxnxp" path="res://Assets/Flappy Bird Assets/background3.png" id="4_73nn6"]
 [ext_resource type="Texture2D" uid="uid://cvhg75e666d0i" path="res://Assets/Flappy Bird Assets/background2.png" id="5_r0mdn"]
 [ext_resource type="Texture2D" uid="uid://c46khfpnqhmbd" path="res://Assets/Flappy Bird Assets/cooldown-Sheet.png" id="6_iycpb"]
-[ext_resource type="Script" path="res://Scripts/cooldown.gd" id="7_fbpkw"]
+[ext_resource type="Script" uid="uid://uideqdtdrdyn" path="res://Scripts/cooldown.gd" id="7_fbpkw"]
 [ext_resource type="Script" uid="uid://cqgivp1mbt8ie" path="res://Scripts/tween.gd" id="8_iycpb"]
 [ext_resource type="PackedScene" uid="uid://c1hnuutvfirvv" path="res://Scenes/clock.tscn" id="9_fbpkw"]
 [ext_resource type="AudioStream" uid="uid://das4t1ixjm7jr" path="res://Assets/Audio/Alarm Clock.mp3" id="10_xb5p2"]
+[ext_resource type="Shader" uid="uid://wsyyqj2iknqt" path="res://Scripts/shaders/button.gdshader" id="11_qfa6q"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_18r40"]
 
@@ -183,6 +184,21 @@ corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8vhgc"]
+shader = ExtResource("11_qfa6q")
+shader_parameter/blur = 2.000000095
+shader_parameter/warp_intensity = 0.4
+shader_parameter/strength_x = 12.0
+shader_parameter/strength_y = 12.0
+shader_parameter/offset_x = 0.0
+shader_parameter/offset_y = 0.0
+shader_parameter/corner_radius = 1.0
+shader_parameter/edge_smoothness = 3.0
+shader_parameter/tint = Color(1, 0.39866668, 0.120000005, 0.078431375)
+shader_parameter/edge_highlight = Color(1, 1, 1, 1)
+shader_parameter/edge_width = 10.0
+shader_parameter/chromatic_strength = 5.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kbvy"]
 bg_color = Color(1, 0.84313726, 0.6313726, 0.73333335)
@@ -384,11 +400,12 @@ anchors_preset = 0
 
 [node name="ButtonDown" type="Button" parent="CanvasLayer/Buttons" unique_id=967273571]
 layout_mode = 1
-offset_top = 632.0
+offset_top = 584.0
 offset_right = 288.0
-offset_bottom = 752.0
+offset_bottom = 704.0
 scale = Vector2(0.5, 0.5)
 mouse_filter = 1
+theme_override_colors/font_pressed_color = Color(0, 1, 0.29999995, 1)
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_xb5p2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_qfa6q")
@@ -397,15 +414,28 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_0f7ud")
 disabled = true
 toggle_mode = true
 text = "Down"
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Buttons/ButtonDown" unique_id=166071127]
+z_index = -1
+material = SubResource("ShaderMaterial_8vhgc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="ButtonUp" type="Button" parent="CanvasLayer/Buttons" unique_id=1827578824]
 layout_mode = 1
 offset_left = 144.0
-offset_top = 632.0
+offset_top = 584.0
 offset_right = 432.0
-offset_bottom = 752.0
+offset_bottom = 704.0
 scale = Vector2(0.5, 0.5)
 mouse_filter = 1
+theme_override_colors/font_pressed_color = Color(0.85, 1, 0, 1)
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_xb5p2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0kbvy")
@@ -414,15 +444,28 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_wa4fy")
 disabled = true
 toggle_mode = true
 text = "Up "
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Buttons/ButtonUp" unique_id=1141069858]
+z_index = -1
+material = SubResource("ShaderMaterial_8vhgc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="ButtonInvi" type="Button" parent="CanvasLayer/Buttons" unique_id=1858261480]
 layout_mode = 1
 offset_left = 288.0
-offset_top = 632.0
+offset_top = 584.0
 offset_right = 576.0
-offset_bottom = 748.0
+offset_bottom = 700.0
 scale = Vector2(0.5, 0.5)
 mouse_filter = 1
+theme_override_colors/font_pressed_color = Color(0, 1, 0.9166665, 1)
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_xb5p2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0kbvy")
@@ -431,15 +474,28 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_jvvi0")
 disabled = true
 toggle_mode = true
 text = "Invisible"
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Buttons/ButtonInvi" unique_id=76052779]
+z_index = -1
+material = SubResource("ShaderMaterial_8vhgc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="ButtonHard" type="Button" parent="CanvasLayer/Buttons" unique_id=726347594]
 layout_mode = 1
 offset_left = 432.0
-offset_top = 632.0
+offset_top = 584.0
 offset_right = 720.0
-offset_bottom = 748.0
+offset_bottom = 700.0
 scale = Vector2(0.5, 0.5)
 mouse_filter = 1
+theme_override_colors/font_pressed_color = Color(1, 0.56666666, 0, 1)
 theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxFlat_xb5p2")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0kbvy")
@@ -448,6 +504,18 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_ow2y3")
 disabled = true
 toggle_mode = true
 text = "Hard"
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Buttons/ButtonHard" unique_id=289274159]
+z_index = -1
+material = SubResource("ShaderMaterial_8vhgc")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="timeout" from="Timer/PipeSpawner" to="CanvasLayer/Sprite2D" method="_on_pipe_spawner_timeout"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

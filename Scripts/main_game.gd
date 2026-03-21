@@ -64,7 +64,7 @@ func pipe_manager(pipe) -> int:
 	if(level==5):
 		if($CanvasLayer/Buttons.get_child(1).button_pressed):
 			pipe.upspeed = 15
-			pipe_after[1]=-1
+			pipe_after[1] =- 1
 			$CanvasLayer/Buttons.get_child(1).button_pressed=false
 			$CanvasLayer/Buttons.get_child(1).disabled = true
 			disabledButtons[1] = $CanvasLayer/Buttons.get_child(1)
@@ -148,7 +148,35 @@ func _timer_finished():
 		await tween.finished
 	get_tree().paused = true
 	
+func _process(_delta):
+	if $CanvasLayer/Buttons/ButtonDown.disabled == true and not $CanvasLayer/Buttons/ButtonDown/ColorRect.visible == false:
+		$CanvasLayer/Buttons/ButtonDown/ColorRect.visible = false
+
+	elif $CanvasLayer/Buttons/ButtonDown.disabled == false and not $CanvasLayer/Buttons/ButtonDown/ColorRect.visible == true:
+		$CanvasLayer/Buttons/ButtonDown/ColorRect.visible = true
+
+
+	if $CanvasLayer/Buttons/ButtonUp.disabled == true and not $CanvasLayer/Buttons/ButtonUp/ColorRect.visible == false:
+		$CanvasLayer/Buttons/ButtonUp/ColorRect.visible = false
+
+	elif $CanvasLayer/Buttons/ButtonUp.disabled == false and not $CanvasLayer/Buttons/ButtonUp/ColorRect.visible == true:
+		$CanvasLayer/Buttons/ButtonUp/ColorRect.visible = true
 	
+
+	if $CanvasLayer/Buttons/ButtonHard.disabled == true and not $CanvasLayer/Buttons/ButtonHard/ColorRect.visible == false:
+		$CanvasLayer/Buttons/ButtonHard/ColorRect.visible = false
+
+	elif $CanvasLayer/Buttons/ButtonHard.disabled == false and not $CanvasLayer/Buttons/ButtonHard/ColorRect.visible == true:
+		$CanvasLayer/Buttons/ButtonHard/ColorRect.visible = true
+	
+
+	if $CanvasLayer/Buttons/ButtonInvi.disabled == true and not $CanvasLayer/Buttons/ButtonInvi/ColorRect.visible == false:
+		$CanvasLayer/Buttons/ButtonInvi/ColorRect.visible = false
+
+	elif $CanvasLayer/Buttons/ButtonInvi.disabled == false and not $CanvasLayer/Buttons/ButtonInvi/ColorRect.visible == true:
+		$CanvasLayer/Buttons/ButtonInvi/ColorRect.visible = true
+
+
 
 func _on_area_2d_mouse_entered() -> void:
 	is_in_area = true

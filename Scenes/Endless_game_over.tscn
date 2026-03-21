@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dj75l0e3v3cmt"]
+
+[ext_resource type="PackedScene" uid="uid://6nb0hsbl8xp6" path="res://Scenes/game_over.tscn" id="1_51rs3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_51rs3"]
+font_size = 64
+outline_size = 15
+outline_color = Color(0, 1, 0.98333335, 1)
+
+[node name="Game_over" unique_id=1217476244 instance=ExtResource("1_51rs3")]
+is_endless_mode = null
+is_timer_out = null
+
+[node name="Label2" type="Label" parent="." index="2" unique_id=495826885]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 36.0
+offset_right = 206.0
+offset_bottom = 215.0
+grow_horizontal = 2
+text = "
+"
+label_settings = SubResource("LabelSettings_51rs3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
