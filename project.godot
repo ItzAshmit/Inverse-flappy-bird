@@ -10,20 +10,36 @@ config_version=5
 
 [application]
 
-config/name="inverse_flappy_bird"
+config/name="Inverse_Flappy_Bird"
+config/description="The Classic Flappy bird Game Where You Place Pipes"
 run/main_scene="uid://prveo4rtfbyf"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="uid://c6se8ybm7eols"
+config/icon="uid://dhpy6xdsu1lpb"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
 Audio="*uid://cdwbqfaxolbgv"
+
+[debug]
+
+canvas_items/custom_image=""
+canvas_items/size/mode=0
+canvas_items/description=""
+canvas_items/name="inverse_flappy_bird"
+canvas_items/icon="res://icon.svg"
+canvas_items/minimum_display_time=0
+canvas_items/image=""
+canvas_items/bg_color=Color(0.14, 0.14, 0.14, 1)
 
 [display]
 
 window/size/viewport_width=1200
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://8rvg0dokuxmv"
 
 [input]
 
