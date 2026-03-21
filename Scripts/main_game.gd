@@ -13,6 +13,7 @@ signal pipe_crossed(y_axis:float)
 func _ready() -> void:
 	len_ = get_tree().current_scene.scene_file_path.length() - 30
 	level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
+	if level==0: level = 21
 	if(level<=5): time = 30
 	elif(level<=10): time = 20
 	elif(level<=15): time = 15
@@ -126,6 +127,15 @@ func pipe_manager(pipe) -> int:
 			$CanvasLayer/Buttons.get_child(3).button_pressed=false
 			$CanvasLayer/Buttons.get_child(3).disabled = true
 			disabledButtons[3] = $CanvasLayer/Buttons.get_child(3)
+	if(level==21):
+		if($CanvasLayer/Buttons.get_child(2).button_pressed):
+			pipe.damage =0
+			pipe.modulate = Color(1.0,1.0,1.0,0.5)
+			ret = 0
+			pipe_after[2]=-1
+			$CanvasLayer/Buttons.get_child(2).button_pressed=false
+			$CanvasLayer/Buttons.get_child(2).disabled = true
+			disabledButtons[2] = $CanvasLayer/Buttons.get_child(2)
 	return ret
 
 

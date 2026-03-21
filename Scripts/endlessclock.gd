@@ -19,14 +19,14 @@ func _physics_process(delta: float):
 		time_left = 0
 		$hand.rotation_degrees = 360
 		finished.emit()
-	if(time_went >= 10 and buttons_enabled == 0):
+	if(time_went >= 30 and buttons_enabled == 0):
 		buttons_enabled += 1
 		buttons = self.get_parent().get_node("Buttons")
 		buttons.get_child(0).disabled = false
-	elif(time_went >= 20 and buttons_enabled == 1):
+	elif(time_went >= 60 and buttons_enabled == 1):
 		buttons_enabled += 1
 		buttons.get_child(1).disabled = false
-	elif(time_went >= 30 and buttons_enabled == 2):
+	elif(time_went >= 90 and buttons_enabled == 2):
 		buttons_enabled += 1
 		buttons.get_child(2).disabled = false
 	elif(time_went >= 120 and buttons_enabled == 3):
