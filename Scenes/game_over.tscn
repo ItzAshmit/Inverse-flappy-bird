@@ -119,8 +119,8 @@ corner_radius_bottom_left = 100
 
 [sub_resource type="LabelSettings" id="LabelSettings_ojehl"]
 font_size = 64
-outline_size = 20
-outline_color = Color(1, 0, 0, 1)
+outline_size = 10
+outline_color = Color(1, 0.6166667, 0, 1)
 
 [node name="Game_over" type="Control" unique_id=1217476244]
 process_mode = 3
@@ -132,6 +132,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_ojehl")
+is_endless_mode = true
 
 [node name="Panel" type="Panel" parent="." unique_id=626936539]
 layout_mode = 1

@@ -25,7 +25,7 @@ func _on_next_level_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/levels/level" + str(level + 1) + ".tscn")
 
 
-func _process(delta):
+func _process(_delta):
 	if is_endless_mode:
 		var time = self.get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer/Endless timer").time
 		$Label2.text = "Score - " + str(round(time)/10)
