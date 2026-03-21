@@ -15,7 +15,7 @@ func _ready() -> void:
 	level = get_tree().current_scene.scene_file_path.substr(25,len_).to_int()
 	if level==0: 
 		level = 21
-		$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").is_endless_mode = true
+		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").is_endless_mode = true
 	if(level<=5): time = 30
 	elif(level<=10): time = 20
 	elif(level<=15): time = 15

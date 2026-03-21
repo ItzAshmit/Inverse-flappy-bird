@@ -30,3 +30,5 @@ func _process(_delta):
 		var time = self.get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer/Endless timer").time
 		$Label2.text = "Score - " + str(round(time)/10)
 		print($Label2.text)
+	else:
+		$Label2.visible = false
