@@ -30,6 +30,11 @@ func _ready() -> void:
 	text = list.pick_random()
 "
 
+[sub_resource type="LabelSettings" id="LabelSettings_hx2pa"]
+font_size = 64
+outline_size = 20
+outline_color = Color(1, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx2pa"]
 bg_color = Color(1, 0.63, 0.63, 0.73333335)
 border_width_left = 10
@@ -191,6 +196,21 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "You beated the Bird"
 label_settings = SubResource("LabelSettings_8fo1c")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = SubResource("GDScript_ojehl")
+
+[node name="Label2" type="Label" parent="." unique_id=1851188472]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "fdajlkdfals"
+label_settings = SubResource("LabelSettings_hx2pa")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3

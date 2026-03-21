@@ -117,6 +117,21 @@ corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
 
+[sub_resource type="LabelSettings" id="LabelSettings_ojehl"]
+font_size = 64
+outline_size = 20
+outline_color = Color(1, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_8fo1c"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var list = [\"You kiiled the bird..🙂\", \"You won Wow😒\", \"My bird.. 😞\", \"It took so long to build and you just...\", \"Great placing of pipes..🙂\", \"whatever, you won😒\", \"You dont have a heart\", \"wheres the humanity\", \"you cant just.. kill\", \"you muderer.... my bird\"]
+	text = list.pick_random()
+"
+
 [node name="Game_over" type="Control" unique_id=1217476244]
 process_mode = 3
 layout_mode = 3
@@ -139,9 +154,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rjluv")
 
 [node name="Label" type="Label" parent="." unique_id=840121333]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "You Lost
@@ -185,6 +200,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_cinmp")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_esbfh")
 toggle_mode = true
 text = "Main Menu"
+
+[node name="Label2" type="Label" parent="." unique_id=1076437788]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_ojehl")
+horizontal_alignment = 1
+autowrap_mode = 3
+script = SubResource("GDScript_8fo1c")
 
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

@@ -3,7 +3,6 @@ extends Control
 @export var is_endless_mode:bool = false
 @export var is_timer_out:bool = false
 
-
 func _on_button_2_pressed() -> void:
 	get_tree().paused = false
 	await get_tree().process_frame
@@ -28,5 +27,4 @@ func _on_next_level_pressed() -> void:
 
 func _process(delta):
 	if is_endless_mode:
-
-		$Label2.text = ''
+		$Label2.text = "Score - " 
