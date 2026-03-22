@@ -8,10 +8,8 @@ outline_size = 15
 outline_color = Color(0, 1, 0.98333335, 1)
 
 [node name="Game_over" unique_id=1217476244 instance=ExtResource("1_51rs3")]
-is_endless_mode = null
-is_timer_out = null
 
-[node name="Label2" type="Label" parent="." index="2" unique_id=495826885]
+[node name="Label3" type="Label" parent="." index="2" unique_id=495826885]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

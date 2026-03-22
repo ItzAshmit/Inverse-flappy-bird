@@ -22,6 +22,7 @@ boot_splash/minimum_display_time=2000
 [autoload]
 
 Audio="*uid://cdwbqfaxolbgv"
+EndlessTimer="*uid://cerage0jc4lck"
 
 [debug]
 
