@@ -22,6 +22,7 @@ boot_splash/minimum_display_time=2000
 [autoload]
 
 Audio="*uid://cdwbqfaxolbgv"
+PokiSDK="*uid://bb73c5bdkkmut"
 
 [debug]
 
@@ -40,6 +41,14 @@ window/size/viewport_width=1200
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="uid://8rvg0dokuxmv"
+
+[dotnet]
+
+project/assembly_name="Inverse_Flappy_Bird"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/poki-sdk/plugin.cfg")
 
 [input]
 

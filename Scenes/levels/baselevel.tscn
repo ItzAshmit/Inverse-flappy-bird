@@ -32,7 +32,7 @@ border_width_bottom = 10
 border_blend = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbpkw"]
-size = Vector2(172.25, 215)
+size = Vector2(190.125, 215)
 
 [sub_resource type="Animation" id="Animation_fbpkw"]
 length = 0.001
@@ -322,7 +322,7 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fbpkw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=237772333]
-position = Vector2(340, 318.5)
+position = Vector2(331.0625, 318.5)
 shape = SubResource("RectangleShape2D_fbpkw")
 
 [node name="pipes" type="Node" parent="." unique_id=966294912]

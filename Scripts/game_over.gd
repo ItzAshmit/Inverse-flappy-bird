@@ -29,6 +29,6 @@ func _process(_delta):
 	if is_endless_mode:
 		var time = self.get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer/Endless timer").time
 		$Label2.text = "Score - " + str(round(time)/10)
-		print($Label2.text)
 	else:
-		$Label2.visible = false
+		if has_node("Label2"):
+			$Label2.visible = false

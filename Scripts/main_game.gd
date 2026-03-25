@@ -22,6 +22,7 @@ func _ready() -> void:
 	else: time = 10
 	$Area2D/Panel.modulate = Color(1.0,1.0,1.0,0.0)
 	$CanvasLayer/clock.finished.connect(_timer_finished)
+
 func pipe_spawner() -> int:
 	var Pipe_scene = load("res://Scenes/pipe.tscn")
 	var pipe = Pipe_scene.instantiate()
@@ -144,6 +145,7 @@ func pipe_manager(pipe) -> int:
 func _timer_finished():
 	if(!$BirdParent.get_child(0).get_node("CanvasLayer/Game_over").visible):
 		var tween := create_tween()
+		print(2543)
 		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").visible = true
 		$BirdParent.get_child(0).get_node("CanvasLayer/Game_lost").scale = Vector2(0.01,0.01)
 		tween.tween_property($BirdParent.get_child(0).get_node("CanvasLayer/Game_lost"), "scale", Vector2(1.0,1.0), 1.5).set_trans(Tween.TRANS_ELASTIC)
