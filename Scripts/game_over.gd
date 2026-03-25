@@ -3,6 +3,9 @@ extends Control
 @export var is_endless_mode:bool = false
 @export var is_timer_out:bool = false
 
+func _ready() -> void:
+	EndlessTimer.time = 0
+
 func _on_button_2_pressed() -> void:
 	get_tree().paused = false
 	await get_tree().process_frame
@@ -27,7 +30,7 @@ func _on_next_level_pressed() -> void:
 
 func _process(_delta):
 	if is_endless_mode:
-		var time = self.get_parent().get_parent().get_parent().get_parent().get_node("CanvasLayer/Endless timer").time
+		var time = EndlessTimer.time
 		$Label2.text = "Score - " + str(round(time)/10)
 	else:
 		if has_node("Label2"):

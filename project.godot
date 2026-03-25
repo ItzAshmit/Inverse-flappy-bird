@@ -24,6 +24,9 @@ boot_splash/minimum_display_time=2000
 Audio="*uid://cdwbqfaxolbgv"
 PokiSDK="*uid://bb73c5bdkkmut"
 
+
+EndlessTimer="*uid://cerage0jc4lck"
+
 [debug]
 
 canvas_items/custom_image=""
